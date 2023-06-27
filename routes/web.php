@@ -43,7 +43,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
-  
+        Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard');
+
   
 
     });
