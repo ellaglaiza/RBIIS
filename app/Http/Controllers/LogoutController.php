@@ -3,22 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+use App\Models\User;
+use Validator;
+use Auth;
 
 class LogoutController extends Controller
 {
     /**
-     * Log out account user.
+     * The attributes that are mass assignable.
      *
-     * @return \Illuminate\Routing\Redirector
+     * @var array
      */
-    public function perform()
-    {
-        Session::flush();
-        
-        Auth::logout();
+    
 
-        return redirect('login');
+    public function perform(Request $request) 
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

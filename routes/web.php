@@ -45,7 +45,20 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
         Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard');
 
-  
+        //Addresident
+        Route::get('/residentprofile/add', 'ResidentProfileController@addresidentprofile')->name('residentprofile.add');
+        Route::post('/residentprofile/add/save', 'ResidentProfileController@saveresidentprofile')->name('residentprofile.save');
 
+        //List
+        Route::get('/residentprofile/Lists', 'ListsController@listresidentprofile')->name('residentprofile.list');
+
+        //updates
+        Route::get('/Lists/edit/{id}', 'ListsController@editresidentprofile')->name('list.edit');
+        Route::post('/Lists/edit/save', 'ListsController@updateresidentprofile')->name('list.edit.save');
+
+        //delete
+         Route::get('/Lists/delete/{id}', 'ListsController@deleteresidentprofile')->name('list.delete');
+        Route::post('/Lists/delete', 'ListsController@deleteresidentprofile')->name('list.edit.delete');
+       
     });
 });

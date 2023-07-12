@@ -201,6 +201,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  
 }
 
 svg {
@@ -10169,6 +10170,7 @@ a:focus {
 
 .topbar {
   height: 4.375rem;
+  width:62.344rem  ;
 }
 
 .topbar #sidebarToggleTop {
