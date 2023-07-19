@@ -19,10 +19,6 @@ return new class extends Migration
            $table->string('suffix')->nullable();
            $table->string('purok');
            $table->string('address');
-           $table->string('age');
-           $table->string('date_of_birth');
-           $table->string('place_of_birth');
-           $table->string('sex');
            $table->timestamps();
         });
     }

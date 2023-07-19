@@ -22,11 +22,11 @@
                      <table id="example1" class="table table-hover">
                         <thead>
                            <tr>
-                              <th>Firstname</th>
-                              <th>Middlename</th>
-                              <th>Lastname</th>
-                              <th>Suffix</th>
-                              <th>Age</th>
+                              <th>Poruk</th>
+                              <th>Male</th>
+                              <th>Female</th>
+                              <th>Total Household</th>
+                              <th>Total </th>
                               <th>Purok</th>
                               <th>Address</th>
                               <th class="text-center">Action</th>
@@ -42,6 +42,8 @@
                               <td>{{$ResidentProfile->lastname}}</td>
                               <td>{{$ResidentProfile->suffix}}</td>
                               <td>{{$ResidentProfile->age}}</td>
+                            <!--   <td>{{$ResidentProfile->date_of_birth}}</td>
+                              <td>{{$ResidentProfile->place_of_birth}}</td> -->
                               <td>{{$ResidentProfile->purok}}</td>
                               <td>{{$ResidentProfile->address}}</td>
                               <td class="text-center">

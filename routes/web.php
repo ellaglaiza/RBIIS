@@ -57,8 +57,19 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::post('/Lists/edit/save', 'ListsController@updateresidentprofile')->name('list.edit.save');
 
         //delete
-         Route::get('/Lists/delete/{id}', 'ListsController@deleteresidentprofile')->name('list.delete');
+        Route::get('/Lists/delete/{id}', 'ListsController@deleteresidentprofile')->name('list.delete');
         Route::post('/Lists/delete', 'ListsController@deleteresidentprofile')->name('list.edit.delete');
        
+       //view
+        Route::get('/Lists/view/{id}', 'ListsController@viewresidentprofile')->name('list.view');
+        Route::post('/Lists/view', 'ListsController@viewresidentprofile')->name('list.edit.view');
+       
+       //Reports
+
+        //population
+        Route::get('/Reports/Population', 'Reports\PopulationController@populationstore')->name('population.store');
+        Route::post('/Reports/Population/save', 'Reports\PopulationController@populationsave')->name('population.save');
+
+      
     });
 });

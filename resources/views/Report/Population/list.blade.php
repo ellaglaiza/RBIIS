@@ -42,6 +42,8 @@
                               <td>{{$ResidentProfile->lastname}}</td>
                               <td>{{$ResidentProfile->suffix}}</td>
                               <td>{{$ResidentProfile->age}}</td>
+                            <!--   <td>{{$ResidentProfile->date_of_birth}}</td>
+                              <td>{{$ResidentProfile->place_of_birth}}</td> -->
                               <td>{{$ResidentProfile->purok}}</td>
                               <td>{{$ResidentProfile->address}}</td>
                               <td class="text-center">

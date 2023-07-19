@@ -21,16 +21,22 @@ class ListsController extends Controller
         return view('Resident.List',[
                 'residents'=>$resident
         ]);
+
     }
+
      public function updateresidentprofile(Request $request){
         $Updatesave= Resident::where('id',$request->id)->first();
         $Updatesave->firstname = $request->firstname;
         $Updatesave->middlename = $request->middlename;
         $Updatesave->lastname= $request->lastname;
         $Updatesave->suffix = $request->suffix;
+        $Updatesave->age = $request->age;
+        $Updatesave->place_of_birth = $request->place_of_birth;
         $Updatesave->purok = $request->purok;
-        $Updatesave->address = $request->address;
-
+        $Updatesave->sex = $request->sex;
+        $Updatesave->civil_status = $request->civil_status;
+        $Updatesave->religion = $request->religion;
+        $Updatesave->citizenship = $request->citizenship;
 
         if($Updatesave->save()) {
              return redirect()->back()->withErrors('Updated!');
@@ -42,8 +48,15 @@ class ListsController extends Controller
         $Deletesave->middlename = $request->middlename;
         $Deletesave->lastname= $request->lastname;
         $Deletesave->suffix = $request->suffix;
+        $Deletesave->age = $request->age;
+        $Deletesave->place_of_birth = $request->place_of_birth;
         $Deletesave->purok = $request->purok;
         $Deletesave->address = $request->address;
+        $Deletesave->sex = $request->sex;
+        $Deletesave->civil_status = $request->civil_status;
+        $Deletesave->religion = $request->religion;
+        $Deletesave->citizenship = $request->citizenship;
+
 
 
         if($Deletesave->delete()) {
@@ -51,4 +64,13 @@ class ListsController extends Controller
         }
 
     }
+
+   public function viewresidentprofile(Request $request){
+        $resident=Resident::where('id',$request->id)->first();
+        
+        return view('Resident.view',[
+                'resident'=>$resident
+        ]);
+    }
+
 }

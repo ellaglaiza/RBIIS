@@ -1834,7 +1834,7 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #6e707e;
+  color: #e74a3b;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #d1d3e2;
@@ -2936,7 +2936,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem;

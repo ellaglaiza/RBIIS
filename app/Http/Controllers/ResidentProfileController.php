@@ -15,8 +15,14 @@ class ResidentProfileController extends Controller
         $Residentsave->middlename = $request->middlename;
         $Residentsave->lastname= $request->lastname;
         $Residentsave->suffix = $request->suffix;
+        $Residentsave->age = $request->age;
+        $Residentsave->place_of_birth = $request->place_of_birth;
         $Residentsave->purok = $request->purok;
         $Residentsave->address = $request->address;
+        $Residentsave->sex = $request->sex;
+        $Residentsave->civil_status = $request->civil_status;
+        $Residentsave->citizenship = $request->citizenship;
+        $Residentsave->religion = $request->religion;
 
 
         if($Residentsave->save()) {

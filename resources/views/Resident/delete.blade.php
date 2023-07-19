@@ -13,9 +13,8 @@
          <form action="{{ route('list.edit.delete') }}"  method="post">
             @csrf
             <div class="col-md-12">
-               <div class="card-header"></div>
                         <div class="row">
-                           <div class="col-md-5">
+                           <div class="col-md-4">
                               <div class="form-group">
                                  <label>Firstname</label>
                                  <input type="hidden" name="id" value="{{$resident->id}}">
@@ -38,11 +37,32 @@
                               </div>
                            </div>
 
-                           <div class="col-md-12">
+                           <div class="col-md-1">
                               <div class="form-group">
                                 <label> Suffix </label>
                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control" name="suffix" value="{{$resident->suffix}}" placeholder=""></input>
+                                <input class= "form-control" name="suffix" value="{{$resident->suffix}}" ></input>
+                              </div>
+                           </div>
+                            <div class="col-md-1">
+                              <div class="form-group">
+                                <label>Age</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="age" value="{{$resident->age}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-1">
+                              <div class="form-group">
+                                <label>Date_of_Birth</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="date_of_birth" value="{{$resident->date_of_birth}}" placeholder=""></input>
+                              </div>
+                           </div>
+                           <div class="col-md-1">
+                              <div class="form-group">
+                                <label>Place_of_Birth</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="place_of_birth" value="{{$resident->place_of_birth}}" placeholder=""></input>
                               </div>
                            </div>
                            <div class="col-md-12">
@@ -59,7 +79,7 @@
                                 <input class= "form-control"  name="address" value="{{$resident->address}}" placeholder=""></input>
                               </div>
                            </div>
-                        
+                     
                         <center>
                <div class="col-md-5">
                   <button type="submit" class="btn btn-primary" style="background-color: black;">Save</button>
