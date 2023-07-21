@@ -97,7 +97,7 @@
                                <div class="col-md-12">
                               <div class="form-group">
                                 <label>Civil Status</label>
-                                <input class= "form-control" name="civil_status"placeholder="" ></input>
+                                <input class= "form-control" name="civil_status" placeholder="" ></input>
                               </div>
                                </div>
  

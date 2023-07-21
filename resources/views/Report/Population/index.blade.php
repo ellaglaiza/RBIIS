@@ -5,7 +5,7 @@
       <div class="container-fluid">
          <div class="row mb-2">
       <div class="col-sm-6">
-         <h1 class="m-0" style="border-radius: 100px;"> List of Residents</h1>
+         <h1 class="m-0" style="border-radius: 100px;"></h1>
          </div>
             <div class="col-sm-6">
             </div>
@@ -26,36 +26,23 @@
                               <th>Male</th>
                               <th>Female</th>
                               <th>Total Household</th>
-                              <th>Total </th>
-                              <th>Purok</th>
-                              <th>Address</th>
+                              <th>Total Population</th>
+                             
                               <th class="text-center">Action</th>
                            </tr>
 
                         </thead>
                         <tbody>
-                          @foreach($residents as $ResidentProfile)
+                          @foreach($report as $Reports)
                            <tr>
                          
-                              <td>{{$ResidentProfile->firstname}}</td>
-                              <td>{{$ResidentProfile->middlename}}</td>
-                              <td>{{$ResidentProfile->lastname}}</td>
-                              <td>{{$ResidentProfile->suffix}}</td>
-                              <td>{{$ResidentProfile->age}}</td>
-                            <!--   <td>{{$ResidentProfile->date_of_birth}}</td>
-                              <td>{{$ResidentProfile->place_of_birth}}</td> -->
-                              <td>{{$ResidentProfile->purok}}</td>
-                              <td>{{$ResidentProfile->address}}</td>
+                              <td>{{$Report->purok}}</td>
+                              <td>{{$Report->male}}</td>
+                              <td>{{$Report->female}}</td>
+                              <td>{{$Report->total_household}}</td>
+                              <td>{{$Report->total_population}}</td>
                               <td class="text-center">
-                                 <a class="btn btn-sm btn-success" href="{{ url('/Lists/edit/').'/'.$ResidentProfile->id}}" ><i
-                                       class="fa fa-edit"></i> Update</a>
-
-                                  <a class="btn btn-sm btn-success" href="{{ url('/Lists/view/').'/'.$ResidentProfile->id}}" ><i
-                                       class="fa fa-edit"></i>View</a>
-
-                                 <a class="btn btn-sm btn-danger" href="{{ url('/Lists/delete/').'/'.$ResidentProfile->id}}" ><i></i> Delete</a>
-                                        {{method_field('DELETE') }}
-                                        @csrf
+                               
                               </td>
                            </tr>
                            @endforeach
