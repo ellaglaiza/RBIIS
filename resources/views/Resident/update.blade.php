@@ -86,6 +86,55 @@
                                 <input class= "form-control"  name="civil_status" value="{{$resident->civil_status}}" ></input>
                               </div>
                            </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Sex</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="sex" value="{{$resident->sex}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Elementary</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="elementary" value="{{$resident->elementary}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>High School</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="high_school" value="{{$resident->high_school}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>College</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="college" value="{{$resident->college}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Degree Received</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="degree_received" value="{{$resident->degree_received}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Special Skills</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="special_skills" value="{{$resident->special_skills}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Year Graduated</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="year_graduated" value="{{$resident->year_graduated}}" ></input>
+                              </div>
+                           </div>
                         <center>
                <div class="col-md-5">
                   <button type="submit" class="btn btn-primary" style="background-color: black;">Save</button>
