@@ -67,7 +67,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
        //Reports
 
         //population
-        Route::get('/reports/Population', 'ReportController@savepopulation')->name('population.save');
+        Route::get('/Reports/Population', 'ReportController@savepopulation')->name('population.save');
 
        
       

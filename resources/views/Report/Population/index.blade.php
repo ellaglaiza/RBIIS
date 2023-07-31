@@ -36,11 +36,11 @@
                           @foreach($report as $Reports)
                            <tr>
                          
-                              <td>{{$Report->purok}}</td>
-                              <td>{{$Report->male}}</td>
-                              <td>{{$Report->female}}</td>
-                              <td>{{$Report->total_household}}</td>
-                              <td>{{$Report->total_population}}</td>
+                              <td>{{$Reports->purok}}</td>
+                              <td>{{$ReportsReports->male}}</td>
+                              <td>{{$Reports->female}}</td>
+                              <td>{{$Reports->total_household}}</td>
+                              <td>{{$Reports->total_population}}</td>
                               <td class="text-center">
                                
                               </td>

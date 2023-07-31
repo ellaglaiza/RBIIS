@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Report;
+
 
 class ReportController extends Controller
 {
        public function savepopulation(){
-        $report=Report::orderby('created_at','desc')->paginate(10);
         
-        return view('Report.Population.index',[
-                'report'=>$report
-        ]);
+        return view('Report.Population.index');
     }
 }
+

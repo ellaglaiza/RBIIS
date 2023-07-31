@@ -20,9 +20,9 @@ class ResidentProfileController extends Controller
         $Residentsave->purok = $request->purok;
         $Residentsave->address = $request->address;
         $Residentsave->sex = $request->sex;
-        $Residentsave->civil_status = $request->civil_status;
-        $Residentsave->citizenship = $request->citizenship;
-        $Residentsave->religion = $request->religion;
+        // $Residentsave->civil_status = $request->civil_status;
+        // $Residentsave->citizenship = $request->citizenship;
+        // $Residentsave->religion = $request->religion;
 
 
         if($Residentsave->save()) {

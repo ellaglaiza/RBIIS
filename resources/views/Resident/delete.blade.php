@@ -51,16 +51,16 @@
                                 <input class= "form-control"  name="age" value="{{$resident->age}}" placeholder=""></input>
                               </div>
                            </div>
-                            <div class="col-md-1">
+                          <!--   <div class="col-md-1">
                               <div class="form-group">
                                 <label>Date_of_Birth</label>
                                    <input type="hidden" name="id" value="{{$resident->id}}">
                                 <input class= "form-control"  name="date_of_birth" value="{{$resident->date_of_birth}}" placeholder=""></input>
                               </div>
-                           </div>
+                           </div> -->
                            <div class="col-md-1">
                               <div class="form-group">
-                                <label>Place_of_Birth</label>
+                                <label>Place of Birth</label>
                                    <input type="hidden" name="id" value="{{$resident->id}}">
                                 <input class= "form-control"  name="place_of_birth" value="{{$resident->place_of_birth}}" placeholder=""></input>
                               </div>
@@ -77,6 +77,76 @@
                                 <label>Address</label>
                                    <input type="hidden" name="id" value="{{$resident->id}}">
                                 <input class= "form-control"  name="address" value="{{$resident->address}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Sex</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="sex" value="{{$resident->sex}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Citizenship</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="citizenship" value="{{$resident->citizenship}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Religion</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="religion" value="{{$resident->religion}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Civil Status</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="civil_status" value="{{$resident->civil_status}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Elementary</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="elementary" value="{{$resident->elementary}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>High School</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="high_school" value="{{$resident->high_school}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>College</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="college" value="{{$resident->college}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Degree Received</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="degree_received" value="{{$resident->degree_received}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Special Skills</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="special_skills" value="{{$resident->special_skills}}" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label></label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="year_graduated" value="{{$resident->year_graduated}}" placeholder=""></input>
                               </div>
                            </div>
                      
