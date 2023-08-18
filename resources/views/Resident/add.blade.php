@@ -122,6 +122,35 @@
                                 <label style="margin-top: 1px; margin-inline: -8px;"> Female</label><br>
                               </div>
                                </div>
+<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
+                               <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Civil Status</label>
+                                <input class= "form-control" name="civil_status" placeholder="" ></input>
+                              </div>
+                               </div>
+ 
+                             
+                              <!-- <div class="card-"> -->
+                               <label>Civil Status:</label>
+                                <input  style="margin: revert; margin-top: 14px" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label style="margin-top: 19px" for="vehicle1"> Single</label><br>
+                                <input style="margin: revert; margin-top: 14px" type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                <label style="margin-top: 19px" for="vehicle2"> Married</label><br>
+                                <input style="margin: revert; margin-top: 14px" type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                <label style="margin-top: 19px" for="vehicle3"> Widow</label>
+                                <input style="margin: revert; margin-top: 14px" type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                <label style="margin-top: 19px" for="vehicle3"> Separeted</label>
+                          <!--     </div> -->
+                               <h3 class="m-1" style="font-size: 1.75rem font-weight: 600">Educational Background</h3>
+<!-- >>>>>>> 551089173053e275d4aab62d76b2ba20e99693a3 -->
+              
+                            <div class="col-md-7">
+                              <div class="form-group">
+                                <label>Elementary </label>
+                                <input class="form-control" name="elementary"  placeholder=""></input>
+=======
 
                                 <label style="margin-inline: 50px;">Civil Status:</label>
                               <div class="">
@@ -144,6 +173,7 @@
                                   <label>Elementary </label>
                                   <input class="form-control" name="elementary"  placeholder=""></input>
                                 </div>
+>>>>>>> f0c36eeae4511a95d35cd53235f13b3d94dab44b
                               </div>
                             <div class="col-md-4">
                               <div class="form-group">

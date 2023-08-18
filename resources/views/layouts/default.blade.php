@@ -80,7 +80,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Barangay Reports:</h6>
-                        <a class="collapse-item" href="{{ route('population.store') }}">Population</a>
+                        <a class="collapse-item" href="{{ route('population.save') }}">Population</a>
+                        <a class="collapse-item" href="">Land Tenure Status</a>
           
                     </div>
                 </div>

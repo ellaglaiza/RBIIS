@@ -1,152 +1,155 @@
 @extends('layouts.default')
-  
+
 @section('content')
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2> Show Product</h2>
-            </div>
-           
-        </div>
-    </div>
-   
-    <div class="row card p-5" style="background-color: white;">
+<style type="text/css">
+    .form-control{
+      color: black;
+      margin-top: -20px;
+      margin-bottom: -20px;
+
+    }
+</style>
+ <div class="container mt-2"  >
+        <h4 class="m-1" style="background-color: lightgreen;" >Personal Information</h4>
+        <div class="card mb-7" style="max-width: 500px;  ">
+            <div class="row g-12" style="margin-right: -25.75rem">
+                <div class="col-md-12">
+          
+      <div class="row card p-1" >
       @include('layouts.partials.messages')
          <form action="{{ route('list.edit.view') }}"  method="post">
           @csrf
             <div class="col-md-12">
-               <div class="card-header"></div>
-                        <div class="row">
-                           <div class="col-md-4">
+<!--                <div class="card-header"></div>
+  -->                      
+                         <div class="row">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                 <label>Firstname</label>
-                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <input type="text" name="firstname" value="{{$resident->firstname}}" class="form-control" >
+                               <p><strong>Firstname: </strong> {{ $resident->firstname }}</p>
                               </div>
                            </div>
-                           <div class="col-md-3">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                 <label>Middle Name</label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">
-                                  <input type="text" name="middlename" value="{{$resident->middlename}}" class="form-control" >
+                               <p><strong>Purok: </strong> {{ $resident->purok }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                 <label>Last name</label>
-                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <input type="text" name="lastname" value="{{$resident->lastname}}" class="form-control" >
+                               <p><strong>Middlename: </strong> {{ $resident->middlename }}</p>
                               </div>
                            </div>
-
-                           <div class="col-md-1">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label> Suffix </label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control" name="suffix" value="{{$resident->suffix}}" ></input>
+                               <p><strong>Address: </strong> {{ $resident->address }}</p>
                               </div>
                            </div>
-                             <div class="col-md-2">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>Age</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="age" value="{{$resident->age}}" ></input>
+                               <p><strong>Lastname: </strong> {{ $resident->lastname }}</p>
                               </div>
                            </div>
-                           <div class="col-md-5">
+                          
+                             <div class="col-md-6">
                               <div class="form-group">
-                                <label>Purok </label>
-                             <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class="form-control" name="purok" value="{{$resident->purok}}"></input>
+                               <p><strong>Age: </strong> {{ $resident->age }}</p>
                               </div>
                            </div>
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                               <div class="form-group">
-                                <label>Address</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="address" value="{{$resident->address}}" ></input>
+                               <p><strong>Suffix: </strong> {{ $resident->suffix }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>Religion</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="religion" value="{{$resident->religion}}" ></input>
+                               <p><strong>Purok: </strong> {{ $resident->purok }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>Citizenship</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="citizenship" value="{{$resident->citizenship}}" ></input>
+                               <p><strong>Email Address: </strong> {{ $resident->email_address }}</p>
                               </div>
                            </div>
-                             <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>Civil Status</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="civil_status" value="{{$resident->civil_status}}" ></input>
+                               <p><strong>Religion: </strong> {{ $resident->religion }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                             <div class="col-md-6">
                               <div class="form-group">
-                                <label>Sex</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="sex" value="{{$resident->sex}}" ></input>
+                               <p><strong>Contact Number: </strong> {{ $resident->contact_number }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>Place of Birth</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="place_of_birth" value="{{$resident->place_of_birth}}" ></input>
+                               <p><strong>Citizenship: </strong> {{ $resident->citizenship }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                            <div class="col-md-6">
                               <div class="form-group">
-                                <label>Elementary</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="elementary" value="{{$resident->elementary}}" ></input>
+                               <p><strong>Civil Status: </strong> {{ $resident->civil_status }}</p>
+                              </div>
+                           </div> 
+                            <div class="col-md-6">
+                            <div class="form-group">
+                               <p><strong>Religion: </strong> {{ $resident->religion }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>High School</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="high_school" value="{{$resident->high_school}}" ></input>
+                               <p><strong>Place Of Birth </strong> {{ $resident->place_of_birth }}</p>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
-                                <label>College</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="college" value="{{$resident->college}}" ></input>
+                               <p><strong>Date Of Birth: </strong> {{ $resident->date_of_birth }}</p>
                               </div>
-                           </div>
+                           </div> 
+                            <div class="col-md-12">
+                              <div class="form-group">
+                               <p><strong>Sex: </strong> {{ $resident->sex }}</p>
+                              </div>
+                           </div> 
+                           <!-- <div class="container mt-2"  >
+                            <h4 class="m-1" style="background-color: lightgreen;" >Personal Information</h4>
+                            <div class="card mb-12" style="max-width: 500px; ">
+                                <div class="row g-12" style="margin-right: -25.75rem">
+                                    <div class="col-md-12">
+                                                  
+                            <div class="col-md-8">
+                            <div class="form-group">
+                               <p><strong>Elementary: </strong> {{ $resident->elementary }}</p>
+                              </div>
+                            </div>
                             <div class="col-md-4">
+                            <div class="form-group">
+                               <p><strong>Year Graduated: </strong> {{ $resident->year_graduated }}</p>
+                              </div>
+                            </div>
+                           <div class="col-md-8">
                               <div class="form-group">
-                                <label>Degree Received</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="degree_received" value="{{$resident->degree_received}}" ></input>
+                               <p><strong>High School: </strong> {{ $resident->high_school }}</p>
                               </div>
                            </div>
-                            <div class="col-md-4">
+                           <div class="col-md-4">
+                            <div class="form-group">
+                               <p><strong>Year Graduated: </strong> {{ $resident->year_graduated }}</p>
+                              </div>
+                            </div>
+                           <div class="col-md-8">
                               <div class="form-group">
-                                <label>Special Skills</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="special_skills" value="{{$resident->special_skills}}" ></input>
+                               <p><strong>College: </strong> {{ $resident->college }}</p>
                               </div>
                            </div>
-                            <div class="col-md-4">
-                              <div class="form-group">
-                                <label>Year Graduated</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="year_graduated" value="{{$resident->year_graduated}}" ></input>
+                           <div class="col-md-4">
+                            <div class="form-group">
+                               <p><strong>Year Graduated: </strong> {{ $resident->year_graduated }}</p>
                               </div>
-                           </div>
-                        <center>
-            </div>
-         </form>
-      </div>  
-</div>
+                            </div>
+                          </div> -->
+                 </form>
+              </div>  
+        </div>
+      
 @endsection
+
+            
