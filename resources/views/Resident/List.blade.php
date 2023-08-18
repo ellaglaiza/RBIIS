@@ -1,7 +1,7 @@
  @extends('layouts.default')
 
 @section('content')
-<div class="content-header">
+<div class="content-header" style="font-weight: 700">
       <div class="container-fluid">
          <div class="row mb-2">
       <div class="col-sm-6">
