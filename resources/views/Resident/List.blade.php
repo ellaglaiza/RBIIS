@@ -1,6 +1,7 @@
  @extends('layouts.default')
 
 @section('content')
+<<<<<<< HEAD
 <style type="text/css">
    h1{
      margin-top: -292px;
@@ -13,6 +14,9 @@
 
 </style>
 <div class="content-header">
+=======
+<div class="content-header" style="font-weight: 700">
+>>>>>>> 6dfa53eb6416635d4a346cd7b000630e44747c95
       <div class="container-fluid">
          <div class="row mb-12">
       <div class="col-sm-6">
