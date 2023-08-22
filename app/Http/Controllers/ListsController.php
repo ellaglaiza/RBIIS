@@ -7,7 +7,7 @@ use App\Models\Resident;
 
 class ListsController extends Controller
 {
-     public function editresidentprofile(Request $request){
+	 public function editresidentprofile(Request $request){
         $resident=Resident::where('id',$request->id)->first();
         
         return view('Resident.update',[
@@ -51,11 +51,12 @@ class ListsController extends Controller
         }
 
     }
-     public function viewresidentprofile(Request $request){
+    public function viewresidentprofile(Request $request){
         $resident=Resident::where('id',$request->id)->first();
         
         return view('Resident.view',[
                 'resident'=>$resident
         ]);
     }
+
 }

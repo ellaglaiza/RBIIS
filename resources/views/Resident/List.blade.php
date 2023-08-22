@@ -1,11 +1,22 @@
  @extends('layouts.default')
 
 @section('content')
+<style type="text/css">
+   h1{
+     margin-top: -292px;
+     font-size: 30px;
+   }
+   .row{
+      margin-top: -230px;
+      background-color: ;
+   }
+
+</style>
 <div class="content-header">
       <div class="container-fluid">
          <div class="row mb-12">
       <div class="col-sm-6">
-         <h1 class="m-0" style="border-radius: 140px;"> List of Residents</h1>
+         <h1> List of Residents</h1>
          </div>
             <div class="col-sm-6">
             </div>

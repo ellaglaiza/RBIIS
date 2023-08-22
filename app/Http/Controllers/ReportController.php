@@ -9,8 +9,11 @@ use App\Models\Report;
 class ReportController extends Controller
 {
        public function savepopulation(){
+        $report=Report::orderby('created_at','desc')->paginate(10);
         
-        return view('Report.Population.index');
+        return view('Report.Population.index',[
+                'reports'=>$report
+        ]);
     }
 }
 

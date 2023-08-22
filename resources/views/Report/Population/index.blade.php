@@ -1,52 +1,85 @@
  @extends('layouts.default')
 
 @section('content')
-<div class="content-header">
+<style type="text/css">
+   .btn{
+    /*  float: right;*/
+   }
+   tr{
+      text-align: center;
+   }
+</style>
+<!-- <div class="content-header">
       <div class="container-fluid">
          <div class="row mb-2">
       <div class="col-sm-6">
-         <h1 class="m-0" style="border-radius: 100px;"></h1>
          </div>
             <div class="col-sm-6">
             </div>
          </div>
-      </div>
+      </div> -->
       <div class="row card p-">
-               <div class="card-header">
-              
-                     <section class="content">
+      <div class="card-header">
+       
+      <section class="content">
             <div class="container-fluid">
                <div class="card card-info">
                   <br>
                   <div class="col-md-12">
                      <table id="example1" class="table table-hover">
-                        <thead>
-                           <tr>
-                              <th>Poruk</th>
-                              <th>Male</th>
-                              <th>Female</th>
-                              <th>Total Household</th>
-                              <th>Total Population</th>
-                             
-                              <th class="text-center">Action</th>
-                           </tr>
 
-                        </thead>
-                        <tbody>
-                          @foreach($report as $Reports)
-                           <tr>
-                         
-                              <td>{{$Reports->purok}}</td>
-                              <td>{{$ReportsReports->male}}</td>
-                              <td>{{$Reports->female}}</td>
-                              <td>{{$Reports->total_household}}</td>
-                              <td>{{$Reports->total_population}}</td>
-                              <td class="text-center">
-                               
-                              </td>
-                           </tr>
-                           @endforeach
-                        </tbody>
+  <thead>
+
+    <tr>
+      <th colspan="1"> Purok</th>
+      <th colspan="1">Male</th>
+      <th colspan="1">Female</th>
+      <th colspan="1">Total Population</th>
+      <th colspan="1">Total Household</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Camia</td>
+      <td>22</td>
+       <td>33</td>
+      <td>555</td>
+      <td>222</td>
+    </tr>
+    <tr>
+      <td>Santan</td>
+      <td>Profit</td>
+      <td>Sales</td>
+      <td>Profit</td>
+      <td>222</td>
+    </tr>
+    <tr>
+      <td>Adelfa</td>
+      <td>Profit</td>
+      <td>Sales</td>
+      <td>Profit</td>
+        <td>$50,00</td>
+    </tr>
+    <tr>
+      <td>Bouganvillia</td>
+      <td>Profit</td>
+        <td>$50,00</td>
+        <td>Sales</td>
+      <td>Profit</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>Profit</td>
+      <td>Sales</td>
+        <td>$50,00</td>
+      <td>Profit</td>
+    </tr>
+   
+     
+  </tbody>
+          
                      </table>
                   </div>
                </div>
@@ -55,6 +88,9 @@
                </center>
             </div>
       </div>  
+</div>
+<div class="text-center">
+  <button onclick="window.print()" class="btn btn-primary" >Print</button>
 </div>
       
 @endsection
