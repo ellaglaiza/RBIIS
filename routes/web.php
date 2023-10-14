@@ -64,10 +64,25 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/Lists/view/{id}', 'ListsController@viewresidentprofile')->name('list.view');
         Route::post('/Lists/view', 'ListsController@viewresidentprofile')->name('list.edit.view');
        
+        
        //Reports
 
         //population
         Route::get('/reports/Population', 'ReportController@savepopulation')->name('population.save');
+        //populatiobyage
+        Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
+        //senior citizen
+        Route::get('/reports/SeniorCitizen', 'ListPopulationController@savesenior')->name('senior.save');
+        //PWD
+        Route::get('/reports/PWD', 'ListPopulationController@savePWD')->name('PWD.save');
+        //OFW
+        Route::get('/reports/OFW', 'ListPopulationController@saveOFW')->name('OFW.save');
+        //Solo Parent
+        Route::get('/reports/SoloParent', 'ListPopulationController@saveSoloParent')->name('soloparent.save');
+        //Unemployed
+        Route::get('/reports/Unemployed', 'ListPopulationController@saveUnemployed')->name('Unemployed.save');
+
+
 
        
       

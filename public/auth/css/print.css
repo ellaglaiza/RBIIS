@@ -1,0 +1,6 @@
+@media print {
+    /* Hide elements by their IDs or classes */
+    #dashboard-header, .sidebar {
+        display: none !important;
+    }
+}

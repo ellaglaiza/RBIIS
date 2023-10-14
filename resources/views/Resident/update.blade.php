@@ -15,6 +15,49 @@
             <div class="col-md-12">
                <div class="card-header"></div>
                         <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                 <label>Region</label>
+                                 <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input type="text" name="region" value="{{$resident->region}}" class="form-control" >
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                 <label>Province</label>
+                                 <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input type="text" name="province" value="{{$resident->province}}" class="form-control" >
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                 <label>City/Municipality</label>
+                                 <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input type="text" name="city" value="{{$resident->city}}" class="form-control" >
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                 <label>Barangay</label>
+                                 <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input type="text" name="barangay" value="{{$resident->barangay}}" class="form-control" >
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                 <label>Household Number</label>
+                                 <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input type="text" name="household_number" value="{{$resident->household_number}}" class="form-control" >
+                              </div>
+                           </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                 <label>No. Of Household Members:</label>
+                                 <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input type="text" name="no_household_member" value="{{$resident->no_household_member}}" class="form-control" >
+                              </div>
+                           </div>
+                           <hr>
                            <div class="col-md-4">
                               <div class="form-group">
                                  <label>Firstname</label>
@@ -51,7 +94,7 @@
                                 <input class= "form-control"  name="age" value="{{$resident->age}}" ></input>
                               </div>
                            </div>
-                           <div class="col-md-3">
+                           <div class="col-md-4">
                               <div class="form-group">
                                 <label>Citizenship </label>
                              <input type="hidden" name="id" value="{{$resident->id}}">
@@ -65,65 +108,55 @@
                                 <input class="form-control" name="religion" value="{{$resident->religion}}"></input>
                               </div>
                            </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                               <div class="form-group">
                                 <label>Place of Birth </label>
                              <input type="hidden" name="id" value="{{$resident->id}}">
                                 <input class="form-control" name="place_of_birth" value="{{$resident->place_of_birth}}"></input>
                               </div>
                            </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Date of Birth </label>
+                             <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class="form-control" name="date_of_birth" value="{{$resident->date_of_birth}}"></input>
+                              </div>
+                           </div>
+                             <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Sex</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="sex" value="{{$resident->sex}}" ></input>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Civil Status</label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input class= "form-control"  name="civil_status" value="{{$resident->civil_status}}" ></input>
+                              </div>
+                           </div>
+                            <div class="col-md-6">
                               <div class="form-group">
                                 <label>Address</label>
                                    <input type="hidden" name="id" value="{{$resident->id}}">
                                 <input class= "form-control"  name="address" value="{{$resident->address}}" ></input>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <div class="form-group">
                                 <label>Purok</label>
                                    <input type="hidden" name="id" value="{{$resident->id}}">
                                 <input class= "form-control"  name="purok" value="{{$resident->purok}}" ></input>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                            <div class="col-md-12">
                               <div class="form-group">
-                                <label>Barangay</label>
+                                <label>Remarks(other info)</label>
                                    <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="barangay" value="{{$resident->barangay}}" ></input>
+                                <input class= "form-control"  name="remarks" value="{{$resident->remarks}}" ></input>
                               </div>
                            </div>
-                           <div class="col-md-3">
-                              <div class="form-group">
-                                <label>Street Name</label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="street_name" value="{{$resident->street_name}}" ></input>
-                              </div>
-                           </div>
-
-                              <label style="margin-inline: 15px;">Sex:</label>
-                                <div>
-                                 <div>
-                                <input style="display: 0px; margin-inline: 9px; margin-top: 25px;" type="checkbox" name="sex">
-                                <label style="margin-top: 1px; margin-inline: -8px; display: inline-block;" name="male"> Male</label><br>
-                                <input style="margin-inline: 9px; display: 0px;" type="checkbox" name="female">
-                                <label style="margin-top: 1px; margin-inline: -8px;"> Female</label><br>
-                              </div>
-                               </div>
-
-                                <label style="margin-inline: 50px;">Civil Status:</label>
-                              <div class="">
-                                 <div class="">
-                                <input style="margin: -30px; margin-top: -29px;" type="checkbox" name="civil_status">
-                                <label style="margin-top: 26px; margin-inline: 30px;" name="single"> Single</label>
-                                <input style="margin: -23px; margin-top: -33px;" type="checkbox">
-                                <label style="margin-top: 26px; margin-inline: 23px;" name="married"> Married</label><br>
-                                <input style="margin: -31px; margin-top: -32px;" type="checkbox">
-                                <label style="margin-top: 26px; margin-inline: 31px;" name="widow"> Widow</label>
-                                <input style="margin: -29px; margin-top: -33px;" type="checkbox">
-                                <label style="margin-top: 26px; margin-inline: 30px;" name="separated"> Separated</label>
-                                </div>
-                              </div>
 
                            <div class="col-md-7">
                               <div class="form-group">

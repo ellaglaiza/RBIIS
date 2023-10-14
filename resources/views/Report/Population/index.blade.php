@@ -1,98 +1,69 @@
  @extends('layouts.default')
 
 @section('content')
+   <link rel="stylesheet" href="{{ asset('auth/css/print.css') }}" media="print">
+     <button  id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
+
+<script>
+    document.getElementById('print-button').addEventListener('click', function () {
+        var printContents = document.getElementById('table-container').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    });
+</script>
+
 <style type="text/css">
    .btn{
-    /*  float: right;*/
    }
    tr{
       text-align: center;
    }
+   .card{
+    margin-bottom: 60px;
+   }
+   #print-button {
+    display: block;
+    
+}
+@media print {
+    #print-button {
+        display: none;
+    }
+}
 </style>
-<!-- <div class="content-header">
-      <div class="container-fluid">
-         <div class="row mb-2">
-      <div class="col-sm-6">
-         </div>
-            <div class="col-sm-6">
-            </div>
-         </div>
-      </div> -->
-      <div class="row card p-">
       <div class="card-header">
-       
-      <section class="content">
+       <section class="content">
             <div class="container-fluid">
                <div class="card card-info">
-                  <br>
-                  <div class="col-md-12">
-                     <table id="example1" class="table table-hover">
-
-  <thead>
-
-    <tr>
-      <th colspan="1"> Purok</th>
-      <th colspan="1">Male</th>
-      <th colspan="1">Female</th>
-      <th colspan="1">Total Population</th>
-      <th colspan="1">Total Household</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Camia</td>
-      <td>22</td>
-       <td>33</td>
-      <td>555</td>
-      <td>222</td>
-    </tr>
-    <tr>
-      <td>Santan</td>
-      <td>Profit</td>
-      <td>Sales</td>
-      <td>Profit</td>
-      <td>222</td>
-    </tr>
-    <tr>
-      <td>Adelfa</td>
-      <td>Profit</td>
-      <td>Sales</td>
-      <td>Profit</td>
-        <td>$50,00</td>
-    </tr>
-    <tr>
-      <td>Bouganvillia</td>
-      <td>Profit</td>
-        <td>$50,00</td>
-        <td>Sales</td>
-      <td>Profit</td>
-    </tr>
-    <tr>
-      <td>Sales</td>
-      <td>Profit</td>
-      <td>Sales</td>
-        <td>$50,00</td>
-      <td>Profit</td>
-    </tr>
-   
-     
-  </tbody>
-          
-                     </table>
-                  </div>
-               </div>
-            </div>
-         </section>
-               </center>
-            </div>
-      </div>  
-</div>
-<div class="text-center">
-  <button onclick="window.print()" class="btn btn-primary" >Print</button>
-</div>
-      
-@endsection
+                <br>
+                <div class="col-md-12">
+                    <table id="example1" class="table table-hover">
+                    <div id="table-container">
+                      <table id="example1" class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Purok</th>
+                            <th>Male</th>
+                            <th>Female</th>
+                            <th>Total Population by Purok</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @for($x=0;$x < count($reports);$x++)
+                          <tr>
+                            <th>{{ $reports[$x]['purok_name'] }}</th>
+                            <th>{{ $reports[$x]['total_male'] }}</th>
+                            <th>{{ $reports[$x]['total_female'] }}</th>
+                            <th>{{ $reports[$x]['total_household'] }}</th>
+                          </tr>
+                          @endfor
+                       </tbody>
+                      </table>
+  @endsection
 
             

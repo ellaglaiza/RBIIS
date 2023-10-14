@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title> Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('auth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -34,8 +34,11 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class=""></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">RBIIS </div>
-            </a>
+                <img class="img-profile rounded-circle" src= "{{ asset('auth/img/admin1.jpg')}}" style="width: 60px;
+                  margin-right: -10px;">
+                    <div class="sidebar-brand-text mx-3">RBIIS </div>
+
+                                                            </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -81,8 +84,16 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Barangay Reports:</h6>
                         <a class="collapse-item" href="{{ route('population.save') }}">Population</a>
-                        <a class="collapse-item" href="">Land Tenure Status</a>
-          
+                        <a class="collapse-item" href="{{ route('populationbyage.save') }}">Population by Age</a>
+                        <a class="collapse-item" href="{{ route('senior.save') }}">Senior Citizen</a>
+                        <a class="collapse-item" href="{{ route('PWD.save') }}">PWD</a>
+                        <a class="collapse-item" href="{{ route('OFW.save') }}">Overseas Filipino Worker</a>
+                        <a class="collapse-item" href="{{ route('soloparent.save') }}">Solo Parent</a>
+                        <a class="collapse-item" href="{{ route('Unemployed.save') }}">Unemployed</a>
+                        <a class="collapse-item" href="">Children's Out of School</a>
+                     
+
+
                     </div>
                 </div>
             </li>
@@ -114,55 +125,12 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-1 my-5 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
+                   
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                     
-                         
-
-                        <!-- Nav Item - Messages -->
-                    
-                            <!-- Dropdown - Messages -->
-                           
-
+                       
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -176,24 +144,14 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
+                        
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{route('logout.perform')}}" >
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
                             </div>
+                            
                         </li>
 
                     </ul>
@@ -227,6 +185,27 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('auth/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{ asset('auth/js/demo/chart-pie-demo.js')}}"></script>
-      <script src="{{asset('auth/js/demo/datatables-demo.js') }}"></script>
+    <script src="{{asset('auth/js/demo/datatables-demo.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: '/reports/PopulationByAge',
+            method: 'GET',
+            success: function(response) {
+                // Handle the response and update your HTML elements
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
 </body>
 </html>
