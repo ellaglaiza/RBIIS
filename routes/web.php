@@ -69,12 +69,29 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
         //population
         Route::get('/reports/Population', 'ReportController@savepopulation')->name('population.save');
+<<<<<<< HEAD
         Route::get('/reports/SeniorCitizen', 'ListPopulationController@savesenior')->name('senior.save');
         Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
 
         //certificate fo indigency
         Route::get('/reports/Certificate-of-Indigency', 'ReportController@savecertificateofindigency')->name('certificateofindigency.save');
         Route::post('/reports/Indigency', 'ReportController@saveindigency')->name('indigency.save');
+=======
+        //populatiobyage
+        Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
+        //senior citizen
+        Route::get('/reports/SeniorCitizen', 'ListPopulationController@savesenior')->name('senior.save');
+        //PWD
+        Route::get('/reports/PWD', 'ListPopulationController@savePWD')->name('PWD.save');
+        //OFW
+        Route::get('/reports/OFW', 'ListPopulationController@saveOFW')->name('OFW.save');
+        //Solo Parent
+        Route::get('/reports/SoloParent', 'ListPopulationController@saveSoloParent')->name('soloparent.save');
+        //Unemployed
+        Route::get('/reports/Unemployed', 'ListPopulationController@saveUnemployed')->name('Unemployed.save');
+
+
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 
       
     });

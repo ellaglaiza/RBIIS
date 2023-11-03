@@ -61,6 +61,7 @@
                                    </thead>
                                    <tbody>
                                      <tbody>
+<<<<<<< HEAD
       @for($x=0;$x < count($reports);$x++)
       <tr>
         <th>{{ $reports[$x]['populationby_age'] }}</th>
@@ -70,6 +71,17 @@
       </tr>
       @endfor
     </tbody>                                
+=======
+                                     @for($x=0;$x < count($reports);$x++)
+                                       <tr>
+                                         <th>{{ $reports[$x]['populationby_age'] }}</th>
+                                            <th>{{ $reports[$x]['total_male'] }}</th>
+                                            <th>{{ $reports[$x]['total_female'] }}</th>
+                                               <th>{{ $reports[$x]['total_population'] }}</th>
+                                                </tr>
+                                              @endfor
+                                             </tbody>                                
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                                    </tbody>
                                </div>
                            </table>

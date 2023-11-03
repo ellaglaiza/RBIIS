@@ -14,6 +14,7 @@ class ReportController extends Controller
 {
     $puroks = Purok::all();
     $data_array = [];
+<<<<<<< HEAD
 
     foreach ($puroks as $purok) {
         $count_male = Resident::where([['purok', $purok->purok_name], ['sex', 'Male']])->get();
@@ -68,11 +69,38 @@ class ReportController extends Controller
             'total_male' => count($count_male),
             'total_female' => count($count_female),
             'total_population' => $total_population,
+=======
+
+    foreach ($puroks as $purok) {
+        $count_male = Resident::where([['purok', $purok->purok_name], ['sex', 'Male']])->get();
+        $count_female = Resident::where([['purok', $purok->purok_name], ['sex', 'Female']])->get();
+        $household = Resident::where([['purok', $purok->purok_name]])->get();
+        $total_population = 0;
+        // foreach ($household as $resident) {
+        //     if ($resident->members_name === 'null' || $resident->members_name === null) {
+        //         $total_population += 1;
+        //     } else {
+        //         $members = json_decode($resident->members_name, true); 
+        //         if (is_array($members)) {
+        //             $total_population += 1 + count($members);
+        //         } else {
+        //             $total_population += 1; 
+        //         }
+        //     }
+        // }
+
+        $data_array[] = [
+            'purok_name' => $purok->purok_name,
+            'total_male' => count($count_male),
+            'total_female' => count($count_female),
+            'total_household' => count($household),
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
         ];
     }
 
     $report = $data_array;
 
+<<<<<<< HEAD
     return view('Report.Certificate of Indigency.index', [
         'reports' => $report,
     ]);
@@ -138,3 +166,10 @@ public function report(){
 
 
  
+=======
+    return view('Report.Population.index', [
+        'reports' => $report,
+    ]);
+}
+}
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9

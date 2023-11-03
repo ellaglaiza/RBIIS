@@ -7,7 +7,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top: -520px; " >
+<<<<<<< HEAD
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+=======
+                        <h1 class="h1 mb-0 text-gray-800 " >Dashboard</h1>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                         <a href="" class=""><i
                                 class=""></i></a>
                     </div>
@@ -15,7 +19,6 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">

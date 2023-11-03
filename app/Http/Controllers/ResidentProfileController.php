@@ -64,5 +64,9 @@ class ResidentProfileController extends Controller
              return redirect()->back()->withErrors('Successfully Saved!');
         }
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 
 }

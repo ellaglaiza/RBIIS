@@ -53,7 +53,11 @@
                                <div id="table-container">
                                    <thead>
                                    <tr>
+<<<<<<< HEAD
                                        <th>Population By Age</th>
+=======
+                                       <th>Senior Citizen By Purok</th>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                                        <th>Male</th>
                                        <th>Female</th>
                                        <th>Total Population</th>
@@ -61,6 +65,7 @@
                                    </thead>
                                    <tbody>
                                      <tbody>
+<<<<<<< HEAD
       @for($x=0;$x < count($reports);$x++)
       <tr>
         <th>{{ $reports[$x]['populationby_age'] }}</th>
@@ -71,6 +76,17 @@
       @endfor
     </tbody>
                                  
+=======
+                                     @for($x=0;$x < count($reports);$x++)
+                                       <tr>
+                                         <th>{{ $reports[$x]['purok_name'] }}</th>
+                                            <th>{{ $reports[$x]['total_male'] }}</th>
+                                            <th>{{ $reports[$x]['total_female'] }}</th>
+                                               <th>{{ $reports[$x]['total_population'] }}</th>
+                                                </tr>
+                                              @endfor
+                                             </tbody>                                
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                                    </tbody>
                                </div>
                            </table>

@@ -29,6 +29,10 @@ class ListsController extends Controller
         $Updatesave->lastname= $request->lastname;
         $Updatesave->suffix = $request->suffix;
         $Updatesave->purok = $request->purok;
+<<<<<<< HEAD
+=======
+        $Updatesave->age = $request->age;
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
         $Updatesave->sex = $request->sex;
         $Updatesave->civil_status = $request->civil_status;
         $Updatesave->religion = $request->religion;
