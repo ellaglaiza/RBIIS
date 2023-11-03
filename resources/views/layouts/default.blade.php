@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Registry Barangay Inhabitant Information System</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('auth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -34,6 +34,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class=""></i>
                 </div>
+                 <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg')}}" style="width: 60px;">
                 <div class="sidebar-brand-text mx-3">RBIIS </div>
             </a>
 
@@ -81,8 +82,12 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Barangay Reports:</h6>
                         <a class="collapse-item" href="{{ route('population.save') }}">Population</a>
-                        <a class="collapse-item" href="">Land Tenure Status</a>
-          
+                        <a class="collapse-item" href="{{ route('populationbyage.save') }}">Population by Age</a>
+                        <a class="collapse-item" href="{{ route('senior.save') }}">Senior Citizen</a>
+                        <a class="collapse-item" href="">Solo Parent</a>
+                        <a class="collapse-item" href="">Overseas Filipino Worker</a>
+                        <a class="collapse-item" href="">PWD</a>
+                        <a class="collapse-item" href="{{ route('certificateofindigency.save') }}">Certificate of Indigency</a>
                     </div>
                 </div>
             </li>
@@ -227,6 +232,15 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('auth/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{ asset('auth/js/demo/chart-pie-demo.js')}}"></script>
-      <script src="{{asset('auth/js/demo/datatables-demo.js') }}"></script>
+    <script src="{{asset('auth/js/demo/datatables-demo.js') }}"></script>
+    <script type="text/javascript">
+        $.ajax({
+            method:'GET',
+            url:'',
+            success: function(response) {
+                
+            }
+        })
+    </script>
 </body>
 </html>

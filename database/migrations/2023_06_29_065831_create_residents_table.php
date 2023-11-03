@@ -17,7 +17,7 @@ return new class extends Migration
            $table->string('middlename')->nullable();
            $table->string('lastname');
            $table->string('suffix')->nullable();
-           $table->string('purok');
+           $table->string('purok')->nullable();
            $table->string('address');
            $table->timestamps();
         });
@@ -29,5 +29,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('residents');
+        
     }
 };

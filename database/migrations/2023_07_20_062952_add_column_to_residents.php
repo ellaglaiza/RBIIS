@@ -18,12 +18,11 @@ return new class extends Migration
             $table->string('religion')->after('citizenship');
             $table->integer('age')->after('religion');
             $table->string('civil_status')->after('age');
-            $table->string('elementary')->after('civil_status');
+            $table->string('elementary')->after('civil_status')->nullable();
             $table->string('high_school')->after('elementary');
             $table->string('college')->after('high_school');
             $table->string('degree_received')->after('college');
             $table->string('special_skills')->after('degree_received');
-            $table->integer('year_graduated')->after('special_skills');
         });
     }
 

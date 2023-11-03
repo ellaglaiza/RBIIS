@@ -29,15 +29,11 @@ class ListsController extends Controller
         $Updatesave->lastname= $request->lastname;
         $Updatesave->suffix = $request->suffix;
         $Updatesave->purok = $request->purok;
-<<<<<<< HEAD
         $Updatesave->sex = $request->sex;
         $Updatesave->civil_status = $request->civil_status;
         $Updatesave->religion = $request->religion;
         $Updatesave->citizenship = $request->citizenship;
-=======
         $Updatesave->address = $request->address;
-
->>>>>>> ab4feaefa3f90581b4dbbaa5195978670d87fa88
 
         if($Updatesave->save()) {
              return redirect()->back()->withErrors('Updated!');
@@ -51,14 +47,11 @@ class ListsController extends Controller
         $Deletesave->suffix = $request->suffix;
         $Deletesave->purok = $request->purok;
         $Deletesave->address = $request->address;
-<<<<<<< HEAD
         $Deletesave->sex = $request->sex;
         $Deletesave->civil_status = $request->civil_status;
         $Deletesave->religion = $request->religion;
         $Deletesave->citizenship = $request->citizenship;
 
-=======
->>>>>>> ab4feaefa3f90581b4dbbaa5195978670d87fa88
 
 
         if($Deletesave->delete()) {
