@@ -54,6 +54,15 @@
                            </div>
                               <div class="col-md-4">
                               <div class="form-group">
+<<<<<<< HEAD
+                                <label style="font-family: emoji; font-weight: 500;">Age</label>
+                                <input class= "form-control" name="age" placeholder=""></input>
+                              </div>
+                           </div>
+                              <div class="col-md-4">
+                              <div class="form-group">
+=======
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                                 <label style="font-family: emoji; font-weight: 500;">Citizenship</label>
                                 <input class= "form-control" name="citizenship" placeholder=""></input>
                               </div>
@@ -64,7 +73,7 @@
                                 <input class= "form-control" name="religion" placeholder=""></input>
                               </div>
                            </div>
-                             <div class="col-md-4">
+                             <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Place of Birth</label>
                                 <input class= "form-control" name="place_of_birth" placeholder=""></input>
@@ -73,6 +82,9 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Date of Birth</label>
+<<<<<<< HEAD
+                                <input type="date" class= "form-control" name="date_of_birth" placeholder=""></input>
+=======
                                 <input type="date" class= "form-control" id="date_of_birth" name="date_of_birth" placeholder=""></input>
                               </div>
                            </div>
@@ -80,6 +92,7 @@
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Age</label>
                                 <input class= "form-control" name="age" id="age" placeholder=""></input>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                               </div>
                            </div>
                              <div class="col-md-6">
@@ -96,6 +109,9 @@
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Civil Status </label>
+<<<<<<< HEAD
+                                <input class="form-control" name="civil_status"  placeholder=""></input>
+=======
                                  <select class="form-control" name="sex">
                                   <option disabled>Select Civil Status</option>
                                   <option>Single</option>
@@ -103,11 +119,15 @@
                                   <option>Widow</option>
                                   <option>Separated</option>
                                 </select>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                               </div>
                            </div>
                              <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
+<<<<<<< HEAD
+                                <input class="form-control" name="remarks"  placeholder=""></input>
+=======
                                  <select class="form-control" name="sex">
                                   <option></option>
                                   <option>PWD</option>
@@ -125,6 +145,7 @@
                                   <option>Household with Toilets</option>
                                   <option>Household without Toilets</option>
                                 </select>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                               </div>
                            </div>
                             <div class="col-md-6">
@@ -134,6 +155,25 @@
                                 <input class= "form-control" name="address" placeholder=""></input>
                               </div>
                            </div>
+<<<<<<< HEAD
+=======
+                            <div class="col-md-6" style="margin-top: 34px;">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
+                                <input class= "form-control" name="HouseholdNo" placeholder=""></input>
+                              </div>
+                           </div>
+                              <div class="col-md-6">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">No. Of Household Members:</label>
+<<<<<<< HEAD
+                                <input type="number" class= "form-contro  l" name="householdMem" placeholder="" id="household_number"></input>
+=======
+                                <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number"></input>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
+                              </div>
+                           </div>
+>>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
                              <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500; margin-top: 34px;">Purok</label>
@@ -365,6 +405,8 @@
          </form>
       </div>  
 </div>
+<<<<<<< HEAD
+=======
 <script>
    const dateOfBirthInput = document.getElementById('date_of_birth');
    const ageInput = document.getElementById('age');
@@ -379,8 +421,12 @@
       ageInput.value = age;
    });
 </script>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
+>>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
 <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
 
 <script>

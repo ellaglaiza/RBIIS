@@ -19,7 +19,7 @@ class ResidentProfileController extends Controller
         $Residentsave->middlename = $request->middlename;
         $Residentsave->lastname= $request->lastname;
         $Residentsave->suffix = $request->suffix;
-        $Residentsave->age = $request->age;
+        $Residentsave->age = 0;
         $Residentsave->place_of_birth = $request->place_of_birth;
         $Residentsave->purok = $request->purok;
         $Residentsave->address = $request->address;
@@ -64,6 +64,9 @@ class ResidentProfileController extends Controller
              return redirect()->back()->withErrors('Successfully Saved!');
         }
     }
+<<<<<<< HEAD
+=======
     
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 
 }

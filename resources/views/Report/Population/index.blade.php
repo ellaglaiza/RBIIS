@@ -9,7 +9,11 @@
       text-align: center;
    }
    .card{
+<<<<<<< HEAD
+    margin-bottom: 100px;
+=======
     margin-bottom: 60px;
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
    }
    #print-button {
     display: block;
@@ -22,6 +26,72 @@
         display: none;
     }
 }
+<<<<<<< HEAD
+=======
+</style>
+<<<<<<< HEAD
+
+      <div class="row card p-">
+=======
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
+      <div class="card-header">
+       <section class="content">
+            <div class="container-fluid">
+               <div class="card card-info">
+<<<<<<< HEAD
+                  <br>
+                  <div class="col-md-12">
+                     <table id="example1" class="table table-hover">
+<div id="table-container">
+  <table id="example1" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Purok</th>
+        <th>Male</th>
+        <th>Female</th>
+        
+        <th>Total Population by Purok</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for($x=0;$x < count($reports);$x++)
+      <tr>
+        <th>{{ $reports[$x]['purok_name'] }}</th>
+        <th>{{ $reports[$x]['total_male'] }}</th>
+        <th>{{ $reports[$x]['total_female'] }}</th>
+        <th>{{ $reports[$x]['total_household'] }}</th>
+      </tr>
+      @endfor
+    </tbody>
+  </table>
+=======
+                <br>
+                <div class="col-md-12">
+                    <table id="example1" class="table table-hover">
+                    <div id="table-container">
+                      <table id="example1" class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Purok</th>
+                            <th>Male</th>
+                            <th>Female</th>
+                            <th>Total Population by Purok</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @for($x=0;$x < count($reports);$x++)
+                          <tr>
+                            <th>{{ $reports[$x]['purok_name'] }}</th>
+                            <th>{{ $reports[$x]['total_male'] }}</th>
+                            <th>{{ $reports[$x]['total_female'] }}</th>
+                            <th>{{ $reports[$x]['total_household'] }}</th>
+                          </tr>
+                          @endfor
+                       </tbody>
+                      </table>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
+  @endsection
+>>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
 
 /* Custom CSS for the header */
 .header {

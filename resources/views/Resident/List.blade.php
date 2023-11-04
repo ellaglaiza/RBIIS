@@ -28,17 +28,38 @@
                         <th>Age</th>
                         <th>Sex</th>
                         <th>Purok</th>
+<<<<<<< HEAD
+
                         <th class="text-center">Action</th>
                      </tr>
+
+=======
+                        <th class="text-center">Action</th>
+                     </tr>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                   </thead>
                   <tbody>
                     @foreach($residents as $ResidentProfile)
                      <tr>
+<<<<<<< HEAD
+                   
+=======
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                         <td>{{$ResidentProfile->firstname}}</td>
                         <td>{{$ResidentProfile->middlename}}</td>
                         <td>{{$ResidentProfile->lastname}}</td>
                         <td>{{$ResidentProfile->suffix}}</td>
+<<<<<<< HEAD
+                       <!--  <td> <?php
+                              $dob = $ResidentProfile->date_of_birth;
+                              
+                              $dob = '1994-07-02';
+                              $age = date_diff(date_create($dob),date_create(date("Y-m-d")));
+                              echo $age->format('%y');
+                        ?></td> -->
+=======
                         <td>{{$ResidentProfile->age}}</td>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                         <td>{{$ResidentProfile->sex}}</td>
                         <td>{{$ResidentProfile->purok}}</td>
                         <td class="text-center">

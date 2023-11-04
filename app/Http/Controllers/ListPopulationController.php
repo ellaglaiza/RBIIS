@@ -6,12 +6,33 @@ use Illuminate\Http\Request;
 use App\Models\Report;
 use App\Models\Resident;
 use App\Models\Purok;
+<<<<<<< HEAD
+=======
 use Illuminate\Support\Facades\DB;
 
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 
 
 class ListPopulationController extends Controller
 {
+<<<<<<< HEAD
+      public function savesenior()
+{
+    $puroks = Purok::all();
+    $data_array = [];
+
+    foreach ($puroks as $purok) {
+        $count_male = Resident::where([['purok', $purok->populationby_age], ['sex', 'Male']])->get();
+        $count_female = Resident::where([['purok', $purok->populationby_age], ['sex', 'Female']])->get();
+        $household = Resident::where([['purok', $purok->populationby_age]])->get();
+        $total_population = 0;
+        
+       
+        $data_array[] = [
+            'populationby_age' => $purok->populationby_age,
+            'total_male' => count($count_male),
+            'total_female' => count($count_female),
+=======
 public function savepopulationbyage()
 {
     // Define the age groups
@@ -48,12 +69,21 @@ public function savepopulationbyage()
             'populationby_age' => $ageGroup,
             'total_male' => $count_male,
             'total_female' => $count_female,
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
             'total_population' => $total_population,
         ];
     }
 
     $report = $data_array;
 
+<<<<<<< HEAD
+    return view('Report.SeniorCitizen.index', [
+        'reports' => $report,
+    ]);
+}
+
+   public function savepopulationbyage()
+=======
     return view('Report.PopulationByAge.index', [
         'reports' => $report,
     ]);
@@ -61,11 +91,25 @@ public function savepopulationbyage()
   
 
 public function savesenior()
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 {
     $puroks = Purok::all();
     $data_array = [];
 
     foreach ($puroks as $purok) {
+<<<<<<< HEAD
+        $count_male = Resident::where([['purok', $purok->populationby_age], ['sex', 'Male']])->get();
+        $count_female = Resident::where([['purok', $purok->populationby_age], ['sex', 'Female']])->get();
+        $household = Resident::where([['purok', $purok->populationby_age]])->get();
+        $total_population = 0;
+        
+       
+        $data_array[] = [
+            'populationby_age' => $purok->populationby_age,
+            'total_male' => count($count_male),
+            'total_female' => count($count_female),
+            'total_population' => $total_population,
+=======
         $count_male = Resident::where([['purok', $purok->purok_name], ['sex', 'Male'], ['age', '>=', 60]])->count();
         $count_female = Resident::where([['purok', $purok->purok_name], ['sex', 'Female'], ['age', '>=', 60]])->count();
         $total_population = Resident::where([['purok', $purok->purok_name], ['age', '>=', 60]])->count();
@@ -75,11 +119,20 @@ public function savesenior()
             'total_male' => $count_male,
             'total_female' => $count_female,
             'total_population' => $total_population, 
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
         ];
     }
 
     $report = $data_array;
 
+<<<<<<< HEAD
+    return view('Report.PopulationByAge.index', [
+        'reports' => $report,
+    ]);
+}
+
+
+=======
     return view('Report.SeniorCitizen.index', [
         'reports' => $report
     ]);
@@ -344,4 +397,5 @@ public function saveMonitoringReport(){
 
 
 //another
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 }

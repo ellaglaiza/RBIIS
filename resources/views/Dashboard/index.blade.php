@@ -7,7 +7,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top: -520px; " >
+<<<<<<< HEAD
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+=======
                         <h1 class="h1 mb-0 text-gray-800 " >Dashboard</h1>
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                         <a href="" class=""><i
                                 class=""></i></a>
                     </div>

@@ -69,6 +69,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
         //population
         Route::get('/reports/Population', 'ReportController@savepopulation')->name('population.save');
+<<<<<<< HEAD
+        Route::get('/reports/SeniorCitizen', 'ListPopulationController@savesenior')->name('senior.save');
+        Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
+
+        //certificate fo indigency
+        Route::get('/reports/Certificate-of-Indigency', 'ReportController@savecertificateofindigency')->name('certificateofindigency.save');
+        Route::post('/reports/Indigency', 'ReportController@saveindigency')->name('indigency.save');
+=======
         //populatiobyage
         Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
         //senior citizen
@@ -88,6 +96,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         //MonitoringReport
         Route::get('/reports/MonitoringReport', 'ListPopulationController@saveMonitoringReport')->name('MonitoringReport.save');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
+
+>>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
       
     });
 });

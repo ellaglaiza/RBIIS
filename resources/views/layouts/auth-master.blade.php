@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Registry Barangay Inhabitant Information System</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('auth/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
