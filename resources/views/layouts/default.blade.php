@@ -19,6 +19,8 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('auth/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
+    <link href="{{ asset('auth/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -62,7 +64,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                     <i class="fas fa-id-card fa-2x text-gray-300"></i> 
                     <span>Resident Profile</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -76,12 +78,12 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                     <i class="fas fa-chart-bar fa-2x text-gray-300"></i>
                     <span>Reports</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="bg-white py-3 collapse-inner rounded">
                         <h6 class="collapse-header">Barangay Reports:</h6>
                         <a class="collapse-item" href="{{ route('population.save') }}">Population</a>
                         <a class="collapse-item" href="{{ route('populationbyage.save') }}">Population by Age</a>
@@ -90,15 +92,24 @@
                         <a class="collapse-item" href="{{ route('OFW.save') }}">Overseas Filipino Worker</a>
                         <a class="collapse-item" href="{{ route('soloparent.save') }}">Solo Parent</a>
                         <a class="collapse-item" href="{{ route('Unemployed.save') }}">Unemployed</a>
-                        <a class="collapse-item" href="">Children's Out of School</a>
-                     
+                        <a class="collapse-item" href="{{ route('ChildrensOutofSchool.save') }}">Children's Out of School</a>
+                        <a class="collapse-item" href="{{ route('HouseholdSurvey.save') }}">Household Survey of 2023</a>
+                        <a class="collapse-item" href="{{ route('MonitoringReport.save') }}">Monitoring Report</a>
 
 
                     </div>
                 </div>
             </li>
-
-            <!-- Divider -->
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-file-signature fa-2x text-gray-300"></i> 
+                <span>Certificate of Indigency</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-certificate"></i>
+                    <span>Baranagay Clearance</span></a>
+            </li>
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -179,14 +190,17 @@
     <script src="{{ asset('auth/js/sb-admin-2.min.js')}}"></script>
 
     <!-- Page level plugins -->
-     <script src="{{ asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('auth/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('auth/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ asset('auth/js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{ asset('auth/js/demo/chart-pie-demo.js')}}"></script>
-    <script src="{{asset('auth/js/demo/datatables-demo.js') }}"></script>
-<script>
+    <script src="{{ asset('auth/js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('auth/js/demo/chart-pie-demo.js') }}"></script>
+    <script src="{{ asset('auth/js/demo/datatables-demo.js') }}"></script>
+
+
+
+<!-- <script>
     $(document).ready(function() {
         $.ajax({
             url: '/reports/PopulationByAge',
@@ -200,7 +214,7 @@
         });
     });
 </script>
-
+ -->
 
 
 

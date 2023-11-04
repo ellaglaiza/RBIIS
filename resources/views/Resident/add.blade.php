@@ -22,6 +22,7 @@
         @include('layouts.partials.messages')
          <form action="{{ route('residentprofile.save') }}"  method="post">
             @csrf
+            
             <h3 class="m-1"  style="font-weight: bolder; font-size: 30px; margin-top: -333px;">Personal Information</h3>
                    
                         <div class="col-md-12" style="  margin-top: 15px;">
@@ -91,6 +92,7 @@
                                 </select>
                               </div>
                             </div>
+
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Civil Status </label>
@@ -103,15 +105,25 @@
                                 </select>
                               </div>
                            </div>
-                             <div class="col-md-12">
+                             <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
                                  <select class="form-control" name="sex">
-                                  <option disabled></option>
                                   <option></option>
                                   <option>PWD</option>
                                   <option>Solo Parent</option>
-                                 
+                                  <option>Childrens Out of School 15-24 yrs. old</option>
+                                  <option>Belongs to Indigenous People</option>
+                                </select>
+                              </div>
+                           </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Household (with/without) Toilets</label>
+                                 <select class="form-control" name="sex">
+                                  <option></option>
+                                  <option>Household with Toilets</option>
+                                  <option>Household without Toilets</option>
                                 </select>
                               </div>
                            </div>
@@ -122,26 +134,18 @@
                                 <input class= "form-control" name="address" placeholder=""></input>
                               </div>
                            </div>
-                            <div class="col-md-6" style="margin-top: 34px;">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
-                                <input class= "form-control" name="HouseholdNo" placeholder=""></input>
-                              </div>
-                           </div>
-                              <div class="col-md-6">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">No. Of Household Members:</label>
-                                <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number"></input>
-                              </div>
-                           </div>
                              <div class="col-md-6">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Purok</label>
+                                <label style="font-family: emoji; font-weight: 500; margin-top: 34px;">Purok</label>
                                 <select name="purok" class="form-control" required="">
                                   <option disabled>Select Purok</option>
-                                  @foreach($puroks as $purok)
-                                  <option>{{ $purok->purok_name}}</option>
-                                  @endforeach
+                                  <option>Santan</option>
+                                  <option>Camia</option>
+                                  <option>Bougainvilla</option>
+                                  <option>Orchids</option>
+                                  <option>Rosal</option>
+                                  <option>Daisy</option>
+                                  <option>Adelfa</option>
                                 </select>
                               </div>
                            </div>
@@ -169,25 +173,39 @@
                                  <input type="text" name="region"  class="form-control" >
                               </div>
                            </div>
-                           <div class="col-md-4">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">No. Of Family Members:</label>
+                                <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number"></input>
+                              </div>
+                           </div>                         
+                         <div class="col-md-6" style="">
+                          <div class="form-group">
+                            <label style="font-family: emoji; font-weight: 500;">Number of Families inside the Household:</label>
+                            <input class="form-control" name="numFamilies" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                          </div>
+                        </div>
+                        <div class="col-md-12" style="display: none;" id="household_number_div">
+                            <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
+                                <input class="form-control" name="HouseholdNo" placeholder="" id="household_number_input">
+                            </div>
+                        </div>
+                           <div class="col-md-6">
                               <div class="form-group">
                                <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Contact Details</h3>
-                                <label style="font-family: emoji; font-weight: 500;">Landline Number:</label>
-                                <input class= "form-control" name="landlineNo." placeholder=""></input>
-                              </div>
-                           </div>
-                            <div class="col-md-4" style="margin-top: 34px;">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Contact Number:</label>
+                               <label style="font-family: emoji; font-weight: 500;">Contact Number:</label>
                                 <input class= "form-control" name="contact_number" placeholder="+63"></input>
                               </div>
                            </div>
-                              <div class="col-md-4" style="margin-top: 35px;">
+                           
+                              <div class="col-md-6" style="margin-top: 35px;">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Email Address:</label>
-                                <input class= "form-control" name="email_add" placeholder=""></input>
+                                <label for="email" style="font-family: emoji; font-weight: 500;">Email Address:</label>
+                                <input type="email" class= "form-control" name="email" placeholder=""></input>
                               </div>
                            </div>
+                           <hr>
                            <div class="col-md-4">
                               <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
                               <div class="form-group">
@@ -211,8 +229,8 @@
                               <div class="form-group">
                                   <hr>
                                   <h3 style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
-                                  <label style="font-family: emoji; font-weight: 500;">Kindergarten</label>
-                                  <input class= "form-control"  name="kindergarten" placeholder="" ></input>
+                                  <label style="font-family: emoji; font-weight: 500;">Elementary</label>
+                                  <input class= "form-control"  name="elementary" placeholder="" ></input>
                               </div>
                            </div>
                            <div class="col-md-5">
@@ -221,22 +239,23 @@
                                 <input class= "form-control"  name="year_graduated1" placeholder="" style="margin-top: 1px;"></input>
                               </div>
                            </div>
+                         
                            <div class="col-md-7">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Elementary</label>
-                                <input class= "form-control"  name="elementary" placeholder="" ></input>
+                                <label style="font-family: emoji; font-weight: 500;">High School</label>
+                                <input class= "form-control"  name="high_school" placeholder="" ></input>
                               </div>
                            </div>
                            <div class="col-md-5">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Year Graduated</label>
-                                <input class= "form-control"  name="year_graduated2" placeholder="" ></input>
+                                <input class= "form-control"  name="year_graduated3" placeholder="" ></input>
                               </div>
                            </div>
-                           <div class="col-md-7">
+                            <div class="col-md-7">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">High School</label>
-                                <input class= "form-control"  name="high_school" placeholder="" ></input>
+                                <label style="font-family: emoji; font-weight: 500;">Senior High School</label>
+                                <input class= "form-control"  name="senior_HS" placeholder="" ></input>
                               </div>
                            </div>
                            <div class="col-md-5">
@@ -269,6 +288,18 @@
                                 <input class= "form-control"  name="year_graduated5" placeholder="" ></input>
                               </div>
                            </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Degree Received</label>
+                                <input class= "form-control"  name="degree_received" placeholder="" ></input>
+                              </div>
+                           </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Special Skills</label>
+                                <input class= "form-control"  name="special_skills" placeholder="" ></input>
+                              </div>
+                           </div>
                           
                            <div class="col-md-12">
                               <div class="form-group">
@@ -293,7 +324,7 @@
                             <div class="col-md-6" style="margin-top: 6px;">
                               <div class="form-group">
                                   <label style="font-family: emoji; font-weight: 500;">Types Of Employment</label>
-                                  <select class="form-control" name="types_of_employment">
+                                  <select class="form-control" name="type_of_employment">
                                     <option></option>
                                     <option>Permanent/Regular</option>
                                     <option>Seanonal</option>
@@ -314,24 +345,22 @@
                               </div>
                            </div>
 
-                           <div class="col-md-12" id="household_form" hidden>
+                      <div class="col-md-12" id="household_form" hidden>
                               <div class="form-group">
                                 <hr>
-                                <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Household Members</h3>
+                                <h3 class="m-1" style="font-weight: 200px; font-size: 20px;">Household Members</h3>
                               </div>
                               <div class="row" id="household_form_member">
 
                               </div>
                            </div>
 
-                                            </form>
 
-                      
-                        <center>
                <div class="col-md-5">
                   <button type="submit" class="btn btn-primary" style="background-color: black; margin-top: 10px;">Save</button>
                </div>
-               </center>
+              </div>
+              <a href="{{ route('dashboard') }}" class="btn btn-secondary" style="background-color: black; margin-left: 881px; margin-top: -66px;">Back</a>
             </div>
          </form>
       </div>  
@@ -350,7 +379,10 @@
       ageInput.value = age;
    });
 </script>
+
+
 <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+
 <script>
   $('#household_number').on('keyup', function(){
    
@@ -365,12 +397,20 @@
     } else {
       $('#household_form').attr('hidden','hidden');
     }
-
-    
-    
-    
     console.log((household_number-1));
     console.log(household_number);
   })
+</script>
+
+<script>
+    function showHouseholdNumber() {
+        let householdNumberDiv = document.getElementById('household_number_div');
+        let numFamiliesInput = document.getElementById('family_id');
+        if (numFamiliesInput.value !== '') {
+            householdNumberDiv.style.display = 'block';
+        } else {
+            householdNumberDiv.style.display = 'none';
+        }
+    }
 </script>
 @endsection

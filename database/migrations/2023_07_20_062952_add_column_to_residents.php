@@ -21,8 +21,7 @@ return new class extends Migration
             $table->string('elementary')->after('civil_status')->nullable();
             $table->string('high_school')->after('elementary');
             $table->string('college')->after('high_school');
-            $table->string('degree_received')->after('college');
-            $table->string('special_skills')->after('degree_received');
+           
         });
     }
 

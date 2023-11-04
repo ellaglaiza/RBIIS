@@ -34,13 +34,11 @@ class ResidentProfileController extends Controller
         $Residentsave->remarks = $request->remarks;  
         $Residentsave->barangay = $request->barangay;  
         $Residentsave->city_munipality = $request->city_munipality; 
-
         $Residentsave->province  = $request->province;
-
         $Residentsave->region = $request->region;
-          
         $Residentsave->landlineNo = $request->landlineNo;  
-        $Residentsave->contact_number = $request->contact_number;  
+        $Residentsave->contact_number = $request->contact_number; 
+        $Residentsave->householdNO = $request->householdNO;  
         $Residentsave->email = $request->email;  
         $Residentsave->mother_name = $request->mother_name;  
         $Residentsave->father_name = $request->father_name;  
@@ -49,6 +47,8 @@ class ResidentProfileController extends Controller
         $Residentsave->year_graduated1 = $request->year_graduated1;  
         $Residentsave->vocational = $request->vocational;  
         $Residentsave->year_graduated2 = $request->year_graduated2;  
+        $Residentsave->degree_received = $request->degree_received;  
+        $Residentsave->special_skills = $request->special_skills;  
         $Residentsave->year_graduated3 = $request->year_graduated3;  
         $Residentsave->year_graduated4 = $request->year_graduated4;  
         $Residentsave->year_graduated5 = $request->year_graduated5;  

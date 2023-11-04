@@ -81,10 +81,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/reports/SoloParent', 'ListPopulationController@saveSoloParent')->name('soloparent.save');
         //Unemployed
         Route::get('/reports/Unemployed', 'ListPopulationController@saveUnemployed')->name('Unemployed.save');
+        //Children's out of school
+        Route::get('/reports/ChildrensOutofSchool', 'ListPopulationController@saveChildrensOutofSchool')->name('ChildrensOutofSchool.save');
+        //HOUSEHOLD SURVEY 
+        Route::get('/reports/HouseholdSurvey', 'ListPopulationController@saveHouseholdSurvey')->name('HouseholdSurvey.save');
+        //MonitoringReport
+        Route::get('/reports/MonitoringReport', 'ListPopulationController@saveMonitoringReport')->name('MonitoringReport.save');
 
-
-
-       
       
     });
 });

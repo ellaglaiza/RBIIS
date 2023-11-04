@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('guardian')->after('father_name')->nullable();
             $table->string('senior_HS')->after('guardian')->nullable();
 
-            $table->year('year_graduated1')->after('senior_HS')->nullable();
+            $table->string('year_graduated1')->after('senior_HS')->nullable()->change();
             $table->string('vocational')->after('year_graduated1')->nullable();
             $table->year('year_graduated2')->after('vocational')->nullable();
             $table->year('year_graduated3')->after('year_graduated2')->nullable();

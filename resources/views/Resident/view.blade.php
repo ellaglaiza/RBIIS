@@ -3,7 +3,7 @@
 @section('content')
     <link href="{{ asset('style/style.css')}}" rel="stylesheet">
 
-  <div class="container mt-2"  >
+  <div class="container mt-12" style="font-weight: 800;"  >
         <div class="card mb-7" style="max-width: 500px;  ">
             <div class="row g-12" style="margin-right: -25.75rem">
                 <div class="col-md-12">
@@ -12,265 +12,200 @@
       @include('layouts.partials.messages')
          <form action="{{ route('list.edit.view') }}"  method="post">
           @csrf
-            <div class="col-md-12">
-    <div class="main-body">
-          <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="250">
-                  </div>
-                </div>
+            <section style="background-color: #eee;">
+ 
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+              class="rounded-circle img-fluid" style="width: 150px;">
+              <p class="text-muted mb-0">{{$resident->firstname}} {{$resident->middlename}} {{$resident->lastname}} </p>
+            
+            <p class="text-muted mb-1"></p>
+            <p class="text-muted mb-4"></p>
+            <div class="d-flex justify-content-center mb-2">
+              
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4 mb-lg-0" style="  height: 420px;">
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush rounded-3">
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <p class="mb-0">Place of Birth: </p>
+                <p class="mb-0">{{$resident->place_of_birth}}</p>
+              </li>
+               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <p class="mb-0">Civil Status: </p>
+                <p class="mb-0">{{$resident->civil_status}}</p>
+              </li>
+               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <p class="mb-0">Date of Birth: </p>
+                <p class="mb-0">{{$resident->date_of_birth}}</p>
+              </li>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <p class="mb-0">Contact Number:</p>
+                <p class="mb-0">{{$resident->contact_number}}</p>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <p class="mb-0">Email Address:</p>
+                <p class="mb-0">{{$resident->email}}</p>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Full Name:</p>
               </div>
-              <div class="card mt-3">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-3" style="text-align: center;"></h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                   
-                    </div>
-                  </div>
-  
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{$resident->firstname}} {{$resident->middlename}} {{$resident->lastname}} {{$resident->suffix}}</p>
               </div>
             </div>
-            <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h7 class="mb-0">Firstname</h7>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                     {{ $resident->firstname }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Middlename</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                     {{ $resident->middlename }} 
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Lastname</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                       {{ $resident->lastname }} 
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Suffix</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->suffix }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Age</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->age }}
-                    </div>
-                  </div>
-                  <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Purok</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->purok }}
-                    </div>
-                  </div>
-                </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Sex:</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{$resident->sex}}</p>
+              </div>
+              
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Age:</p>
+              </div>
+               <div class="col-sm-9">
+                <p class="text-muted mb-0">{{$resident->age}}</p>
               </div>
             </div>
-             <div class="col-md-12" >
-              <div class="card mb-3" >
-                <div class="card-body">
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Barangay</h6>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Religion: </p>
+              </div>
+               <div class="col-sm-9">
+                <p class="text-muted mb-0">{{$resident->religion}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Citizenship:</p>
+              </div>
+               <div class="col-sm-9">
+                <p class="text-muted mb-0">{{$resident->citizenship}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row" style="  height: 420px;">
+          <div class="col-md-6">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">Residents Address</span> 
+                <p class="mt-4 mb-1" style="font-size: medium;">Address: {{$resident->address}} </p>               
+                <p class="mt-4 mb-1" style="font-size: medium;">Barangay: {{$resident->barangay}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Purok: {{$resident->purok}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">City/Municipality: {{$resident->city_munipality}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Province:  {{$resident->province}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Region: {{$resident->region}}</p>
+                 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style=" height: 420px;">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">Educational Background
+                </p>
+                <p class="mb-1" style="font-size: medium;">Elementary:  {{$resident->elementary}} </p>
+                <div class="col-sm-9">
+              </div>
+                <p class="mt-4 mb-1" style="font-size: medium;">High School: {{$resident->high_school}}</p>
+                <div class="col-sm-9">
+              </div>
+                <p class="mt-4 mb-1" style="font-size: medium;">Senior High School: {{$resident->senior_HS}}</p>
+                <div class="col-sm-9">
+              </div>
+              <p class="mt-4 mb-1" style="font-size: medium;">College: {{$resident->college}}</p>
+                <div class="col-sm-9">
+              </div>
+              <p class="mt-4 mb-1" style="font-size: medium;">Vocational: {{$resident->vocational}}</p>
+                <div class="col-sm-9">
+              </div>
+               
+              </div>
+            </div>
+          </div>
+           
+          <div class="row" style="margin-top: 30px;   margin-left: -9.75rem;">
+          <div class="col-md-12">
+            <div class="card mb-12 mb-md-12" style="  float: right;
+  margin-inline: 0px;
+  margin-top: 1px;  width: 450px;  height: 261px;
+  margin-left: -155px;">
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">Family Background</span> 
+                <p class="mb-1" style="font-size: medium;">Mother's Name: {{$resident->mother_name}}</p>
+               <div class="col-sm-9">
+              </div>
+                <p class="mt-4 mb-1" style="font-size: medium;">Father's Name: {{$resident->father_name}}</p>
+                <div class="col-sm-9">
+              </div>
+                <p class="mt-4 mb-1" style="font-size: medium;">Guardian: {{$resident->guardian}}</p>
+                <div class="col-sm-9">
+              </div>
+
+              <div class="row" style="margin-top: 30px;   margin-left: -9.75rem;">
+          <div class="col-md-12">
+            <div class="card mb-12 mb-md-12" style="  margin-inline: 0px;
+  margin-top: -218px;
+  width: 445px;
+  margin-left: 592px;">
+
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">Occupation</span> 
+                <p class="mb-1" style="font-size: medium;">Status of Employment: {{$resident->status_of_employment}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Category of Employment: {{$resident->category_of_employment}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Types of Employment: {{$resident->type_of_employment}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Occupation: {{$resident->occupation}}</p>
+
+              </div>
+           </div>
+        </div>
+          <div class="row" style="margin-top: 30px;   margin-left: -9.75rem;">
+               <div class="col-md-12">
+                  <div class="card mb-12 mb-md-12" style=" float: right;
+  margin-inline: 0px;
+  margin-top: -9px;
+  width: 914px;
+  margin-left: 282px;">
+                    
+<div class="col-sm-12 text-secondary">
+  <div class="col-sm-12">
+                      <center><h5 class="mb-0" style="font-weight: bolder;">Household Members</h5></center>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                     {{ $resident->barangay }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Citizenship</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                     {{ $resident->citizenship }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Religion</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                       {{ $resident->religion }}
-                    </div>
-                  </div>
-                  <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Place of Birth</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->place_of_birth }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Date of Birth</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->date_of_birth }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->address }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Sex</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->sex }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Civil Status</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->civil_status }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Elementary</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->elementary }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">High School</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->high_school }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">College</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->college }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->year_graduated }}
-                    </div>
-                  </div>
-                    <hr>
-                    <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->year_graduated }}
-                    </div>
-                  </div>
-                    <hr>
-                    <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->year_graduated }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Degree Received</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->degree_received }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Occupation</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->occupation }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Source of Living</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->source_of_living }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Others</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $resident->others }}
-                    </div>
-                  </div>
-                    <hr>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <center><h6 class="mb-0">Household Members</h6></center>
-                    </div>
-                    <div class="col-sm-12 text-secondary">
+                    <div class="col-sm-12 text-secondary"><hr>
                       <div class="row">
                         <div class="col-md-4"><h6 class="mb-0" style="font-weight: bolder;">NAME</h6></div>
                         <div class="col-md-4"><h6 class="mb-0" style="font-weight: bolder;">DATE OF BIRTH</h6></div>
                         <div class="col-md-4"><h6 class="mb-0" style="font-weight: bolder;">RELATION</h6></div>
                       </div>
                     </div>
-                    <div class="col-sm-12 text-secondary">
+                    <div class="col-sm-12 text-secondary"><hr>
                         <?php 
                         $members_name = json_decode($resident->members_name);
                         $members_dob = json_decode($resident->members_dob);
@@ -282,23 +217,40 @@
                             <div class="row">
                                 <div class="col-md-4"><h6 class="mb-0">{{ $members_name[$x] }}</h6></div>
                                 <div class="col-md-4"><h6 class="mb-0">{{ $members_dob[$x] }}</h6></div>
-                                <div class="col-md-4"><h6 class="mb-0">{{ $members_relationship[$x] }}</h6></div>
+                                <div class="col-md-4"><h6 class="mb-0">{{ $members_relationship[$x] }}</h6></div><hr>
                             </div>
                         <?php
                             }
                         }
                         ?>
                     </div>
-                </div>
-              </div>
-            </div>
+
+    <?php 
+    if (!empty($resident->members_name) && !empty($resident->members_dob) && !empty($resident->members_relationship)) {
+        $members_name = json_decode($resident->members_name);
+        $members_dob = json_decode($resident->members_dob);
+        $members_relationship = json_decode($resident->members_relationship);
+        if (is_array($members_name) && is_array($members_dob) && is_array($members_relationship)) {
+            for ($x = 0; $x < count($members_name); $x++) {
+                ?>
+                
+   <div class="row">
+                                      <?php
+            }
+        } else {
+            // Handle the case where the decoded variables are not arrays
+            echo "Invalid data for household members.";
+        }
+    } else {
+        // Handle the case where the variables are empty or null
+        echo "No household members data available.";
+    }
+    ?>
+</div>
           </div>
         </div>
-    </div> 
-    </div>
-
+      </div>
+</section>
 </div>
 
 @endsection
-
-            

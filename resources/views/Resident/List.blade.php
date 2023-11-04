@@ -12,14 +12,13 @@
    }
 
 </style>
-<div class="content-header" style="font-weight: 700">
-   <section class="content">
-      <div class="container-fluid">
-         <h3>List</h3>
-         <div class="card card-info">
-
-            <div class="col-md-0">
-               <table id="example1" class="table table-hover">
+ <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary">Lists</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                      <tr>
                         <th>Firstname</th>
@@ -56,6 +55,8 @@
                   </tbody>
                </table>
             </div>
+          </div>
+        </div>
          </div>
       </div>
    </section>

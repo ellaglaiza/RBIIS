@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Resident;
+
 
 class DashboardController extends Controller
 {
@@ -12,7 +14,9 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
     public function index() 
-    {
-        return view('Dashboard.index');
-    }
+{
+    $totalPopulation = Resident::count(); 
+
+    return view('Dashboard.index', compact('totalPopulation'));
+}
 }
