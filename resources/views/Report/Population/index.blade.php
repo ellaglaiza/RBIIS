@@ -9,11 +9,7 @@
       text-align: center;
    }
    .card{
-<<<<<<< HEAD
-    margin-bottom: 100px;
-=======
     margin-bottom: 60px;
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
    }
    #print-button {
     display: block;
@@ -23,80 +19,15 @@
 }
 @media print {
     #print-button {
-        display: none;
+    display: none;
     }
 }
-<<<<<<< HEAD
-=======
-</style>
-<<<<<<< HEAD
-
-      <div class="row card p-">
-=======
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
-      <div class="card-header">
-       <section class="content">
-            <div class="container-fluid">
-               <div class="card card-info">
-<<<<<<< HEAD
-                  <br>
-                  <div class="col-md-12">
-                     <table id="example1" class="table table-hover">
-<div id="table-container">
-  <table id="example1" class="table table-hover">
-    <thead>
-      <tr>
-        <th>Purok</th>
-        <th>Male</th>
-        <th>Female</th>
-        
-        <th>Total Population by Purok</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for($x=0;$x < count($reports);$x++)
-      <tr>
-        <th>{{ $reports[$x]['purok_name'] }}</th>
-        <th>{{ $reports[$x]['total_male'] }}</th>
-        <th>{{ $reports[$x]['total_female'] }}</th>
-        <th>{{ $reports[$x]['total_household'] }}</th>
-      </tr>
-      @endfor
-    </tbody>
-  </table>
-=======
-                <br>
-                <div class="col-md-12">
-                    <table id="example1" class="table table-hover">
-                    <div id="table-container">
-                      <table id="example1" class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>Purok</th>
-                            <th>Male</th>
-                            <th>Female</th>
-                            <th>Total Population by Purok</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          @for($x=0;$x < count($reports);$x++)
-                          <tr>
-                            <th>{{ $reports[$x]['purok_name'] }}</th>
-                            <th>{{ $reports[$x]['total_male'] }}</th>
-                            <th>{{ $reports[$x]['total_female'] }}</th>
-                            <th>{{ $reports[$x]['total_household'] }}</th>
-                          </tr>
-                          @endfor
-                       </tbody>
-                      </table>
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
-  @endsection
->>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
 
 /* Custom CSS for the header */
 .header {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 28px;
 }
 
 .header h5, .header h5 {
@@ -135,12 +66,16 @@ tr:nth-child(even) {
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
 
+<td>
+
+    <a style="margin-left: 878px; padding: 5px;" id="print-button" href="{{ route('list.residentprofile.list') }}" class="btn btn-primary btn-sm">Resident Lists</a>                         
+</td>
   <!-- Add image tag here -->
   <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">
-                  <p style="">POPULATION</p>
+                  <p style="margin-top: -40px;">POPULATION</p>
                     <table id="example1" class="table table-hover">
                      <thead>
                         <tr>

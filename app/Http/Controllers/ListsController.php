@@ -18,28 +18,46 @@ class ListsController extends Controller
      public function listresidentprofile(){
         $resident=Resident::orderby('created_at','desc')->paginate(1000);
         
-        return view('Resident.List',[
+        return view('Resident.List', [
                 'residents'=>$resident
         ]);
     }
+
+     public function recordslistresidentprofile(){
+        $resident=Resident::orderby('created_at','desc')->paginate(1000);
+        
+        return view('HouseholdRecords.index', [
+                'residents'=>$resident
+        ]);
+    }
+    
+  
+// Assuming you have a controller method like this
+public function recordviewresidentprofile($id) {
+    $resident = Resident::find($id); // Assuming your model is named Resident
+
+    // Check if the resident is found
+    if (!$resident) {
+        abort(404); // Or handle the case where the resident is not found
+    }
+
+    return view('HouseholdRecords.view', compact('resident'));
+}
+
+
+      
      public function updateresidentprofile(Request $request){
         $Updatesave= Resident::where('id',$request->id)->first();
         $Updatesave->firstname = $request->firstname;
         $Updatesave->middlename = $request->middlename;
         $Updatesave->lastname= $request->lastname;
         $Updatesave->suffix = $request->suffix;
-<<<<<<< HEAD
         $Updatesave->age = $request->age;
         $Updatesave->place_of_birth = $request->place_of_birth;
         $Updatesave->purok = $request->purok;
         $Updatesave->address = $request->address;
-=======
         $Updatesave->purok = $request->purok;
-<<<<<<< HEAD
-=======
         $Updatesave->age = $request->age;
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
->>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
         $Updatesave->sex = $request->sex;
         $Updatesave->civil_status = $request->civil_status;
         $Updatesave->citizenship = $request->citizenship;

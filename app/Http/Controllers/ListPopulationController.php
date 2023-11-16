@@ -6,33 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Report;
 use App\Models\Resident;
 use App\Models\Purok;
-<<<<<<< HEAD
-=======
+
 use Illuminate\Support\Facades\DB;
 
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 
 
 class ListPopulationController extends Controller
 {
-<<<<<<< HEAD
-      public function savesenior()
-{
-    $puroks = Purok::all();
-    $data_array = [];
-
-    foreach ($puroks as $purok) {
-        $count_male = Resident::where([['purok', $purok->populationby_age], ['sex', 'Male']])->get();
-        $count_female = Resident::where([['purok', $purok->populationby_age], ['sex', 'Female']])->get();
-        $household = Resident::where([['purok', $purok->populationby_age]])->get();
-        $total_population = 0;
-        
-       
-        $data_array[] = [
-            'populationby_age' => $purok->populationby_age,
-            'total_male' => count($count_male),
-            'total_female' => count($count_female),
-=======
+     
 public function savepopulationbyage()
 {
     // Define the age groups
@@ -40,7 +21,7 @@ public function savepopulationbyage()
         'Children 0-5 yrs. old' => ['min' => 0, 'max' => 5],
         'Children 6-12 yrs. old' => ['min' => 6, 'max' => 12],
         'Children 13-17 yrs. old' => ['min' => 13, 'max' => 17],
-        'Adult 18-35 yrs. old' => ['min' => 18, 'max' => 35], 
+        'Adult 18-35 yrs. old' => ['min' => 18, 'max' => 35],
         'Adult 36-50 yrs. old' => ['min' => 36, 'max' => 50],
         'Adult 51-65 yrs. old' => ['min' => 51, 'max' => 65],
         'Adult 66 yrs. old and above' => ['min' => 66, 'max' => 150],
@@ -69,47 +50,24 @@ public function savepopulationbyage()
             'populationby_age' => $ageGroup,
             'total_male' => $count_male,
             'total_female' => $count_female,
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
             'total_population' => $total_population,
         ];
     }
 
     $report = $data_array;
 
-<<<<<<< HEAD
-    return view('Report.SeniorCitizen.index', [
-        'reports' => $report,
-    ]);
-}
-
-   public function savepopulationbyage()
-=======
     return view('Report.PopulationByAge.index', [
         'reports' => $report,
     ]);
 }
-  
+ 
 
 public function savesenior()
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 {
     $puroks = Purok::all();
     $data_array = [];
 
     foreach ($puroks as $purok) {
-<<<<<<< HEAD
-        $count_male = Resident::where([['purok', $purok->populationby_age], ['sex', 'Male']])->get();
-        $count_female = Resident::where([['purok', $purok->populationby_age], ['sex', 'Female']])->get();
-        $household = Resident::where([['purok', $purok->populationby_age]])->get();
-        $total_population = 0;
-        
-       
-        $data_array[] = [
-            'populationby_age' => $purok->populationby_age,
-            'total_male' => count($count_male),
-            'total_female' => count($count_female),
-            'total_population' => $total_population,
-=======
         $count_male = Resident::where([['purok', $purok->purok_name], ['sex', 'Male'], ['age', '>=', 60]])->count();
         $count_female = Resident::where([['purok', $purok->purok_name], ['sex', 'Female'], ['age', '>=', 60]])->count();
         $total_population = Resident::where([['purok', $purok->purok_name], ['age', '>=', 60]])->count();
@@ -119,24 +77,22 @@ public function savesenior()
             'total_male' => $count_male,
             'total_female' => $count_female,
             'total_population' => $total_population, 
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
         ];
     }
 
-    $report = $data_array;
-
-<<<<<<< HEAD
-    return view('Report.PopulationByAge.index', [
-        'reports' => $report,
-    ]);
+   
+    return view('Report.SeniorCitizen.index', compact('data_array'));
 }
 
 
-=======
-    return view('Report.SeniorCitizen.index', [
-        'reports' => $report
-    ]);
-}
+public function listssavesenior ()
+    {
+         $seniorCitizens = Resident::where('age', '>=', 60)
+            ->select('firstname', 'middlename', 'lastname')
+            ->get();
+
+        return view('Report.SeniorCitizen.lists', compact('seniorCitizens'));
+    }
 
 public function savePWD()
 {
@@ -160,6 +116,16 @@ public function savePWD()
     return view('Report.PWD.index', compact('data_array'));
 }
 
+public function listsavePWD()
+{
+    // Fetch all solo parents from the resident table
+    $PWD = Resident::where('remarks', 'PWD')
+        ->select('firstname', 'middlename', 'lastname')
+        ->get();
+
+    // Return the view with the solo parent data
+    return view('Report.PWD.list', compact('PWD'));
+}
 
 public function saveOFW()
 {
@@ -182,6 +148,17 @@ public function saveOFW()
     }
 
     return view('Report.OFW.index', compact('data_array'));
+}
+
+public function listsaveOFW()
+{
+    // Fetch all solo parents from the resident table
+    $OFW = Resident::where('remarks', 'OFW')
+        ->select('firstname', 'middlename', 'lastname')
+        ->get();
+
+    // Return the view with the solo parent data
+    return view('Report.OFW.list', compact('OFW'));
 }
 
 public function saveSoloParent()
@@ -208,6 +185,16 @@ public function saveSoloParent()
     return view('Report.SoloParent.index', compact('data_array'));
 }
 
+public function listsaveSoloParent()
+{
+    // Fetch all solo parents from the resident table
+    $soloParents = Resident::where('remarks', 'Solo Parent')
+        ->select('firstname', 'middlename', 'lastname')
+        ->get();
+
+    // Return the view with the solo parent data
+    return view('Report.SoloParent.list', compact('soloParents'));
+}
 public function saveUnemployed()
 {
   
@@ -232,6 +219,16 @@ public function saveUnemployed()
     return view('Report.Unemployed.index', compact('data_array'));
 }
 
+public function listsaveUnemployed()
+{
+    // Fetch all solo parents from the resident table
+    $unemployed = Resident::where('status_of_employment', 'Unemployed')
+        ->select('firstname', 'middlename', 'lastname')
+        ->get();
+
+    // Return the view with the solo parent data
+    return view('Report.Unemployed.list', compact('unemployed'));
+}
 
 public function saveChildrensOutofSchool()
 {
@@ -241,8 +238,8 @@ public function saveChildrensOutofSchool()
     $data_array = [];
 
     foreach ($puroks as $purok) {
-        $count_male = Resident::where('purok', $purok)->where('remarks', 'Childrens Out of School 15-25 yrs. old')->where('sex', 'Male')->count();
-        $count_female = Resident::where('purok', $purok)->where('remarks', 'Childrens Out of School 15-25 yrs. old')->where('sex', 'Female')->count();
+        $count_male = Resident::where('purok', $purok)->where('remarks', 'Childrens Out of School 15-24 yrs. old')->where('sex', 'Male')->count();
+        $count_female = Resident::where('purok', $purok)->where('remarks', 'Childrens Out of School 15-24 yrs. old')->where('sex', 'Female')->count();
         $total_population = $count_male + $count_female;
 
 
@@ -256,6 +253,16 @@ public function saveChildrensOutofSchool()
 
 
     return view('Report.ChildrensOutofSchool.index', compact('data_array'));
+}
+public function listsaveChildrensOutofSchool()
+{
+    // Fetch all solo parents from the resident table
+    $OutofSchool = Resident::where('remarks', 'Childrens Out of School 15-24 yrs. old')
+        ->select('firstname', 'middlename', 'lastname')
+        ->get();
+
+    // Return the view with the solo parent data
+    return view('Report.ChildrensOutofSchool.list', compact('OutofSchool'));
 }
 
     
@@ -397,5 +404,4 @@ public function saveMonitoringReport(){
 
 
 //another
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 }

@@ -63,36 +63,29 @@ tr:nth-child(even) {
   <h5>Barangay of San Ramon</h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
-
-
-<td>
-     <a style="margin-left: 784px;" href="{{ route('list.Unemployed.save') }}" class="btn btn-primary btn-sm">Lists of All Unemployed</a>
- </td>
   <!-- Add image tag here -->
   <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>                           
              <section class="content">
                 <div class="col-md-12">
-                  <p style="margin-top: -40px;">Unemployed</p>
+                  <p style="margin-top: -40px;">Lists of All Unemployed</p>
                     <table id="example1" class="table table-hover">
-                     <thead>
-                             <tr>
-                                   <th>Unemployed By Purok</th>
-                                    <th>Male</th>
-                                    <th>Female</th>
-                                    <th>Total Population</th>
-                              </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($data_array as $data)
-                                      <tr>
-                                         <th>{{ $data['purok_name'] }}</th>
-                                          <th>{{ $data['total_male'] }}</th>
-                                          <th>{{ $data['total_female'] }}</th>
-                                          <th>{{ $data['total_population'] }}</th>
-                                      </tr>
-                                    @endforeach
-                                  </tbody>
+                      <thead>
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Middlename</th>
+                                            <th>Lastname</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($unemployed as $unemployed)
+                                            <tr>
+                                                <td>{{ $unemployed->firstname }}</td>
+                                                <td>{{ $unemployed->middlename }}</td>
+                                                <td>{{ $unemployed->lastname }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
                   </table>
                    </div>
            </section>

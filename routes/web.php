@@ -51,6 +51,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
         //List
         Route::get('/residentprofile/Lists', 'ListsController@listresidentprofile')->name('residentprofile.list');
+        //household records list
+        Route::get('/residentprofile/Lists/records', 'ListsController@recordslistresidentprofile')->name('records.residentprofile.list');
+
 
         //updates
         Route::get('/Lists/edit/{id}', 'ListsController@editresidentprofile')->name('list.edit');
@@ -63,45 +66,53 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
        //view
         Route::get('/Lists/view/{id}', 'ListsController@viewresidentprofile')->name('list.view');
         Route::post('/Lists/view', 'ListsController@viewresidentprofile')->name('list.edit.view');
+
+        //household records
+        Route::get('/Lists/view/records/{id}', 'ListsController@recordviewresidentprofile')->name('records.list');
+        Route::post('/Lists/view/records', 'ListsController@recordviewresidentprofile')->name('records.list.view');
+
+      
        
         
        //Reports
 
         //population
         Route::get('/reports/Population', 'ReportController@savepopulation')->name('population.save');
-<<<<<<< HEAD
-        Route::get('/reports/SeniorCitizen', 'ListPopulationController@savesenior')->name('senior.save');
-        Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
+
+         Route::get('/reports/Population/list', 'ReportController@listresidentprofile')->name('list.residentprofile.list');
 
         //certificate fo indigency
         Route::get('/reports/Certificate-of-Indigency', 'ReportController@savecertificateofindigency')->name('certificateofindigency.save');
         Route::post('/reports/Indigency', 'ReportController@saveindigency')->name('indigency.save');
-=======
         //populatiobyage
         Route::get('/reports/PopulationByAge', 'ListPopulationController@savepopulationbyage')->name('populationbyage.save');
         //senior citizen
+
         Route::get('/reports/SeniorCitizen', 'ListPopulationController@savesenior')->name('senior.save');
+        Route::get('/reports/SeniorCitizenlist', 'ListPopulationController@listssavesenior')->name('list.senior.save');
         //PWD
         Route::get('/reports/PWD', 'ListPopulationController@savePWD')->name('PWD.save');
+        Route::get('/reports/PWD/list', 'ListPopulationController@listsavePWD')->name('list.PWD.save');
+
         //OFW
         Route::get('/reports/OFW', 'ListPopulationController@saveOFW')->name('OFW.save');
+        Route::get('/reports/OFW/list', 'ListPopulationController@listsaveOFW')->name('list.OFW.save');
+
         //Solo Parent
         Route::get('/reports/SoloParent', 'ListPopulationController@saveSoloParent')->name('soloparent.save');
+         Route::get('/reports/SoloParent/list', 'ListPopulationController@listsaveSoloParent')->name('list.soloparent.save');
         //Unemployed
         Route::get('/reports/Unemployed', 'ListPopulationController@saveUnemployed')->name('Unemployed.save');
+        Route::get('/reports/Unemployed/list', 'ListPopulationController@listsaveUnemployed')->name('list.Unemployed.save');
+
         //Children's out of school
         Route::get('/reports/ChildrensOutofSchool', 'ListPopulationController@saveChildrensOutofSchool')->name('ChildrensOutofSchool.save');
+        Route::get('/reports/ChildrensOutofSchool/list', 'ListPopulationController@listsaveChildrensOutofSchool')->name('list.ChildrensOutofSchool.save');
         //HOUSEHOLD SURVEY 
         Route::get('/reports/HouseholdSurvey', 'ListPopulationController@saveHouseholdSurvey')->name('HouseholdSurvey.save');
         //MonitoringReport
         Route::get('/reports/MonitoringReport', 'ListPopulationController@saveMonitoringReport')->name('MonitoringReport.save');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
-
->>>>>>> 7fbcd5b33e7e657161d421ec3cb433db2a2b7a1d
       
     });
 });

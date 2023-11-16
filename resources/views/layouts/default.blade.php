@@ -8,11 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-<<<<<<< HEAD
-    <title>Registry Barangay Inhabitant Information System</title>
-=======
     <title> Dashboard</title>
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('auth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -40,18 +36,10 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class=""></i>
                 </div>
-<<<<<<< HEAD
                  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg')}}" style="width: 60px;">
                 <div class="sidebar-brand-text mx-3">RBIIS </div>
             </a>
-=======
-                <img class="img-profile rounded-circle" src= "{{ asset('auth/img/admin1.jpg')}}" style="width: 60px;
-                  margin-right: -10px;">
-                    <div class="sidebar-brand-text mx-3">RBIIS </div>
-
-                                                            </a>
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
-
+               
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -98,35 +86,25 @@
                         <a class="collapse-item" href="{{ route('population.save') }}">Population</a>
                         <a class="collapse-item" href="{{ route('populationbyage.save') }}">Population by Age</a>
                         <a class="collapse-item" href="{{ route('senior.save') }}">Senior Citizen</a>
-<<<<<<< HEAD
-                        <a class="collapse-item" href="">Solo Parent</a>
-                        <a class="collapse-item" href="">Overseas Filipino Worker</a>
-                        <a class="collapse-item" href="">PWD</a>
-                        <a class="collapse-item" href="{{ route('certificateofindigency.save') }}">Certificate of Indigency</a>
-=======
-                        <a class="collapse-item" href="{{ route('PWD.save') }}">PWD</a>
+<!--                         <a class="collapse-item" href="">PWD</a>
+ --><!--                         <a class="collapse-item" href="{{ route('certificateofindigency.save') }}">Certificate of Indigency</a>
+ -->                        <a class="collapse-item" href="{{ route('PWD.save') }}">PWD</a>
                         <a class="collapse-item" href="{{ route('OFW.save') }}">Overseas Filipino Worker</a>
                         <a class="collapse-item" href="{{ route('soloparent.save') }}">Solo Parent</a>
                         <a class="collapse-item" href="{{ route('Unemployed.save') }}">Unemployed</a>
                         <a class="collapse-item" href="{{ route('ChildrensOutofSchool.save') }}">Children's Out of School</a>
-                        <a class="collapse-item" href="{{ route('HouseholdSurvey.save') }}">Household Survey of 2023</a>
+                        <a class="collapse-item" href="{{ route('HouseholdSurvey.save') }}">Household Survey</a>
                         <a class="collapse-item" href="{{ route('MonitoringReport.save') }}">Monitoring Report</a>
-
-
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
                     </div>
                 </div>
             </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">
-                    <i class="fas fa-file-signature fa-2x text-gray-300"></i> 
-                <span>Certificate of Indigency</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
-                    <i class="fas fa-certificate"></i>
-                    <span>Baranagay Clearance</span></a>
+                <a class="nav-link" href="{{ route('records.residentprofile.list') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Household Records</span></a>
             </li>
+
+             
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -211,7 +189,6 @@
     <script src="{{ asset('auth/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-<<<<<<< HEAD
     <script src="{{ asset('auth/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('auth/js/demo/chart-pie-demo.js') }}"></script>
     <script src="{{ asset('auth/js/demo/datatables-demo.js') }}"></script>
@@ -256,6 +233,5 @@
 
 
 
->>>>>>> 75d72e283339b3e7eef427576aa04b7116e590a9
 </body>
 </html>

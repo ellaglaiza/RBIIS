@@ -1,3 +1,4 @@
+
 @extends('layouts.default')
 
 @section('content')
@@ -19,7 +20,7 @@
 }
 @media print {
     #print-button {
-        display: none;
+    display: none;
     }
 }
 
@@ -27,6 +28,7 @@
 .header {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 28px;
 }
 
 .header h5, .header h5 {
@@ -65,17 +67,31 @@ tr:nth-child(even) {
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
 
+
   <!-- Add image tag here -->
   <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">
-                  <h2 style="TEXT-ALIGN: center;">CERTIFICATE OF INDIGENCY</h2>
-                  <h5 style="text-align: justify; margin-inline: 200px; margin-top: 40px; font-size: x-large;">TO WHOM IT MAY CONCERN:</h5>
-                  <h6 style="text-align: justify; margin-inline: 255px; font-size: x-large; margin-top: 70px;">THIS IS TO CERTIFY that _______________, of legal age,  a<br> bonafide  resident of _______________of_____________________ has been found as one of<br> the indigents of the said barangay.</h6><br>
-                  <h6 style="text-align: justify; margin-inline: 255px; font-size: x-large;">THIS CERTIFIES FURTHER that __________ has no real<br> property holdings and not engaged in any business.</h6><br>
-                  <h6 style="text-align: justify; margin-inline: 255px; font-size: x-large;">DONE this _____ day of __________ at ____________________,<br> ____________________.</h6>
-
+                  <p style="margin-top: -40px;">List of Residents </p>
+                    <table id="example1" class="table table-hover">
+                      <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Middlename</th>
+                                <th>Lastname</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                @foreach ($allResidents as $resident)
+                                    <tr>
+                                        <td>{{ $resident->firstname }}</td>
+                                        <td>{{ $resident->middlename }}</td>
+                                        <td>{{ $resident->lastname }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                  </table>
                    </div>
            </section>
           <link rel="stylesheet" href="{{ asset('auth/css/print.css') }}" media="print">

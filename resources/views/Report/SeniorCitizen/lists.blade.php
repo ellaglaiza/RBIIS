@@ -18,7 +18,7 @@
 }
 @media print {
     #print-button {
-        display: none;
+    display: none;
     }
 }
 
@@ -26,6 +26,7 @@
 .header {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 28px;
 }
 
 .header h5, .header h5 {
@@ -63,36 +64,31 @@ tr:nth-child(even) {
   <h5>Barangay of San Ramon</h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
-
-
-<td>
-     <a style="margin-left: 784px;" href="{{ route('list.Unemployed.save') }}" class="btn btn-primary btn-sm">Lists of All Unemployed</a>
- </td>
   <!-- Add image tag here -->
   <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
-</div>                           
-             <section class="content">
+</div>
+         <section class="content">
                 <div class="col-md-12">
-                  <p style="margin-top: -40px;">Unemployed</p>
+                  <p style="margin-top: -40px;">List of Senior Citizens</p>
                     <table id="example1" class="table table-hover">
                      <thead>
-                             <tr>
-                                   <th>Unemployed By Purok</th>
-                                    <th>Male</th>
-                                    <th>Female</th>
-                                    <th>Total Population</th>
-                              </tr>
+                                    <tr>
+                                        <th>Firstname</th>
+                                         <th>Middlename</th>
+                                          <th>Lastname</th>
+                                        <!-- Add more columns as needed -->
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($data_array as $data)
-                                      <tr>
-                                         <th>{{ $data['purok_name'] }}</th>
-                                          <th>{{ $data['total_male'] }}</th>
-                                          <th>{{ $data['total_female'] }}</th>
-                                          <th>{{ $data['total_population'] }}</th>
-                                      </tr>
+                                    @foreach ($seniorCitizens as $senior)
+                                        <tr>
+                                            <td>{{ $senior->firstname }}</td> 
+                                            <td>{{ $senior->middlename }}</td> 
+                                            <td>{{ $senior->lastname }}</td>
+                                            <!-- Add more cells as needed -->
+                                        </tr>
                                     @endforeach
-                                  </tbody>
+                                </tbody>
                   </table>
                    </div>
            </section>
@@ -117,4 +113,3 @@ tr:nth-child(even) {
           <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i></button>
        </div>
 @endsection
-

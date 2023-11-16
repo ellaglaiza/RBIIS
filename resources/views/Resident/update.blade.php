@@ -148,23 +148,10 @@
                                 <input class= "form-control" name="address" placeholder="" value="{{$resident->address}}"></input>
                               </div>
                            </div>
-                            <div class="col-md-6" style="margin-top: 34px;">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control" name="householdNO" placeholder="" value="{{$resident->householdNO}}"></input>
-                              </div>
-                           </div>
-                              <div class="col-md-6">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">No. Of Family Members:</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number" value="{{$resident->household_number}}"></input>
-                              </div>
-                           </div>
+                            
                              <div class="col-md-6">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Purok</label>
+                                <label style="font-family: emoji; font-weight: 500; margin-top: 33px;">Purok</label>
                                 <input type="hidden" name="id" value="{{$resident->id}}">
                                 <select name="purok" class="form-control" required=""  value="{{$resident->purok}}">
                                   <option disabled>Select Purok</option>
@@ -206,6 +193,25 @@
                                  <input type="text" name="region"  class="form-control" value="{{$resident->region}}">
                               </div>
                            </div>
+                              <div class="col-md-6">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">No. Of Family Members:</label>
+                                <input type="hidden" name="id" value="{{$resident->id}}">
+                                <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number" value="{{$resident->household_number}}"></input>
+                              </div>
+                           </div>
+                            <div class="col-md-6" style="">
+                          <div class="form-group">
+                            <label style="font-family: emoji; font-weight: 500;">Number of Families inside the Household:</label>
+                            <input class="form-control" name="numFamilies" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                          </div>
+                        </div>
+                        <div class="col-md-12" style="display: none;" id="household_number_div">
+                            <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
+                                <input class="form-control" name="householdNO" placeholder="" id="household_number_input">
+                            </div>
+                        </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Contact Details</h3>
@@ -434,5 +440,17 @@
     console.log((household_number-1));
     console.log(household_number);
   })
+</script>
+
+<script>
+    function showHouseholdNumber() {
+        let householdNumberDiv = document.getElementById('household_number_div');
+        let numFamiliesInput = document.getElementById('family_id');
+        if (numFamiliesInput.value !== '') {
+            householdNumberDiv.style.display = 'block';
+        } else {
+            householdNumberDiv.style.display = 'none';
+        }
+    }
 </script>
 @endsection

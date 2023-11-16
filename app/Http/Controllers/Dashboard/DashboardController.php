@@ -16,7 +16,9 @@ class DashboardController extends Controller
     public function index() 
 {
     $totalPopulation = Resident::count(); 
+    
 
     return view('Dashboard.index', compact('totalPopulation'));
 }
+
 }
