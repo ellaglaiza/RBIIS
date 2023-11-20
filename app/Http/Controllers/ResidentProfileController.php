@@ -19,7 +19,7 @@ class ResidentProfileController extends Controller
         $Residentsave->middlename = $request->middlename;
         $Residentsave->lastname= $request->lastname;
         $Residentsave->suffix = $request->suffix;
-        $Residentsave->age = 0;
+        $Residentsave->age = $request->age;;
         $Residentsave->place_of_birth = $request->place_of_birth;
         $Residentsave->purok = $request->purok;
         $Residentsave->address = $request->address;
@@ -56,9 +56,22 @@ class ResidentProfileController extends Controller
         $Residentsave->status_of_employment = $request->status_of_employment;  
         $Residentsave->category_of_employment = $request->category_of_employment;  
         $Residentsave->type_of_employment = $request->type_of_employment;  
-        $Residentsave->members_name = json_encode($request->members_name);
+        $Residentsave->family_id =$request->family_id; 
+        $Residentsave->members_firstname = json_encode($request->members_firstname);
+        $Residentsave->members_middlename = json_encode($request->members_middlename);
+        $Residentsave->members_lastname = json_encode($request->members_lastname);
+        $Residentsave->members_qualifier = json_encode($request->members_qualifier);
+        $Residentsave->members_address = json_encode($request->members_address);
+        $Residentsave->members_placeofbirth = json_encode($request->members_placeofbirth);  
+        $Residentsave->members_sex = json_encode($request->members_sex);
+        $Residentsave->members_school = json_encode($request->members_school);
+        $Residentsave->members_religion = json_encode($request->members_religion);
+        $Residentsave->members_occupation = json_encode($request->members_occupation);
         $Residentsave->members_dob = json_encode($request->members_dob);
         $Residentsave->members_relationship = json_encode($request->members_relationship);
+        $Residentsave->members_remark = json_encode($request->members_remark);
+        $Residentsave-> $members_school = json_encode($request-> $members_school);
+
 
         if($Residentsave->save()) {
              return redirect()->back()->withErrors('Successfully Saved!');

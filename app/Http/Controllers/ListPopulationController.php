@@ -85,15 +85,15 @@ public function savesenior()
 }
 
 
-public function listssavesenior ()
-    {
-         $seniorCitizens = Resident::where('age', '>=', 60)
-            ->select('firstname', 'middlename', 'lastname')
-            ->get();
+public function listssavesenior()
+{
+    $seniorCitizens = Resident::where('age', '>=', 60)
+        ->select('firstname', 'middlename', 'lastname')
+        ->orderBy('lastname') 
+        ->get();
 
-        return view('Report.SeniorCitizen.lists', compact('seniorCitizens'));
-    }
-
+    return view('Report.SeniorCitizen.lists', compact('seniorCitizens'));
+}
 public function savePWD()
 {
     $puroks = Resident::distinct('purok')->pluck('purok');
@@ -118,15 +118,13 @@ public function savePWD()
 
 public function listsavePWD()
 {
-    // Fetch all solo parents from the resident table
     $PWD = Resident::where('remarks', 'PWD')
         ->select('firstname', 'middlename', 'lastname')
+        ->orderBy('lastname') // Sort by lastname in ascending order
         ->get();
 
-    // Return the view with the solo parent data
     return view('Report.PWD.list', compact('PWD'));
 }
-
 public function saveOFW()
 {
     // Replace 'Resident' with your actual model name
@@ -152,12 +150,11 @@ public function saveOFW()
 
 public function listsaveOFW()
 {
-    // Fetch all solo parents from the resident table
-    $OFW = Resident::where('remarks', 'OFW')
+    $OFW = Resident::where('remarks', 'Overseas Filipino Workers')
         ->select('firstname', 'middlename', 'lastname')
+        ->orderBy('lastname') // Sort by lastname in ascending order
         ->get();
 
-    // Return the view with the solo parent data
     return view('Report.OFW.list', compact('OFW'));
 }
 
@@ -187,12 +184,13 @@ public function saveSoloParent()
 
 public function listsaveSoloParent()
 {
-    // Fetch all solo parents from the resident table
+    // Fetch solo parents from the resident table and sort them by lastname
     $soloParents = Resident::where('remarks', 'Solo Parent')
         ->select('firstname', 'middlename', 'lastname')
+        ->orderBy('lastname') // Sort by lastname in ascending order
         ->get();
 
-    // Return the view with the solo parent data
+    // Return the view with the sorted solo parent data
     return view('Report.SoloParent.list', compact('soloParents'));
 }
 public function saveUnemployed()
@@ -224,6 +222,7 @@ public function listsaveUnemployed()
     // Fetch all solo parents from the resident table
     $unemployed = Resident::where('status_of_employment', 'Unemployed')
         ->select('firstname', 'middlename', 'lastname')
+        ->orderBy('lastname') // Sort by lastname in ascending order
         ->get();
 
     // Return the view with the solo parent data
@@ -259,6 +258,7 @@ public function listsaveChildrensOutofSchool()
     // Fetch all solo parents from the resident table
     $OutofSchool = Resident::where('remarks', 'Childrens Out of School 15-24 yrs. old')
         ->select('firstname', 'middlename', 'lastname')
+        ->orderBy('lastname') // Sort by lastname in ascending order
         ->get();
 
     // Return the view with the solo parent data
@@ -273,8 +273,8 @@ public function saveHouseholdSurvey(){
     $total_female = Resident::where('sex', 'Female')->count(); // Count the total female 
     $total_population = Resident::count(); // Count the total population
     $total_HouseholdNo = Resident::distinct('HouseholdNO')->count(); // Assuming 'household_id' is the column representing households
-    $total_withoutToilets = Resident::where('landlineNo', 'Household without Toilets')->count(); 
-    $total_withToilets = Resident::where('landlineNo', 'Household with Toilets')->count(); 
+    // $total_withoutToilets = Resident::where('landlineNo', 'Household without Toilets')->count(); 
+    // $total_withToilets = Resident::where('landlineNo', 'Household with Toilets')->count(); 
     $total_male_pwd = Resident::where('remarks', 'PWD')->where('sex', 'Male')->count();
     $total_female_pwd = Resident::where('remarks', 'PWD')->where('sex', 'Female')->count();
     $total_population_pwd = $total_male_pwd + $total_female_pwd;
@@ -282,18 +282,23 @@ public function saveHouseholdSurvey(){
     $total_male_senior = Resident::where('age', '>=', 60)->where('sex', 'Male')->count();
     $total_female_senior = Resident::where('age', '>=', 60)->where('sex', 'Female')->count();
     $total_population_senior = $total_male_senior + $total_female_senior; // Total senior citizens is the sum of senior males and females
-  $total_nofamily = Resident::select('householdNO', DB::raw('MAX(family_id) as total_family'))
-        ->groupBy('householdNO')
-        ->get();
+ $total_nofamily = Resident::select('householdNO', DB::raw('MAX(family_id) as total_family'))
+    ->groupBy('householdNO')
+    ->get();
 
-    $sum = 0;
-    foreach ($total_nofamily as $resident) {
-        $sum += $resident->total_family;
-    }
+$sum = 0;
+foreach ($total_nofamily as $resident) {
+    $sum += (int)$resident->total_family;
+}
+
+
+$total_withToilets = Resident::where('landlineNo', 'Household without Toilets')->count();
+
+// Count households without toilets
+$total_withoutToilets = $total_HouseholdNo - $total_withToilets;
+
 
     return view('Report.HouseholdSurvey.index', compact('total_male', 'total_HouseholdNo', 'total_female', 'total_population', 'total_male_pwd', 'total_female_pwd', 'total_population_pwd', 'total_male_senior', 'total_female_senior', 'total_population_senior','total_withoutToilets', 'total_withToilets', 'sum'));
-
-
 
 
 }

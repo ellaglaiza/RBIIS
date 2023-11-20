@@ -48,6 +48,7 @@
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
+  
 }
 
 th {
@@ -69,7 +70,7 @@ tr:nth-child(even) {
 
 
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">
@@ -77,19 +78,19 @@ tr:nth-child(even) {
                     <table id="example1" class="table table-hover">
                       <thead>
                             <tr>
-                                <th>Firstname</th>
-                                <th>Middlename</th>
                                 <th>Lastname</th>
+                                <th>Middlename</th>
+                                <th>Middlename</th>
                             </tr>
                         </thead>
                             <tbody>
-                                @foreach ($allResidents as $resident)
-                                    <tr>
-                                        <td>{{ $resident->firstname }}</td>
-                                        <td>{{ $resident->middlename }}</td>
-                                        <td>{{ $resident->lastname }}</td>
-                                    </tr>
-                                @endforeach
+                              @foreach ($sortedResidents as $resident)
+                                  <tr>
+                                      <td>{{ $resident->lastname }}</td>
+                                      <td>{{ $resident->middlename }}</td>
+                                      <td>{{ $resident->firstname }}</td>
+                                  </tr>
+                              @endforeach
                             </tbody>
                   </table>
                    </div>

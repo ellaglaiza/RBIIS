@@ -12,7 +12,7 @@
    }
    #print-button {
     display: block;
-    width: 100px;
+    width: 109px;
     margin-left: 40%;
     
 }
@@ -61,15 +61,15 @@ tr:nth-child(even) {
   <h5>Republic of the Philippines</h5>
   <h5>Province of Southern Leyte</h5>
   <h5>Municipality of Bontoc</h5>
-  <h5>Barangay of San Ramon</h5><br>
+  <h5><strong>Barangay of San Ramon</strong></h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
 
  <td>
-    <a style="margin-left: 784px;" href="{{route('list.PWD.save')}}" class="btn btn-primary btn-sm">Lists of All the PWD</a>                         
+    <a style="margin-left: 889px;" href="{{route('list.PWD.save')}}" class="btn btn-primary btn-sm"  id="print-button">Lists of PWD</a>                         
 </td>
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -305px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">
@@ -98,7 +98,7 @@ tr:nth-child(even) {
            </section>
           <link rel="stylesheet" href="{{ asset('auth/css/print.css') }}" media="print">
                   <div style="">
-                      <h6 style="text-decoration: underline; margin-left: 68%; margin-top: 5%;"> ERNESTO  E. TACARDON  JR.</h6>
+                      <h6 style="text-decoration: underline; margin-left: 71%; margin-top: 5%;"><strong>RENE T. FUSTANES</strong></h6>
                       <h6 style="margin-left: 72%;  ">Punong Barangay</h6>
                      
                   </div>

@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 
+    <link rel="icon" href="{{ asset('auth/img/admin1.png') }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Dashboard</title>
+    <title>RBIIS | Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('auth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -36,7 +37,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class=""></i>
                 </div>
-                 <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg')}}" style="width: 60px;">
+                 <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png')}}" style="width: 60px;">
                 <div class="sidebar-brand-text mx-3">RBIIS </div>
             </a>
                

@@ -13,7 +13,7 @@
    }
    #print-button {
     display: block;
-    width: 100px;
+    width: 170px;
     margin-left: 40%;
     
 }
@@ -62,15 +62,15 @@ tr:nth-child(even) {
   <h5>Republic of the Philippines</h5>
   <h5>Province of Southern Leyte</h5>
   <h5>Municipality of Bontoc</h5>
-  <h5>Barangay of San Ramon</h5><br>
+  <h5><strong>Barangay of San Ramon</strong></h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
 
 <td>
-    <a style="margin-left: 784px;" href="{{route('list.ChildrensOutofSchool.save')}}" class="btn btn-primary btn-sm">Lists of Childrens Out of School</a>                         
+    <a style="margin-left: 811px;" href="{{route('list.ChildrensOutofSchool.save')}}" class="btn btn-primary btn-sm" id="print-button">Children's Out of School</a>                         
 </td>
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">

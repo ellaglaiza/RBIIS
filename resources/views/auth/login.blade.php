@@ -1,62 +1,44 @@
 @extends('layouts.auth')
 
 @section('content')
-    <form method="post" action="{{ route('login.perform') }}">
-
-         <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9" style="margin-top: -10px;">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0 justify-content-center" style="height: -300px; width: -10px;">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block"></div>
-                            <div class="col-lg-6" style="    margin-inline: 467px; ">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
-                                        <div class="form-group">
-                                            @csrf
-                                             <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
-                                              <label for="floatingName">Email or Username</label>
-                                              @if ($errors->has('username'))
-                                                  <span class="text-danger text-left">{{ $errors->first('username') }}</span>
-                                              @endif
-                                        </div>
-                                        <div class="form-group">
-                                              <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
-                                                <label for="floatingPassword">Password</label>
-                                                @if ($errors->has('password'))
-                                                    <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-                                                @endif  
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary btn-user btn-block" type="submit">
-                                            Login
-                                        </button>
-                                        <hr>
-                                         
-                                    <hr>
-                                  
-                                 <!--    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <form method="post" id="submitForm" action="{{ route('login.perform') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+        <!-- /.login-logo -->
+         <div class="card card-outline card-info" style="width: auto; max-width: 322px; margin-inline: auto; margin-top: 100px;">
+            <div class="card-header text-center">
+               <a href="index.html" class="brand-link">
+               <img src="{{ asset('auth/img/admin1.png')}}" style="object-fit: fill; width: -14px; height: 103px;">
+               </a>
+            </div>
+            @include('layouts.partials.messages')
+            <div class="card-body">
+                <label for="floatingName">Email or Username</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Email" required="required" autofocus>
+                    @if ($errors->has('username'))
+                        <span class="text-danger text-left">{{ $errors->first('username') }}</span>
+                    @endif
+                  </div>
+                 <label for="floatingPassword">Password</label>
+                   <div class="input-group mb-3">
+                     
+                    <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
+                   
+                    @if ($errors->has('password'))
+                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                    @endif
+                  </div>
+                  <div class="row">
+                     <div class="col-6 offset-lg-3">
+                        <center>
+                         <button type="submit" class="btn btn-info btn-block" style="background-color: blue;" style="color: white">Login</button>
+                         <!-- <button type="submit" class="btn btn-info btn-block" style="background-color: #aa8800;" style="color: White ">Sign Up</button> -->
+                     </div>
+                  </div>
 
             </div>
-
-        </div>
+            <!-- /.card-body -->
+         </div>
+         <!-- /.card -->
     </form>
 @endsection

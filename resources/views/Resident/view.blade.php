@@ -58,8 +58,8 @@
                 <p class="mb-0">{{$resident->contact_number}}</p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <p class="mb-0">Email Address:</p>
-                <p class="mb-0">{{$resident->email}}</p>
+                <p class="mb-0">Email Address:  {{$resident->email}}</p>
+                <p class="mb-0"></p><hr>
               </li>
 
             </ul>
@@ -120,32 +120,23 @@
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">Residents Address</span> 
-                <p class="mt-4 mb-1" style="font-size: medium;">Household Number:{{$resident->householdNO}}</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Household Number:  {{$resident->householdNO}}</p><hr>
                 <div class="col-sm-9">
                 <p class="text-muted mb-0"></p>
               </div>
-                <p class="mt-4 mb-1" style="font-size: medium;">No. Of Household Members:</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Barangay: {{$resident->barangay}} </p><hr>
                 <div class="col-sm-9">
                 <p class="text-muted mb-0"></p>
               </div>
-                <p class="mt-4 mb-1" style="font-size: medium;">Purok:</p>
-                <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$resident->purok}} </p>
-              </div>
-                <p class="mt-4 mb-1" style="font-size: medium;">Barangay:</p>
+              <p class="mt-4 mb-1" style="font-size: medium;">City/Municipality:  {{$resident->city_munipality}} </p><hr>
                 <div class="col-sm-9">
                 <p class="text-muted mb-0"></p>
               </div>
-              <p class="mt-4 mb-1" style="font-size: medium;">City/Municipality:</p>
+              <p class="mt-4 mb-1" style="font-size: medium;">Province: {{$resident->province}} </p><hr>
                 <div class="col-sm-9">
                 <p class="text-muted mb-0"></p>
               </div>
-              <p class="mt-4 mb-1" style="font-size: medium;">Province:</p>
-                <div class="col-sm-9">
-                <p class="text-muted mb-0"></p>
-              </div>
-              <p class="mt-4 mb-1" style="font-size: medium;">Region:</p>
+              <p class="mt-4 mb-1" style="font-size: medium;">Region: {{$resident->region}} </p><hr>
                 <div class="col-sm-9">
                 <p class="text-muted mb-0"></p>
               </div>
@@ -157,25 +148,25 @@
               <div class="card-body">
                 <p class="mb-4"><span class="text-primary font-italic me-1">Educational Background
                 </p>
-                <p class="mb-1" style="font-size: medium;">Elementary:</p>
+                <p class="mb-1" style="font-size: medium;">Elementary: {{$resident->elementary}}</p><hr>
                 <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$resident->elementary}} </p>
+                <p class="text-muted mb-0"> </p>
               </div>
-                <p class="mt-4 mb-1" style="font-size: medium;">High School:</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">High School: {{$resident->high_school}} </p><hr>
                 <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$resident->high_school}} </p>
+                <p class="text-muted mb-0"></p>
               </div>
-                <p class="mt-4 mb-1" style="font-size: medium;">Senior High:</p>
+                <p class="mt-4 mb-1" style="font-size: medium;">Senior High: {{$resident->senior_high}}</p><hr>
                 <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$resident->senior_high}}  </p>
+                <p class="text-muted mb-0">  </p>
               </div>
-              <p class="mt-4 mb-1" style="font-size: medium;">College:</p>
+              <p class="mt-4 mb-1" style="font-size: medium;">College: {{$resident->college}}</p><hr>
                 <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$resident->college}} </p>
+                <p class="text-muted mb-0"> </p>
               </div>
-              <p class="mt-4 mb-1" style="font-size: medium;">Vocational:</p>
+              <p class="mt-4 mb-1" style="font-size: medium;">Vocational: {{$resident->Vocational}}</p><hr>
                 <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$resident->Vocational}} </p>
+                <p class="text-muted mb-0"> </p>
               </div>
                
               </div>
@@ -238,31 +229,31 @@
                     </div>
                     <div class="col-sm-12 text-secondary"><hr>
                         <?php 
-                        $members_name = json_decode($resident->members_name);
+                        $members_firstname = json_decode($resident->members_firstname);
                         $members_dob = json_decode($resident->members_dob);
                         $members_relationship = json_decode($resident->members_relationship);
                         
-                        if ($members_name !== null && $members_dob !== null && $members_relationship !== null) {
-                            for ($x = 0; $x < count($members_name); $x++) {
+                        if ($members_firstname !== null && $members_dob !== null && $members_relationship !== null) {
+                            for ($x = 0; $x < count($members_firstname); $x++) {
                         ?>
                             <div class="row">
-                                <div class="col-md-4"><h6 class="mb-0">{{ $members_name[$x] }}</h6></div>
+                                <div class="col-md-4"><h6 class="mb-0">{{ $members_firstname[$x] }}</h6></div>
                                 <div class="col-md-4"><h6 class="mb-0">{{ $members_dob[$x] }}</h6></div>
                                 <div class="col-md-4"><h6 class="mb-0">{{ $members_relationship[$x] }}</h6></div><hr>
                             </div>
                         <?php
-                            }
+                         }
                         }
                         ?>
                     </div>
 
     <?php 
-    if (!empty($resident->members_name) && !empty($resident->members_dob) && !empty($resident->members_relationship)) {
-        $members_name = json_decode($resident->members_name);
+    if (!empty($resident->members_firstname) && !empty($resident->members_dob) && !empty($resident->members_relationship)) {
+        $members_firstname = json_decode($resident->members_firstname);
         $members_dob = json_decode($resident->members_dob);
         $members_relationship = json_decode($resident->members_relationship);
-        if (is_array($members_name) && is_array($members_dob) && is_array($members_relationship)) {
-            for ($x = 0; $x < count($members_name); $x++) {
+        if (is_array($members_firstname) && is_array($members_dob) && is_array($members_relationship)) {
+            for ($x = 0; $x < count($members_firstname); $x++) {
                 ?>
                 
    <div class="row">

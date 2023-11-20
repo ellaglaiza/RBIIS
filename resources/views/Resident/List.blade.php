@@ -27,7 +27,6 @@
                         <th>Middlename</th>
                         <th>Lastname</th>
                         <th>Suffix</th>
-                        <th>Age</th>
                         <th>Sex</th>
                         <th>Purok</th>
 
@@ -44,7 +43,6 @@
                         <td>{{$ResidentProfile->middlename}}</td>
                         <td>{{$ResidentProfile->lastname}}</td>
                         <td>{{$ResidentProfile->suffix}}</td>
-                        <td>{{$ResidentProfile->age}}</td>
                         <td>{{$ResidentProfile->sex}}</td>
                         <td>{{$ResidentProfile->purok}}</td>
                         <td class="text-center">

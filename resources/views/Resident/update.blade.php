@@ -24,7 +24,7 @@
             @csrf
             
             <h3 class="m-1"  style="font-weight: bolder; font-size: 30px; margin-top: -333px;">Update</h3>
-                   
+                     <a href="{{ route('dashboard') }}" class="btn btn-secondary" style="background-color: green; margin-left: 881px; margin-top: -90px;">Back</a>
                         <div class="col-md-12" style="  margin-top: 15px;">
                         <div class="row">
                            <div class="col-md-4">
@@ -102,7 +102,6 @@
                                 </select>
                               </div>
                             </div>
-
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Civil Status </label>
@@ -200,18 +199,18 @@
                                 <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number" value="{{$resident->household_number}}"></input>
                               </div>
                            </div>
-                            <div class="col-md-6" style="">
-                          <div class="form-group">
+                            <div class="col-md-6">
+                        <div class="form-group">
                             <label style="font-family: emoji; font-weight: 500;">Number of Families inside the Household:</label>
-                            <input class="form-control" name="numFamilies" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                            <input class="form-control" name="family_id" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                        </div>
                           </div>
-                        </div>
-                        <div class="col-md-12" style="display: none;" id="household_number_div">
-                            <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
-                                <input class="form-control" name="householdNO" placeholder="" id="household_number_input">
-                            </div>
-                        </div>
+                         <div class="col-md-12" style="display: none;" id="household_number_div">
+                          <div class="form-group">
+                                  <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
+                                  <input class="form-control" name="householdNO" placeholder="" id="householdNO">
+                              </div>
+                          </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Contact Details</h3>
@@ -399,8 +398,7 @@
                   <button type="submit" class="btn btn-primary" style="background-color: black; margin-top: 10px;">Save</button>
                </div>
               </div>
-              <a href="{{ route('dashboard') }}" class="btn btn-secondary" style="background-color: black; margin-left: 881px; margin-top: -66px;">Back</a>
-            </div>
+            
          </form>
       </div>  
 </div>
@@ -428,7 +426,7 @@
         $('#household_form').removeAttr('hidden');
         $('#household_form_member').empty();
         for(let x = 0; x < (household_number-1); x++){
-          $('#household_form_member').append('<div class="col-md-4"><div class="form-group"><label>Name:</label><input class= "form-control" name="members_name[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Relationship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div>');
+          $('#household_form_member').append('<div class="col-md-4"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_firstname[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Qualifier:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Sex:</label><input class= "form-control" name="members_sex[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Relationship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>School Grade/Level Completed:</label><input class= "form-control" name="members_school[]" placeholder=""></input></div></div><div class="col-md-6"><div class="form-group"><label>Ocupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-6"><div class="form-group"><label>Remarks:</label><input class= "form-control" name="members_remark[]" placeholder=""></input></div></div>');
         }
     } else {
       $('#household_form').attr('hidden','hidden');

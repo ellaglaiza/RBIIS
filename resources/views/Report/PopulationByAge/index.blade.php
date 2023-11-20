@@ -61,12 +61,12 @@ tr:nth-child(even) {
   <h5>Republic of the Philippines</h5>
   <h5>Province of Southern Leyte</h5>
   <h5>Municipality of Bontoc</h5>
-  <h5>Barangay of San Ramon</h5><br>
+  <h5><strong>Barangay of San Ramon</strong></h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
 
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 80px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">

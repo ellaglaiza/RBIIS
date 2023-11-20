@@ -52,12 +52,15 @@ class ReportController extends Controller
 
 
  
-    public function listresidentprofile()
+   public function listresidentprofile()
 {
-    // Fetch all solo parents from the resident table
-       $allResidents = Resident::select('firstname', 'middlename', 'lastname')->get();
-    // Return the view with the solo parent data
-    return view('Report.Population.list', compact('allResidents'));
+    // Fetch residents without sorting
+    $allResidents = Resident::select('firstname', 'middlename', 'lastname')->get();
+
+    // Sort residents alphabetically by last name
+    $sortedResidents = $allResidents->sortBy('lastname');
+
+    return view('Report.Population.list', compact('sortedResidents'));
 }
 }
 

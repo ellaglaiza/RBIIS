@@ -68,25 +68,25 @@ tr:nth-child(even) {
 
 
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">
                   <p style="margin-top: -40px;">Childrens Out of School</p>
                     <table id="example1" class="table table-hover">
                       <thead>
-                                        <tr>
-                                            <th>Firstname</th>
-                                            <th>Middlename</th>
+                                         <tr>
                                             <th>Lastname</th>
+                                            <th>Middlename</th>
+                                            <th>Firstname</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($OutofSchool as $OutofSchool)
                                             <tr>
-                                                <td>{{ $OutofSchool->firstname }}</td>
-                                                <td>{{ $OutofSchool->middlename }}</td>
                                                 <td>{{ $OutofSchool->lastname }}</td>
+                                                <td>{{ $OutofSchool->middlename }}</td>
+                                                <td>{{ $OutofSchool->firstname }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -95,7 +95,7 @@ tr:nth-child(even) {
            </section>
           <link rel="stylesheet" href="{{ asset('auth/css/print.css') }}" media="print">
                   <div style="">
-                      <h6 style="text-decoration: underline; margin-left: 68%; margin-top: 5%;"> ERNESTO  E. TACARDON  JR.</h6>
+                      <h6 style="text-decoration: underline; margin-left: 71%; margin-top: 5%;"> <strong>RENE T. FUSTANES </strong></h6>
                       <h6 style="margin-left: 72%;  ">Punong Barangay</h6>
                      
                   </div>

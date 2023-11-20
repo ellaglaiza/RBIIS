@@ -89,11 +89,22 @@ public function recordviewresidentprofile($id) {
         $Updatesave->occupation = $request->occupation; 
         $Updatesave->householdNO = $request->householdNO;   
         $Updatesave->status_of_employment = $request->status_of_employment;  
+        $Updatesave->family_id = $request->family_id;  
         $Updatesave->category_of_employment = $request->category_of_employment;  
         $Updatesave->type_of_employment = $request->type_of_employment;  
-        $Updatesave->members_name = json_encode($request->members_name);
+        $Updatesave->members_firstname = json_encode($request->members_firstname);
+        $Updatesave->members_middlename = json_encode($request->members_middlename);
+        $Updatesave->members_lastname = json_encode($request->members_lastname);
+        $Updatesave->members_qualifier = json_encode($request->members_qualifier);
+        $Updatesave->members_address = json_encode($request->members_address);
+        $Updatesave->members_placeofbirth = json_encode($request->members_placeofbirth);  
+        $Updatesave->members_sex = json_encode($request->members_sex);
+        $Updatesave->members_school = json_encode($request->members_school);
+        $Updatesave->members_religion = json_encode($request->members_religion);
+        $Updatesave->members_occupation = json_encode($request->members_occupation);
         $Updatesave->members_dob = json_encode($request->members_dob);
         $Updatesave->members_relationship = json_encode($request->members_relationship);
+        $Updatesave->members_remark = json_encode($request->members_remark);
 
 
 
@@ -144,9 +155,21 @@ public function recordviewresidentprofile($id) {
         $Deletesave->status_of_employment = $request->status_of_employment;  
         $Deletesave->category_of_employment = $request->category_of_employment;  
         $Deletesave->type_of_employment = $request->type_of_employment;  
-        $Deletesave->members_name = json_encode($request->members_name);
+        $Deletesave->family_id = $request->family_id;  
+        $Deletesave->members_firstname = json_encode($request->members_firstname);
+        $Deletesave->members_middlename = json_encode($request->members_middlename);
+        $Deletesave->members_lastname = json_encode($request->members_lastname);
+        $Deletesave->members_qualifier = json_encode($request->members_qualifier);
+        $Deletesave->members_address = json_encode($request->members_address);
+        $Deletesave->members_placeofbirth = json_encode($request->members_placeofbirth);  
+        $Deletesave->members_sex = json_encode($request->members_sex);
+        $Deletesave->members_school = json_encode($request->members_school);
+        $Deletesave->members_religion = json_encode($request->members_religion);
+        $Deletesave->members_occupation = json_encode($request->members_occupation);
         $Deletesave->members_dob = json_encode($request->members_dob);
         $Deletesave->members_relationship = json_encode($request->members_relationship);
+        $Deletesave->members_remark = json_encode($request->members_remark);
+
 
 
         if($Deletesave->delete()) {

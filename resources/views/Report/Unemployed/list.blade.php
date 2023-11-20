@@ -12,7 +12,7 @@
    }
    #print-button {
     display: block;
-    width: 100px;
+    width: 145px;
     margin-left: 40%;
     
 }
@@ -60,11 +60,11 @@ tr:nth-child(even) {
   <h5>Republic of the Philippines</h5>
   <h5>Province of Southern Leyte</h5>
   <h5>Municipality of Bontoc</h5>
-  <h5>Barangay of San Ramon</h5><br>
+  <h5><strong>Barangay of San Ramon</strong></h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 74px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>                           
              <section class="content">
                 <div class="col-md-12">
@@ -72,17 +72,17 @@ tr:nth-child(even) {
                     <table id="example1" class="table table-hover">
                       <thead>
                                         <tr>
-                                            <th>Firstname</th>
-                                            <th>Middlename</th>
                                             <th>Lastname</th>
+                                            <th>Middlename</th>
+                                            <th>Firstname</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($unemployed as $unemployed)
                                             <tr>
-                                                <td>{{ $unemployed->firstname }}</td>
-                                                <td>{{ $unemployed->middlename }}</td>
                                                 <td>{{ $unemployed->lastname }}</td>
+                                                <td>{{ $unemployed->middlename }}</td>
+                                                <td>{{ $unemployed->firstname }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -91,7 +91,7 @@ tr:nth-child(even) {
            </section>
           <link rel="stylesheet" href="{{ asset('auth/css/print.css') }}" media="print">
                   <div style="">
-                      <h6 style="text-decoration: underline; margin-left: 68%; margin-top: 5%;"> ERNESTO  E. TACARDON  JR.</h6>
+                      <h6 style="text-decoration: underline; margin-left: 71%; margin-top: 5%;"> <strong>RENE T. FUSTANES </strong></h6>
                       <h6 style="margin-left: 72%;  ">Punong Barangay</h6>
                      
                   </div>

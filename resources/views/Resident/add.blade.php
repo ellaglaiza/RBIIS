@@ -24,7 +24,8 @@
             @csrf
             
             <h3 class="m-1"  style="font-weight: bolder; font-size: 30px; margin-top: -333px;">Personal Information</h3>
-                   
+                   <a href="{{ route('dashboard') }}" class="btn btn-secondary" style="background-color: green; margin-left: 881px; margin-top: -90px;">Back</a>
+            </div>
                         <div class="col-md-12" style="  margin-top: 15px;">
                         <div class="row">
                            <div class="col-md-4">
@@ -96,7 +97,7 @@
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Civil Status </label>
-                                 <select class="form-control" name="sex">
+                                 <select class="form-control" name="civil_status">
                                   <option disabled>Select Civil Status</option>
                                   <option>Single</option>
                                   <option>Married</option>
@@ -108,7 +109,7 @@
                              <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
-                                 <select class="form-control" name="sex">
+                                 <select class="form-control" name="remarks">
                                   <option></option>
                                   <option>PWD</option>
                                   <option>Solo Parent</option>
@@ -180,18 +181,18 @@
                                 <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number"></input>
                               </div>
                            </div>                         
-                         <div class="col-md-6" style="">
-                          <div class="form-group">
+                           <div class="col-md-6">
+                        <div class="form-group">
                             <label style="font-family: emoji; font-weight: 500;">Number of Families inside the Household:</label>
-                            <input class="form-control" name="numFamilies" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                            <input class="form-control" name="family_id" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                        </div>
                           </div>
-                        </div>
-                        <div class="col-md-12" style="display: none;" id="household_number_div">
-                            <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
-                                <input class="form-control" name="HouseholdNo" placeholder="" id="household_number_input">
-                            </div>
-                        </div>
+                         <div class="col-md-12" style="display: none;" id="household_number_div">
+                          <div class="form-group">
+                                  <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
+                                  <input class="form-control" name="householdNO" placeholder="" id="householdNO">
+                              </div>
+                          </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Contact Details</h3>
@@ -207,22 +208,28 @@
                               </div>
                            </div>
                            <hr>
-                           <div class="col-md-4">
+                           <div class="col-md-6">
                               <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Mother's Name:</label>
                                 <input class= "form-control" name="mother_name" placeholder=""></input>
                               </div>
                            </div>
-                            <div class="col-md-4" style="margin-top: 34px;">
+                            <div class="col-md-6" style="margin-top: 34px;">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Father's Name:</label>
                                 <input class= "form-control" name="father_name" placeholder=""></input>
                               </div>
                            </div>
-                              <div class="col-md-4" style="margin-top: 33px;">
+                              <div class="col-md-6" >
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Guardian:</label>
+                                <input class= "form-control" name="guardian" placeholder=""></input>
+                              </div>
+                           </div>
+                            <div class="col-md-6" >
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Relationship to the Head</label>
                                 <input class= "form-control" name="guardian" placeholder=""></input>
                               </div>
                            </div>
@@ -361,8 +368,7 @@
                   <button type="submit" class="btn btn-primary" style="background-color: black; margin-top: 10px;">Save</button>
                </div>
               </div>
-              <a href="{{ route('dashboard') }}" class="btn btn-secondary" style="background-color: black; margin-left: 881px; margin-top: -66px;">Back</a>
-            </div>
+             
          </form>
       </div>  
 </div>

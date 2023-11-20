@@ -67,13 +67,13 @@ tr:nth-child(even) {
   <h5>Republic of the Philippines</h5>
   <h5>Province of Southern Leyte</h5>
   <h5>Municipality of Bontoc</h5>
-  <h5>Barangay of San Ramon</h5><br>
+  <h5><strong>Barangay of San Ramon</strong></h5><br>
   <h5>OFFICE OF THE PUNONG BARANGAY</h5>
   <hr>
   <h6>Monitoring Report</h6>
 
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.jpg') }}" style="width: 84px; margin-right: 550px; margin-top: -415px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -360px; margin-left: 157px;">
 <!-- 
   <h5>Region: VIII</h5>
   <h5>Province: Southern Leyte</h5>
@@ -148,13 +148,13 @@ tr:nth-child(even) {
                  <tr>
                     <td>Population by Sector</td>     
                 </tr>
-                <tr>
+               <!--  <tr>
                   <td>Labor Force</td>
                   <td>{{ $total_male_unemployed}}</td>
                   <td>{{ $total_female_unemployed }}</td>
                   <td>{{ $total_population_unemployed}}</td>
                   <td></td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td>Unemployed</td>
                   <td>{{ $total_male_unemployed}}</td>
@@ -256,7 +256,7 @@ tr:nth-child(even) {
                   </div>
                    <div class= "header3">
                     <p style="  margin-bottom: -3%; margin-top: 5% ;margin-left:5%;">Submitted by:</p>
-                      <h6 style="text-decoration: underline;  margin-top: 5%; margin-left: 10% "> ERNESTO E. TACARDON</h6>
+                      <h6 style="text-decoration: underline;  margin-top: 5%; margin-left: 12% "><strong>RENE T. FUSTANES</strong></h6>
                       <h6 style="margin-left: 13%;  ">Punong Barangay</h6>
                      
                   </div>
