@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('residents', function (Blueprint $table) {
             $table->integer('age')->after('civil_status');
             $table->string('date_of_birth')->after('place_of_birth');
-            $table->string('remarks')->after('college')->nullable();
+            $table->string('remarks')->after('date_of_birth')->nullable();
             $table->string('barangay')->after('remarks');
             $table->string('city_munipality')->after('barangay');
             $table->string('province')->after('city_munipality');
