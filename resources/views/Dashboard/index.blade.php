@@ -47,7 +47,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top: -520px; " >
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top: -500px; " >
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="" class=""><i
                                 class=""></i></a>
@@ -56,7 +56,8 @@
                     <!-- Content Row -->
                     <div class="row">
                          <div class="col-xl-3 col-md-6 mb-4">
-                                    <div class="card bg-primary text-white shadow h-100">
+                                    <div class="card bg-primary text-white shadow " style="height: 141px;
+    width: 237px;">
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col">
@@ -72,106 +73,129 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6 mb-4">
-                                    <div class="card border-left-success shadow h-100 py-2">
-                                        <div class="card-body" >
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col mr-2">
-                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Number of Families 
-                                                        </div>
-                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $sum }}</div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <i class="fa-light fa-family fa-lg" style="color: #2ac034;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+       <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card shadow h-100 py-2" style="background-color: #5a5c69; height: 141px;
+    width: 237px;">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success  mb-1" style="font-size: 15px; ">Total Number of Families</div>
+                    <div class="h5 mb-0 font-weight-bold" style="font-size: 30px; color: #2ac034;">{{ $sum }}</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-users  fa-3x" style="color: #2ac034;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Number of Household
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $total_HouseholdNo }}</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                     <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card  shadow h-100 py-1" style=" width: 237px; background-color: #1cc8c7">
+        <div class="card-body" style="  color: black;">
+            <div class="row no-gutters align-items-center">
+                <div class="col">
+                    <div class="text-xs font-weight-bold mb-1" style="font-size: 15px;  ">Total Number of Household</div>
+                    <div class="h4 mb-0 font-weight-bold " style="font-size: 25px; ">{{ $total_HouseholdNo }}</div>
+                   
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-home fa-3x " style="color: #c81c1c"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                         <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;" >
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-3 " style="color: #3e72f6">
+                    <div class="text-sm font-weight-bold  mb-1" style="color: #3e72f6" >Solo Parent</div>
+                    <div class="h4 font-weight-bold ">{{ $total_population_soloparent }}</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-user-friends fa-3x " style="color: #3e72f6" ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                         <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card  shadow  py-1" style="background-color: #22a4be80;  height: 141px;
+    width: 237px; " >
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-3">
+                    <div class="text-sm font-weight-bold  text-uppercase mb-1" style="color: #bd00ff">Persons with Disabilities (PWD)</div>
+                    <div class="h4 font-weight-bold text-gray-800">{{ $total_population_pwd }}</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-wheelchair fa-3x " style="color: #bb1eb4"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                       <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card  shadow  py-3" style="background-color: #beb522;   height: 141px;
+    width: 237px;">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-3">
+                    <div class="text-sm font-weight-bold mb-1" style="color: #3a3b45; font-size: 17px">Senior Citizen</div>
+                    <div class="h4 font-weight-bold " style="color: #3a3b45; font-size: 31px; color: #3a3b45">{{$total_population_senior}}</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-user-clock fa-3x " style="color: #3a3b45; font-size: 47px;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
                           <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card  shadow  py-1" style="background-color: #fff;  height: 141px;
+    width: 237px; background-color: #ff8a65">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-3">
+                    <div class="text-sm font-weight-bold  mb-1" style=" color: black;">Overseas Filipino Workers (OFW)</div>
+                    <div class="h4 font-weight-bold " style="  color: black;">{{ $total_population_ofw }}</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-plane fa-3x " style="  color: black;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card  shadow  py-1" style="background-color: #fff;  height: 141px;
+    width: 219px; background-color: #64b5f6">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-3">
+                    <div class="text-sm font-weight-bold  mb-1" style=" color: #e53935;">Unemployed</div>
+                    <div class="h4 font-weight-bold " style="  color: #e53935;">{{ $total_population_unemployed}}</div>
+                </div>
+                <div class="col-auto">
+   <i class="fas fa-user fa-3x" style="color: #e53935;"></i>
+                   </div>
+            </div>
+        </div>
+    </div>
+</div>
+                       <!--  <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                              Solo Parent </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_population_soloparent }}</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">PWD
-                                              </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_population_pwd }}</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                               Senior Citizen </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$total_population_senior}}</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                              OFW </div>
+                                              Deceased </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_population_ofw}}</div>
                                         </div>
                                         <div class="col-auto">
@@ -181,7 +205,7 @@
                                 </div>
                             </div>
                         </div>
-                 
+                  -->
                     </div>
                   
                     

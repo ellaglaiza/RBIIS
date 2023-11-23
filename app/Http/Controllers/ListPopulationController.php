@@ -272,7 +272,7 @@ public function saveHouseholdSurvey(){
     $total_male = Resident::where('sex', 'Male')->count(); // Count the total male 
     $total_female = Resident::where('sex', 'Female')->count(); // Count the total female 
     $total_population = Resident::count(); // Count the total population
-    $total_HouseholdNo = Resident::distinct('HouseholdNO')->count(); // Assuming 'household_id' is the column representing households
+    // Assuming 'household_id' is the column representing households
     // $total_withoutToilets = Resident::where('landlineNo', 'Household without Toilets')->count(); 
     // $total_withToilets = Resident::where('landlineNo', 'Household with Toilets')->count(); 
     $total_male_pwd = Resident::where('remarks', 'PWD')->where('sex', 'Male')->count();
@@ -291,9 +291,9 @@ foreach ($total_nofamily as $resident) {
     $sum += (int)$resident->total_family;
 }
 
+ $total_HouseholdNo = Resident::distinct('HouseholdNO')->count();
 
-$total_withToilets = Resident::where('landlineNo', 'Household without Toilets')->count();
-
+$total_withToilets = Resident::where('landlineNo', 'Household with Toilets')->count();
 // Count households without toilets
 $total_withoutToilets = $total_HouseholdNo - $total_withToilets;
 
