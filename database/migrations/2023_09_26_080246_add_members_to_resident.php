@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('email')->after('contact_number')->nullable();           
             $table->string('occupation')->after('email')->nullable();
             $table->string('status_of_employment')->after('occupation')->nullable();
-            $table->string('members_name')->after('category_of_employment')->nullable();
+            $table->string('members_name')->after('status_of_employment')->nullable();
             $table->string('members_dob')->after('members_name')->nullable();
             $table->string('members_relationship')->after('members_dob')->nullable();
             $table->string('householdNO')->after('members_relationship')->nullable();
