@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('residents', function (Blueprint $table) {
-            $table->renameColumn('members_name', 'members_firstname')->nullable();
             $table->string('members_middlename')->after('members_name')->nullable();
             $table->string('members_lastname')->after('members_middlename')->nullable();
             $table->string('members_qualifier')->after('members_lastname')->nullable();
