@@ -16,11 +16,8 @@ return new class extends Migration
             $table->string('place_of_birth')->after('sex');
             $table->string('citizenship')->after('place_of_birth');
             $table->string('religion')->after('citizenship');
-            $table->integer('age')->after('religion');
-            $table->string('civil_status')->after('age');
-            $table->string('elementary')->after('civil_status')->nullable();
-            $table->string('high_school')->after('elementary');
-            $table->string('college')->after('high_school');
+            $table->string('civil_status')->after('religion');
+            
            
         });
     }
