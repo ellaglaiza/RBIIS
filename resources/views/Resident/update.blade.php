@@ -115,28 +115,41 @@
                                 </select>
                               </div>
                            </div>
-                             <div class="col-md-6">
+                             <div class="col-md-4">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
                                   <input type="hidden" name="id" value="{{$resident->id}}">
                                  <select class="form-control" name="remarks" value="{{$resident->remarks}}" >
-                                  <option></option>
                                   <option>PWD</option>
+                                  <option>OFW</option>
                                   <option>Solo Parent</option>
                                   <option>Childrens Out of School 15-24 yrs. old</option>
                                   <option>Belongs to Indigenous People</option>                                  
                                 </select>
                               </div>
                            </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Household (with/without) Toilets</label>
+                                <label style="font-family: emoji; font-weight: 500;">Other Info</label>
                                  <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <select class="form-control" name="landlineNo" value="{{$resident->landlineNo}}" >
-                                  <option></option>
-                                  <option>Household with Toilets</option>
-                                  <option>Household without Toilets</option>
+                                 <select class="form-control" name="outofschool"  value="{{$resident->outofschool}}"  >
+                                   <option></option>
+                                    <option>Out of School Children(OSC) (6-14 years old)</option> 
+                                   <option>Out of School Youth(OSy) (14-24 years old)</option>
+                                   <option>Labor Force</option>
+                                   <option>Deceased</option>
+                                   <option>Transferred</option>
+                                   <option>New</option>
+
+
                                 </select>
+                              </div>
+                           </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;"> (PhilSys Card No.)</label>
+                                  <input type="hidden" name="id" value="{{$resident->id}}">
+                                 <input class= "form-control" name="landlineNo" placeholder=""></input>
                               </div>
                            </div>
                             <div class="col-md-6">
@@ -196,19 +209,21 @@
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">No. Of Family Members:</label>
                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input type="number" class= "form-control" name="householdMem" placeholder="" id="household_number" value="{{$resident->household_number}}"></input>
+                                <input type="number" class= "form-control" name="nooffamilymember" placeholder="" id="nooffamilymember" value="{{$resident->nooffamilymember}}"></input>
                               </div>
                            </div>
                             <div class="col-md-6">
                         <div class="form-group">
                             <label style="font-family: emoji; font-weight: 500;">Number of Families inside the Household:</label>
-                            <input class="form-control" name="family_id" placeholder="" id="family_id" oninput="showHouseholdNumber()">
+                            <input type="hidden" name="id" value="{{$resident->id}}">
+                            <input class="form-control" name="family_id" placeholder="" id="family_id" value="{{$resident->family_id}}" oninput="showHouseholdNumber()">
                         </div>
                           </div>
                          <div class="col-md-12" style="display: none;" id="household_number_div">
                           <div class="form-group">
                                   <label style="font-family: emoji; font-weight: 500;">Household Number:</label>
-                                  <input class="form-control" name="householdNO" placeholder="" id="householdNO">
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
+                                  <input class="form-control" name="householdNO" placeholder="" id="householdNO" value="{{$resident->householdNO}}">
                               </div>
                           </div>
                            <div class="col-md-6">
@@ -228,115 +243,31 @@
                               </div>
                            </div>
                            <hr>
-                           <div class="col-md-4">
-                              <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Mother's Name:</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control" name="mother_name" placeholder="" value="{{$resident->mother_name}}"></input>
-                              </div>
-                           </div>
-                            <div class="col-md-4" style="margin-top: 34px;">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Father's Name:</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control" name="father_name" placeholder="" value="{{$resident->father_name}}"></input>
-                              </div>
-                           </div>
-                              <div class="col-md-4" style="margin-top: 33px;">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Guardian:</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control" name="guardian" placeholder="" value="{{$resident->guardian}}"></input>
-                              </div>
-                           </div>
                                <div class="col-md-7">
                               <div class="form-group">
-                                  <hr>
-                                  <h3 style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
-                                  <label style="font-family: emoji; font-weight: 500;">Elementary</label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">
-                                  <input class= "form-control"  name="elementary" placeholder="" value="{{$resident->elementary}}"></input>
+                                <hr>
+                                <h3 style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
+                                  <label style="font-family: emoji; font-weight: 500;">HIGHEST EDUCATIONAL ATTAINMENT:         </label>
+                              <select name="members_school" class="form-control" required="">
+                                 <option enabled=""></option>
+                                  <option>Elementary</option>
+                                  <option>High School</option>
+                                  <option>College</option>
+                                  <option>Post Grad</option>
+                                  <option>Vocational</option>
+                                </select>                                
                               </div>
                            </div>
                            <div class="col-md-5">
-                              <div class="form-group">
-                                <label style="margin-top: 55px; font-family: emoji; font-weight: 500;">Year Graduated</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                <input class= "form-control"  name="year_graduated1" placeholder="" value="{{$resident->year_graduated1}}" style="margin-top: 1px;"></input>
+                              <div class="form-group" style="margin-top: 66px">
+                               <label style="font-family: emoji; font-weight: 500;">Please Specify:</label>
+                                <select name="specify" class="form-control" required="">
+                                  <option>Graduate</option>
+                                  <option>Under Graduate</option>
+                                </select>   
                               </div>
                            </div>
-                           <div class="col-md-7">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">High School</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="high_school" placeholder="" value="{{$resident->high_school}}" ></input>
-                              </div>
-                           </div>
-                           <div class="col-md-5">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Year Graduated</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="year_graduated2" placeholder="" value="{{$resident->year_graduated3}}"></input>
-                              </div>
-                           </div>
-                            <div class="col-md-7">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Senior High School</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="senior_HS" placeholder="" value="{{$resident->senior_HS}}"></input>
-                              </div>
-                           </div>
-                           <div class="col-md-5">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Year Graduated</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="year_graduated3" placeholder="" value="{{$resident->year_graduated3}}"></input>
-                              </div>
-                           </div>
-                           <div class="col-md-7">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">College</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="college" placeholder="" value="{{$resident->college}}"></input>
-                              </div>
-                           </div>
-                           <div class="col-md-5">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Year Graduated</label>
-                                 <input type="hidden" name="id" value="{{$resident->id}}">                                
-                                 <input class= "form-control"  name="year_graduated4" placeholder="" value="{{$resident->year_graduated4}}"></input>
-                              </div>
-                           </div>
-                             <div class="col-md-7">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Vocational</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="vocational" placeholder="" value="{{$resident->vocational}}"></input>
-                              </div>
-                           </div>
-                           <div class="col-md-5">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Year Graduated</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="year_graduated5" placeholder="" value="{{$resident->year_graduated5}}" ></input>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Degree Received</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="degree_received" placeholder=""  value="{{$resident->degree_received}}"></input>
-                              </div>
-                           </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Special Skills</label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                <input class= "form-control"  name="special_skills" placeholder=""  value="{{$resident->special_skills}}"></input>
-                              </div>
-                           </div>
-                         <div class="col-md-12">
+                         <div class="col-md-6">
                               <div class="form-group">
                                   <hr>
                                   <h3 style="font-weight: bolder; font-size: 20px;">Occupation</h3>
@@ -345,7 +276,7 @@
                                   <input class= "form-control"  name="occupation" placeholder="occupation" value="{{$resident->occupation}}"></input>
                               </div>
                            </div>
-                           <div class="col-md-6" style="margin-top: 6px;">
+                           <div class="col-md-6" style="margin-top: 56px;">
                               <div class="form-group">
                                   <label style="font-family: emoji; font-weight: 500;">Status Of Employment</label>
                                   <input type="hidden" name="id" value="{{$resident->id}}">                                 
@@ -357,29 +288,7 @@
                                   </select>
                               </div>
                            </div>
-                            <div class="col-md-6" style="margin-top: 6px;">
-                              <div class="form-group">
-                                  <label style="font-family: emoji; font-weight: 500;">Types Of Employment</label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                  <select class="form-control" name="type_of_employment" value="{{$resident->type_of_employment}}">
-                                    <option>Permanent/Regular</option>
-                                    <option>Seanonal</option>
-                                    <option>Casual</option>
-                                    <option>Emergency</option>
-                                  </select>
-                              </div>
-                           </div>
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                  <label style="margin-top: 6px; font-family: emoji; font-weight: 500;">Category Of Employment</label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                  <select class="form-control" name="category_of_employment" value="{{$resident->category_of_employment}}">
-                                    <option>Government</option>
-                                    <option>Private</option>
-                                  </select>
-                              </div>
-                           </div>
-
+                           
                            <div class="col-md-12" id="household_form" hidden>
                               <div class="form-group">
                                 <hr>
@@ -416,27 +325,25 @@
       ageInput.value = age;
    });
 </script>
-<script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
-<script>
-  $('#household_number').on('keyup', function(){
-   
-    var household_number = Number($('#household_number').val());
 
-    if(household_number > 1){
+<script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+
+<script>
+  $('#nooffamilymember').on('keyup', function(){
+   
+    var nooffamilymember = Number($('#nooffamilymember').val());
+
+    if(nooffamilymember > 1){
         $('#household_form').removeAttr('hidden');
         $('#household_form_member').empty();
-        for(let x = 0; x < (household_number-1); x++){
-          $('#household_form_member').append('<div class="col-md-4"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_firstname[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Qualifier:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Sex:</label><input class= "form-control" name="members_sex[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Relationship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>School Grade/Level Completed:</label><input class= "form-control" name="members_school[]" placeholder=""></input></div></div><div class="col-md-6"><div class="form-group"><label>Ocupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-6"><div class="form-group"><label>Remarks:</label><input class= "form-control" name="members_remark[]" placeholder=""></input></div></div>');
+        for(let x = 0; x < (nooffamilymember-1); x++){
+          $('#household_form_member').append('<div class="col-md-3"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_name[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Suffix:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Age:</label><input class= "form-control" name="members_age[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div> <div class="col-md-3"><div class="form-group"> <label style="font-family: emoji; font-weight: 500;">Sex </label><select class="form-control" name="members_sex[]"><option disabled>Select Sex</option><option>Male</option><option>Female</option></select></div></div><div class="col-md-3"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Citizenship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Occupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label><select class="form-control" name="members_remark[]"><option ></option> <option>PWD</option><option>Solo Parent</option><option>Overseas Filipino Workers</option> <option>Belongs to Indigenous People</option></select></div></div>');
         }
     } else {
       $('#household_form').attr('hidden','hidden');
     }
-
-    
-    
-    
-    console.log((household_number-1));
-    console.log(household_number);
+    console.log((nooffamilymember-1));
+    console.log(nooffamilymember);
   })
 </script>
 

@@ -17,7 +17,11 @@ class DashboardController extends Controller
     public function index() 
 {
     $totalPopulation = Resident::count(); 
-    
+    $total_population_deceased = Resident::where('outofschool', 'Deceased')->count();
+    $total_population_transferred = Resident::where('outofschool', 'Transferred')->count();
+
+    $total_population =  $totalPopulation - $total_population_deceased - $total_population_transferred;
+
 	$total_nofamily = Resident::select('householdNO', DB::raw('MAX(family_id) as total_family'))
 	    ->groupBy('householdNO')
 	    ->get();
@@ -37,10 +41,11 @@ class DashboardController extends Controller
    
  	$total_population_ofw = Resident::where('remarks', 'Overseas Filipino Workers')->count();
 
- 	$total_population_unemployed = Resident::where('status_of_employment', 'Unemployed')->count();
+	$total_population_unemployed = Resident::where('status_of_employment', 'Unemployed')->count();
 	
+
    
-	    return view('Dashboard.index', compact('totalPopulation', 'sum', 'total_HouseholdNo','total_population_pwd', 'total_population_senior', 'total_population_soloparent', 'total_population_ofw', 'total_population_unemployed'));
+	    return view('Dashboard.index', compact('totalPopulation','sum','total_HouseholdNo','total_population_pwd','total_population_senior','total_population_soloparent', 'total_population_ofw','total_population_unemployed','total_population_deceased','total_population'));
 }
 
 }

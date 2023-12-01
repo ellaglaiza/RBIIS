@@ -1,75 +1,269 @@
-<DOCTYPE html>
+
 <html>
 <head>
-<title>fgf</title>
+<title></title>
 <style type="text/css">
-    <title>RBIIS | Dashboard</title>
-  
-            .print-button-container {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                margin-top: 35px;
-            }
+<!--
+body { font-family: Arial; font-size: 15.8px; border: 5px solid; margin-top: 176px; width: 722px;
+    height: 839px; }
+.pos { position: absolute; z-index: 0; left: 0px; top: 0px }
+-->
+.sample-box {
+      width: 159px;
+      height: 2px;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    margin-top: 238px;
+  margin-left: 23px;
+    }
+    .sample-box1 {
+      width: 198px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 41px;
+  margin-left: 22px;
+    }
+    .sample-box2 {
+  width: 166px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 42px;
+  margin-left: 23px;
+}
+    .sample-box3 {
+  width: 472px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 45px;
+  margin-left: 22px;
+}
+    .sample-box4 {
+  width: 261px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 35px;
+  margin-left: 23px;
+}
+     .sample-box5 {
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 22px;
+     margin-left: 30px;
+    }   .sample-box6 {
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+     margin-top: -305px;
+  margin-left: 248px;
+    }
+    .sample-box7 {
+        width: 103px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -219px;
+  margin-left: 248px;
+    }
+     .sample-box8 {
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+     margin-top: 210px;
+  margin-left: 248px;
+    }
+    .sample-box10 {
+  width: 139px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 41px;
+  margin-left: 215px;
+}
+    .sample-box11 {
+  width: 187px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -23px;
+  margin-left: 313px;
+}
+     .sample-boxs {
+      width: 144px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -87px;
+  margin-left: 382px;
+    }
+    .sample-boxes {
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 18px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: -108px;
+  margin-left: 415px;
+    }
 
-            .print-button {
-                background-color: #007bff; /* Adjust as needed */
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 4px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-            }
-
-            .print-button i {
-                margin-right: 5px;
-            }
-             .print-button-container1 {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                margin-top: -893px;
-            }
-
-            .print-button1 {
-                background-color: #007bff; /* Adjust as needed */
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 4px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-            }
-
-            .print-button1 i {
-                margin-right: 5px;
-            }
-             #print-button {
-                display: block;
-                width: 100px;
-                margin-left: 40%;
-                
-            }
-            @media print {
-                #print-button {
-                    display: none;
-                }
-            }
-
-      </style>
-
+.box {
+    width: 150px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -23px;
+  margin-left: 555px;
+    }
+    .box1 {
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 18px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+     margin-top: -40px;
+    margin-left: 572px;
+    }
+ .box4 {
+  width: 52px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -24px;
+  margin-left: 383px;
+}
+   .box5 {
+  width: 180px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 36px;
+  margin-left: 529px;
+}
+    .boxs11{
+    width: 186px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 45px;
+  margin-left: 522px;
+    }
+    .boxs12 {
+  width: 116px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -158px;
+  margin-left: 591px;
+}
+    .boxs13 {
+  width: 104px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+  margin-left: 461px;
+}
+   .btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .card {
+      margin-bottom: 100px;
+      margin-bottom: 60px;
+    }
+    #print-button {
+      display: block;
+    width: 100px;
+    margin-left: 88%;
+    background-color: 99FF;
+    text-align: center;
+    position: relative;
+    margin-top: 847px;
+    }
+    @media print {
+      #print-button {
+        display: none;
+      }
+    } 
+    
 </style>
-          
-</head>
 
+<script>
+function printDocument() {
+  window.print();
+}
+</script>
+<button id="print-button" onclick="printDocument()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i style="font-size:24px" class="fa">&#xf02f;</i></i> Print</button></head>
 <body>
 
 
-<nobr><nowrap>
-<div class="pos" id="_0:0" style="top:0">
+<div class="pos" id="_0:0" style="top:-10px; ">
 <div class="pos" id="_60:41" style="top:41;left:60">
 <span id="_13.5" style="font-weight:bold; font-family:Arial; font-size:13.5px; color:#000000">
 RBI Form B<span style="font-weight:normal"> (Revised 2023)</span></span>
@@ -80,57 +274,66 @@ INDIVIDUAL RECORDS OF BARANGAY INHABITANT</span>
 </div>
 <div class="pos" id="_50:114" style="top:114;left:50">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-REGION:</span>
+REGION</span>
+<div class="pos" id="_50:114" style="top:-3;left:55">
+<span style="margin-inline: 30px;"></span>
+    {{$resident->firstname}}
+</div>
 </div>
 <div class="pos" id="_150:114" style="top:114;left:150">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-___________</span>
+:</span>
 </div>
 <div class="pos" id="_200:114" style="top:114;left:200">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-{{$resident->region}}______</span>
+</span>
 </div>
 <div class="pos" id="_250:114" style="top:114;left:250">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-</span>
+             </span>
 </div>
 <div class="pos" id="_450:114" style="top:114;left:450">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
- CITY/MUN:</span>
+ CITY/MUN</span>
+ <div class="pos" id="_450:114" style="top:-2;left:54">
+ <span style="margin-inline: 30px;"></span>
+    {{$resident->firstname}}
+</div>
 </div>
 <div class="pos" id="_550:114" style="top:114;left:550">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-__________________</span>
-</div>
-<div class="pos" id="_550:114" style="top:114;left:550">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-{{$resident->city_munipality}}____</span>
+:</span>
 </div>
 <div class="pos" id="_50:136" style="top:136;left:50">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-PROVINCE:</span>
+PROVINCE</span>
+<div class="pos" id="_50:136" style="top:-4;left:68">
+<span style="margin-inline: 23px;"></span>
+    {{$resident->firstname}}
 </div>
-<div class="pos" id="_150:136" style="top:136;left:147px">
+</div>
+<div class="pos" id="_150:136" style="top:136;left:150">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-___________________</span>
+:</span>
 </div>
-<div class="pos" id="_350:136" style="top:136;left:157px">
+<div class="pos" id="_350:136" style="top:136;left:350">
 <span id="_11.6" style=" font-family:Arial; font-size:11.6px; color:#000000">
-   {{$resident->province}}</span>
+               </span>
 </div>
 <div class="pos" id="_450:136" style="top:136;left:450">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-BARANGAY:</span>
+BARANGAY</span>
+<div class="pos" id="_450:136" style="top:-4;left:60">
+<span style="margin-inline: 27px;"></span>
+    {{$resident->firstname}}
+</div>
 </div>
 <div class="pos" id="_549:136" style="top:136;left:549">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-_____________________</span>
+:</span>
 </div>
-<div class="pos" id="_549:136" style="top:136;left:556px">
-<span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-{{$resident->barangay}}</span>
-</div>
-<div class="pos" id="_342:200" style="top:200;left:286px">
+
+<div class="pos" id="_342:200" style="top:200;left:264">
 <span id="_13.6" style="font-weight:bold; font-family:Arial; font-size:13.6px; color:#000000">
 PERSONAL INFORMATION</span>
 </div>
@@ -138,249 +341,251 @@ PERSONAL INFORMATION</span>
 <span id="_12.8" style="font-weight:bold; font-family:Arial; font-size:12.8px; color:#000000">
                                        </span>
 </div>
-<div class="pos" id="_49:246" style="top:246;left:49">
+ <div class="sample-box">
+<div class="pos" id="_49:246" style="top:245; left:49; margin-inline: 20px; margin-top: -4px;">
 <span id="_15.3" style="font-weight:bold; font-family:Arial; font-size:15.3px; color:#000000">
                  </span>
+        {{$resident->firstname}}
+  </div>
+  </div>
+
+<div class="pos" id="_49:264" style="top:264;left:49; margin-inline: 10px; margin-top: -1px;">
+<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000;">
+                                (PhilSys Card No.)</span>
 </div>
-<div class="pos" id="_49:264" style="top: 263px;
-  left: 112px;">
+ <div class="sample-box1">
+  <div class="pos" id="_49:264" style="top:305;left:49;">
+    <span style="margin-inline: 10px;"></span>
+    {{$resident->firstname}}
 
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-{{$resident->lastname}}</span>
-
+  </div>
 </div>
-<div class="pos" id="_49:264" style="top:264;left:49">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-   __________________________   </span>
-
-</div>
-<div class="pos" id="_49:264" style="top:284;left:49">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000 ;top:274;   margin-left: 28px;">
-                                (PhilSys Card No.) </span>
-</div>
-<div class="pos" id="_49:264" style="top:323;left:49">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-   __________________________     </span>
+<div class="pos" id="_49:328" style="top:328;left:49;  margin-inline: 10px; margin-top: -1px;">
+<span id="_12.1" style=" font-family:Arial; font-size:12.1px; color:#000000">
+<span id="_13.5" style=" font-size:13.5px">  </span><span id="_10.8" style=" font-size:10.8px"> (Last Name)</span></span>
 
 </div>
-<div class="pos" id="_49:264" style=" top: 321px;
-  left: 104px;">
+<div class="sample-box2">
+  <div class="pos" id="_250:330" style="top:307;left:268">
+    <span style="margin-inline: 10px;"></span>
+    {{$resident->firstname}}
+  </div>        
+ </div>
 
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->lastname}}</span>
-
-</div>
-<div class="pos" id="_49:328" style="top:340;left:49">
-<span id="_12.1" style=" font-family:Arial; font-size:12.1px; color:#000000; margin-left: 40px;">
-  <span id="_13.5" style=" font-size:13.5px">  </span><span id="_10.8" style=" font-size:10.8px"> (Last Name)</span></span>
-</div>
-<div class="pos" id="_49:264" style="top:323;left:231px;">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-   __________________________     </span>
-
-</div>
-<div class="pos" id="_49:264" style=" top: 321px;
-  left: 291px;">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->suffix}}</span>
-
-</div>
-<div class="pos" id="_250:330" style="top:340;left:250">
+<div class="pos" id="_250:330" style="top:330;left:250">
 <span id="_11.6" style=" font-family:Arial; font-size:11.6px; color:#000000">
+
             (Suffix, e.g., Jr., I, II, III)</span>
+ 
 </div>
-<div class="pos" id="_49:264" style="top:323;left:423px;">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-   __________________________     </span>
-
+<div class="sample-box3">
+  <div class="pos" id="_250:330" style="top:330;left:250">
+    <span style=""></span>
+  </div>
 </div>
-<div class="pos" id="_49:264" style=" top: 321px;
-  left: 485px;">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->firstname}}</span>
-
-</div>
-<div class="pos" id="_450:330" style="top:340;left:475px">
+<div class="pos" id="_450:330" style="top:330;left:450">
 <span id="_11.0" style=" font-family:Arial; font-size:11.0px; color:#000000">
     (First Name)</span>
 </div>
-<div class="pos" id="_49:264" style="top:323;left:636px;">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000">
-   __________________________     </span>
-
+<div class="sample-box4">
+  <div class="pos" id="_450:330" style="top:306;left:450">
+    <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
 </div>
-<div class="pos" id="_49:264" style=" top: 321px;
-  left: 711px;">
-
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->middlename}}</span>
-
 </div>
 
-<div class="pos" id="_600:330" style="top:340;left:691px">
+<div class="pos" id="_600:330" style="top:309;left:627">
+  <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+</div>
+<div class="pos" id="_600:330" style="top:330;left:600">
 <span id="_11.0" style=" font-family:Arial; font-size:11.0px; color:#000000">
                    (Middle Name)</span>
 </div>
+
+
 <div class="pos" id="_49:386" style="top:386;left:49">
 <span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-      __________________________           </span>
+               </span>
 </div>
-<div class="pos" id="_49:264" style="   top: 384px; left: 96px;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->date_of_birth}}</span>
-
-</div>
-<div class="pos" id="_49:397" style="top:399;left:68px;">
+<div class="sample-box11">
+  <div class="pos" id="_49:397" style="top:374;left:90">
+     <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+    </div>
+  </div>
+<div class="pos" id="_49:397" style="top:397;left:49">
 <span id="_10.1" style=" font-family:Arial; font-size:10.1px; color:#000000">
-              <span id="_11.5" style=" font-size:11.5px"> (Birth Date: mm/dd/yyyy)</span></span>
+  <span id="_11.5" style=" font-size:11.5px"> (Birth Date: mm/dd/yyyy)</span></span>
 </div>
-<div class="pos" id="_49:386" style="top:386;left:250px">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-      ______________________         </span>
-</div>
-<div class="pos" id="_49:264" style="   top: 384px; left: 288px;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->place_of_birth}}</span>
+<div class="sample-box7">
+  <div class="pos" id="_249:397" style="top:373;left:284">
+    <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+  </div>
+  </div>
 
-</div>
-<div class="pos" id="_249:397" style="top:399;left:288px">
+<div class="pos" id="_249:397" style="top:397;left:249">
 <span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
                 (Birth Place)</span>
 </div>
-<div class="pos" id="_49:386" style="top:386;left:405px">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-      __________________        </span>
-</div>
-<div class="pos" id="_49:264" style="   top: 384px; left: 430px;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->sex}}</span>
 
+<div class="pos" id="_399:397" style="top:374;left:409">
+  <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
 </div>
-<div class="pos" id="_399:397" style="top:399;left:446px">
+
+<div class="pos" id="_399:397" style="top:397;left:399">
 <span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
-                    (Sex)     </span>
+                    (Sex)  </span>
 </div>
-<div class="pos" id="_49:386" style="top:386;left:553px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-      __________________        </span>
-</div>
-<div class="pos" id="_49:264" style="   top: 384px; left: 590px;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->civil_status}}</span>
 
+<div class="pos" id="_249:397" style="top:375;left:515">
+  <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
 </div>
-<div class="pos" id="_399:397" style="top:399;left:576px">
-<span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
-                  (Civil Status)</span>
-</div>
-<div class="pos" id="_49:386" style="top:386;left:680px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-      ________________   </span>
-</div>
-<div class="pos" id="_49:264" style="   top: 384px; left: 688px;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->religion}}</span>
 
+ <div class="pos" id="_249:397" style="top:396;left:492">
+ <span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
+     (Civil Status)</span>   
 </div>
-<div class="pos" id="_649:397" style="top:399;left:705px">
+
+<div class="pos" id="_649:397" style="top:397;left:649">
+  <div class="sample-box11" style="margin-inline: -56px; margin-top: -28px; width: 111px">
+    <div class="pos" id="_649:397" style="top:-23;left:-8">
+    <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+  </div>
+  </div>
+</div>
+
+<div class="pos" id="_649:397" style="top:397;left:631">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
 (Religion)</span>
 </div>
-<div class="pos" id="_49:386" style="top:442;left:45px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-  _____________________________________________________________   </span>
-</div>
-<div class="pos" id="_49:264" style="     top: 439px;left: 122px;;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->address}}</span>
 
+<div class="pos" id="_191:455" style="top:444;left:253">
+ <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
 </div>
-<div class="pos" id="_191:455" style="top:455;left:191">
+
+<div class="pos" id="_191:455" style="top:464;left:191">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
                          (Residence Address)</span>
 </div>
-<div class="pos" id="_49:386" style="top:442;left:507px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-  ___________________________________   </span>
-</div>
-<div class="pos" id="_49:264" style="     top: 439px;left: 602px;;">
-<span id="_11.3" style=" font-family:Arial; font-size:11.3px; color:#000000  "  >
-{{$resident->citizenship}}</span>
+<div class="sample-box10">
+  <div class="pos" id="_593:455" style="top:443;left:610">
+     <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+  </div>  
+  </div>
 
-</div>
-<div class="pos" id="_593:455" style="top:455;left:593">
+<div class="pos" id="_593:455" style="top:462;left:589">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
              (Citizenship)</span>
 </div>
-<div class="pos" id="_49:386" style="top:501px;left:43px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-  ___________________________________   </span>
-</div>
-<div class="pos" id="_57:517" style="top:517;left:95px">
+<div class="box4">
+  <div class="pos" id="_57:517" style="top:503;left:138">
+     <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+    </div>
+  </div>
+
+<div class="pos" id="_57:517" style="top:523;left:57">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-                          (Profession / Occupation)                   </span>
+                          (Profession / Occupation)</span>
 </div>
-<div class="pos" id="_49:386" style="top:501px;left:303px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-  ____________________________  </span>
+
+<div class="pos" id="_57:517" style="top:505;left:402px">
+   <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
 </div>
-<div class="pos" id="_57:517" style="top:517;left:357px">
+
+<div class="pos" id="_57:517" style="top:522;left:360px">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-            (Contact Number)                       </span>
+              (Contact Number) </span>
 </div>
-<div class="pos" id="_49:386" style="top:501px;left:527px;">
-<span id="_11.7" style=" font-family:Arial; font-size:11.7px; color:#000000">
-  ____________________________  </span>
+<div class="sample-boxs">
+    <div class="pos" id="_632:517" style="top:503;left:612">
+       <span style="margin-inline: -5px;"></span>
+    {{$resident->firstname}}
+
+  </div>
 </div>
-<div class="pos" id="_632:517" style="top:517;left:581px">
+
+<div class="pos" id="_632:517" style="top:522;left:587">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
   (E-mail Address)</span>
 </div>
+<div class="samplebox2">
+    
+  </div>
 <div class="pos" id="_40:557" style="top:557;left:40">
-    <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-        HIGHEST EDUCATIONAL ATTAINMENT:</span>
-    <label>
-        <input type="checkbox" id="elementary" name="education" value="Elementary" style=" font-family:Arial; font-size:11.7px; color:#000000"> ELEMENTARY 
-    </label>
-    <label>
-        <input type="checkbox" id="highSchool" name="education" value="High School"> HIGH SCHOOL
-    </label>
-    <label>
-        <input type="checkbox" id="college" name="education" value="College"> COLLEGE
-    </label>
-    <label>
-        <input type="checkbox" id="postGrad" name="education" value="Post Grad"> POST GRAD
-    </label>
-    <label>
-        <input type="checkbox" id="vocational" name="education" value="Vocational"> VOCATIONAL
-    </label>
-</div>
+<span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
+HIGHEST EDUCATIONAL ATTAINMENT:
+<label>
+                                   <input type="hidden" name="id" value="{{$resident->id}}">
 
+    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
+">  ELEMENTARY
+  </label>
+  
+  <label>
+    
+    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
+"> HIGH SCHOOL
+  </label>
+  
+  <label>
+    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
+"> COLLEGE
+  </label>
+  
+  <label>
+    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
+"> POST GRAD
+  </label>
+  
+  <label>
+    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
+"> VOCATIONAL
+  </label>
+</span>
+</div>
+<div class="box" style="margin-top: -24px;
+}">
+    
+  </div>
 <div class="pos" id="_300:584" style="top:584;left:300">
-    <span id="_10.9" style="font-style:italic; font-family:Arial; font-size:10.9px; color:#000000">
-        Please specify:</span>
-</div>
+<span id="_10.9" style="font-style:italic; font-family:Arial; font-size:10.9px; color:#000000">
+Please specify:
+  <label>
+    <input type="checkbox" name="specify" value="graduate"> Graduate
+  </label>
+  
+  <label>
+    <input type="checkbox" name="specify" value="undergraduate"> Under Graduate
+  </label>
+</span>
+</div><div class="boxs13">
+    
+  </div>
+<div class="boxs11">
+    
+  </div>
 
-<div class="pos" id="_400:584" style="top:584;left:400">
-    <label>
-        <input type="checkbox" id="postGrad" name="education" value="Post Grad"> Graduate
-    </label>
-    <label>
-        <input type="checkbox" id="vocational" name="education" value="Vocational"> Under Graduate
-    </label>
-</div>
-
+<div class="box5">
+    
+  </div>
+ 
+  </div>
 <div class="pos" id="_50:623" style="top:623;left:50">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 I hereby certify that the above information is true and correct to the best of my knowledge. I understand that for the Barangay to </span>
 </div>
+
+    
+  </div>
 <div class="pos" id="_50:637" style="top:637;left:50">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 carry out its mandate pursuant to Section 394 (d)(6) of the Local Government Code of 1991, they must necessarily process my </span>
@@ -397,7 +602,7 @@ inhabitants of the Barangay. Therefore, I grant my consent and recognize the aut
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 information, subject to the provision of the Philippine Data Privacy Act of 2012.</span>
 </div>
-<div class="pos" id="_100:736" style="top:736;left:100">
+<div class="pos" id="_100:736" style="top:736;left:68">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 ___________________________</span>
 </div>
@@ -405,7 +610,7 @@ ___________________________</span>
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 --------------------------------------------------------------------</span>
 </div>
-<div class="pos" id="_100:751" style="top:751;left:135px">
+<div class="pos" id="_100:751" style="top:751;left:100">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
            Date Accomplished</span>
 </div>
@@ -425,50 +630,43 @@ Attested By:</span>
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
     </span>
 </div>
-<div class="pos" id="_87:893" style="top:893;left:87">
+<div class="pos" id="_87:893" style="top:893;left:68">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 ______________________________</span>
 </div>
-<div class="pos" id="_87:907" style="top:907;left:128px">
+<div class="pos" id="_87:907" style="top:907;left:105">
 <span id="_12.2" style="font-weight:bold; font-family:Arial; font-size:12.2px; color:#000000">
               Barangay Secretary</span>
 </div>
-<div style="  width: 102px;
-  height: 94px; border: 1px solid black; margin-left: 447%; margin-top: 780%;"></div>
-<div class="pos" id="_481:907" style="top:907;left:467px;">
+<div class="sample-box10" style="margin-top: -256px; margin-inline: 437px; width: 70px; height: 74px;">
+  <div class="pos" id="_481:907" style="top:907;left:481">
+     <span style="margin-inline: -5px;"></span>
+
+  </div>  
+  </div>
+  <div class="sample-box10" style="margin-top: -96px; margin-inline: 563px; width: 70px; height: 74px;">
+  <div class="pos" id="_481:907" style="top:907;left:481">
+     <span style="margin-inline: -5px;"></span>
+
+  </div>  
+  </div>
+<div class="pos" id="_481:907" style="top:907;left:481">
 <span id="_10.9" style="font-weight:bold; font-family:Arial; font-size:10.9px; color:#000000">
-   <span id="_12.2" style="font-weight:normal; font-size:12.2px"> Left Thumbmark </span><span id="_12.2" style="font-weight:normal; font-size:12.2px">      
-</div>
-<div style="    width: 102px;
-  height: 94px;
-  border: 1px solid black;
-  margin-left: 564%;
-  margin-top: -93%;"></div>
-<div class="pos" id="_481:907" style="top:907;left:591px">
-<span id="_10.9" style="font-weight:bold; font-family:Arial; font-size:10.9px; color:#000000">
-   <span id="_12.2" style="font-weight:normal; font-size:12.2px">  </span><span id="_12.2" style="font-weight:normal; font-size:12.2px">        Right Thumbmark</span></span>
+   <span id="_12.2" style="font-weight:normal; font-size:12.2px; margin-inline: -32px;"> Left Thumbmark </span><span id="_12.2" style="font-weight:normal; font-size:12.2px; margin-inline: 68px;"> Right Thumbmark</span></span>
 </div>
 <div class="pos" id="_87:973" style="top:973;left:87">
 <span id="_11.9" style="font-weight:bold; font-family:Arial; font-size:11.9px; color:#000000">
-Household Number:  ____________</span>
+Household Number:</span>
 </div>
-<div class="pos" id="_87:973" style="top:973;left:226PX">
-<span id="_11.9" style=" font-family:Arial; font-size:11.9px; color:#000000">
- {{$resident->householdNO}}</span>
-</div>
-
 <div class="pos" id="_87:1000" style="top:1000;left:87">
 <span id="_10.6" style="font-style:italic; font-family:Arial; font-size:10.6px; color:#000000">
 Note: The household No. shall be filled up by the Barangay Secretary.</span>
 </div>
 </nowrap></nobr>
-
  <div class="print-button-container1">
-    <button class="print-button1" onclick="window.print()" id="print-button" >PRINT</button> 
-  </div>
+                 
+
+</div>
 
 </body>
 </html>
-
-
-

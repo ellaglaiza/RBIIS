@@ -79,22 +79,21 @@ tr:nth-child(even) {
                     <table id="example1" class="table table-hover">
                      <thead>
                         <tr>
-                           <th>Purok</th>
-                           <th>Male</th>
-                           <th>Female</th>
-                           <th>Total Population by Purok</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        @for($x=0;$x < count($reports);$x++)
-                        <tr>
-                           <td>{{ $reports[$x]['purok_name'] }}</td>
-                           <td>{{ $reports[$x]['total_male'] }}</td>
-                           <td>{{ $reports[$x]['total_female'] }}</td>
-                           <td>{{ $reports[$x]['total_household'] }}</td>
-                        </tr>
-                        @endfor
-                     </tbody>
+                                            <th>Total Population By Purok</th>
+                                            <th>Male</th>
+                                            <th>Female</th>
+                                            <th>Total Population</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($data_array as $data)
+                                            <tr>
+                                                <th>{{ $data['purok_name'] }}</th>
+                                                <th>{{ $data['total_male'] }}</th>
+                                                <th>{{ $data['total_female'] }}</th>
+                                                <th>{{ $data['total_population'] }}</th>
+                                            </tr>
+                                        @endforeach
                   </table>
                    </div>
            </section>

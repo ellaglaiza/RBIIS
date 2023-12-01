@@ -64,26 +64,34 @@ public function savepopulationbyage()
 
 public function savesenior()
 {
-    $puroks = Purok::all();
-    $data_array = [];
+   $puroks = Resident::distinct('purok')->pluck('purok');
 
-    foreach ($puroks as $purok) {
-        $count_male = Resident::where([['purok', $purok->purok_name], ['sex', 'Male'], ['age', '>=', 60]])->count();
-        $count_female = Resident::where([['purok', $purok->purok_name], ['sex', 'Female'], ['age', '>=', 60]])->count();
-        $total_population = Resident::where([['purok', $purok->purok_name], ['age', '>=', 60]])->count();
+$data_array = [];
 
-        $data_array[] = [
-            'purok_name' => $purok->purok_name,
-            'total_male' => $count_male,
-            'total_female' => $count_female,
-            'total_population' => $total_population, 
-        ];
-    }
+foreach ($puroks as $purok) {
+    $count_male = Resident::where('purok', $purok)
+        ->where('age', '>=', 60) // Corrected: Separated '>=' and the value '60'
+        ->where('sex', 'Male')
+        ->count();
 
-   
-    return view('Report.SeniorCitizen.index', compact('data_array'));
+    $count_female = Resident::where('purok', $purok)
+        ->where('age', '>=', 60) // Corrected: Separated '>=' and the value '60'
+        ->where('sex', 'Female')
+        ->count();
+
+    $total_population = $count_male + $count_female;
+
+    $data_array[] = [
+        'purok_name' => $purok,
+        'total_male' => $count_male,
+        'total_female' => $count_female,
+        'total_population' => $total_population,
+    ];
 }
 
+return view('Report.SeniorCitizen.index', compact('data_array'));
+
+}
 
 public function listssavesenior()
 {
@@ -266,43 +274,35 @@ public function listsaveChildrensOutofSchool()
 }
 
     
-public function saveHouseholdSurvey(){
+// public function saveHouseholdSurvey(){
+
+  
+//     $puroks = Resident::distinct('purok')->pluck('purok');
+
+//     $data_array = [];
+
+//     foreach ($puroks as $purok) {
+//         $count_male = Resident::where('purok', $purok)->where('remarks', 'Childrens Out of School 15-24 yrs. old')->where('sex', 'Male')->count();
+//         $count_female = Resident::where('purok', $purok)->where('remarks', 'Childrens Out of School 15-24 yrs. old')->where('sex', 'Female')->count();
+//         $total_population = $count_male + $count_female;
 
 
-    $total_male = Resident::where('sex', 'Male')->count(); // Count the total male 
-    $total_female = Resident::where('sex', 'Female')->count(); // Count the total female 
-    $total_population = Resident::count(); // Count the total population
-    // Assuming 'household_id' is the column representing households
-    // $total_withoutToilets = Resident::where('landlineNo', 'Household without Toilets')->count(); 
-    // $total_withToilets = Resident::where('landlineNo', 'Household with Toilets')->count(); 
-    $total_male_pwd = Resident::where('remarks', 'PWD')->where('sex', 'Male')->count();
-    $total_female_pwd = Resident::where('remarks', 'PWD')->where('sex', 'Female')->count();
-    $total_population_pwd = $total_male_pwd + $total_female_pwd;
-
-    $total_male_senior = Resident::where('age', '>=', 60)->where('sex', 'Male')->count();
-    $total_female_senior = Resident::where('age', '>=', 60)->where('sex', 'Female')->count();
-    $total_population_senior = $total_male_senior + $total_female_senior; // Total senior citizens is the sum of senior males and females
- $total_nofamily = Resident::select('householdNO', DB::raw('MAX(family_id) as total_family'))
-    ->groupBy('householdNO')
-    ->get();
-
-$sum = 0;
-foreach ($total_nofamily as $resident) {
-    $sum += (int)$resident->total_family;
-}
-
- $total_HouseholdNo = Resident::distinct('HouseholdNO')->count();
-
-$total_withToilets = Resident::where('landlineNo', 'Household with Toilets')->count();
-// Count households without toilets
-$total_withoutToilets = $total_HouseholdNo - $total_withToilets;
+//         $data_array[] = [
+//             'purok_name' => $purok,
+//             'total_male' => $count_male,
+//             'total_female' => $count_female,
+//             'total_population' => $total_population,
+//         ];
+//     }
 
 
-    return view('Report.HouseholdSurvey.index', compact('total_male', 'total_HouseholdNo', 'total_female', 'total_population', 'total_male_pwd', 'total_female_pwd', 'total_population_pwd', 'total_male_senior', 'total_female_senior', 'total_population_senior','total_withoutToilets', 'total_withToilets', 'sum'));
+//     return view('Report.HouseholdSurvey.index', compact('data_array'));
+// }
 
 
-}
+
 public function saveMonitoringReport(){
+
     //0-5 yrs old
     $total_male = Resident::whereBetween('age', [0, 5])->where('sex', 'Male')->count();
     $total_female = Resident::whereBetween('age', [0, 5])->where('sex', 'Female')->count();
@@ -403,7 +403,15 @@ public function saveMonitoringReport(){
     $total_female_foreigner = Resident::where('citizenship', 'Foreigner')->where('sex', 'Female')->count();
     $total_population_foreigner = $total_male_foreigner + $total_female_foreigner; 
 
-    return view('Report.MonitoringReport.index', compact('total_male_pwd', 'total_female_pwd', 'total_population_pwd','total_male_sixyrs', 'total_female_sixyrs', 'total_population_sixyrs','total_male_13yrs', 'total_female_13yrs', 'total_population_13yrs','total_male_18yrs', 'total_female_18yrs', 'total_population_18yrs','total_male_36yrs', 'total_female_36yrs', 'total_population_36yrs','total_male_51yrs', 'total_female_51yrs', 'total_population_51yrs','total_male_66yrs', 'total_female_66yrs', 'total_population_66yrs','total_male_osc', 'total_female_osc','total_population_osc','total_male_unemployed', 'total_female_unemployed', 'total_population_unemployed', 'total_male_soloparent', 'total_female_soloparent', 'total_population_soloparent','total_male_ofw', 'total_female_ofw', 'total_population_ofw', 'total_male', 'total_female', 'total_population', 'total_population_S', 'total_singleF', 'total_singleM', 'total_marriedF','total_marriedM', 'total_separatedF', 'total_separatedM' ,'total_widowF', 'total_widowM', 'total_population_M', 'total_population_TS', 'total_population_W', 'total_population_filipino', 'total_male_filipino',  'total_female_filipino', 'total_female_foreigner','total_male_foreigner', 'total_population_foreigner','total_male_indigenous','total_female_indigenous' , 'total_population_indigenous'));
+    $total_nofamily = Resident::select('householdNO', DB::raw('MAX(family_id) as total_family'))
+        ->groupBy('householdNO')
+        ->get();
+
+    $sum = 0;
+    foreach ($total_nofamily as $resident) {
+        $sum += (int)$resident->total_family;
+    }
+    return view('Report.MonitoringReport.index', compact('total_male_pwd', 'total_female_pwd', 'total_population_pwd','total_male_sixyrs', 'total_female_sixyrs', 'total_population_sixyrs','total_male_13yrs', 'total_female_13yrs', 'total_population_13yrs','total_male_18yrs', 'total_female_18yrs', 'total_population_18yrs','total_male_36yrs', 'total_female_36yrs', 'total_population_36yrs','total_male_51yrs', 'total_female_51yrs', 'total_population_51yrs','total_male_66yrs', 'total_female_66yrs', 'total_population_66yrs','total_male_osc', 'total_female_osc','total_population_osc','total_male_unemployed', 'total_female_unemployed', 'total_population_unemployed', 'total_male_soloparent', 'total_female_soloparent', 'total_population_soloparent','total_male_ofw', 'total_female_ofw', 'total_population_ofw', 'total_male', 'total_female', 'total_population', 'total_population_S', 'total_singleF', 'total_singleM', 'total_marriedF','total_marriedM', 'total_separatedF', 'total_separatedM' ,'total_widowF', 'total_widowM', 'total_population_M', 'total_population_TS', 'total_population_W', 'total_population_filipino', 'total_male_filipino',  'total_female_filipino', 'total_female_foreigner','total_male_foreigner', 'total_population_foreigner','total_male_indigenous','total_female_indigenous' , 'total_population_indigenous', 'sum'));
     }
 
 

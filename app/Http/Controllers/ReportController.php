@@ -12,42 +12,24 @@ class ReportController extends Controller
 {
       public function savepopulation()
 {
-    $puroks = Purok::all();
+   $puroks = Resident::distinct('purok')->pluck('purok');
+
     $data_array = [];
 
     foreach ($puroks as $purok) {
-        $count_male = Resident::where([['purok', $purok->purok_name], ['sex', 'Male']])->get();
-        $count_female = Resident::where([['purok', $purok->purok_name], ['sex', 'Female']])->get();
-        $household = Resident::where([['purok', $purok->purok_name]])->get();
-        // $total_population = 0;
-
-        // foreach ($household as $resident) {
-        //     if ($resident->members_name === 'null' || $resident->members_name === null) {
-        //         $total_population += 1;
-        //     } else {
-        //         $members = json_decode($resident->members_name, true); 
-        //         if (is_array($members)) {
-        //             $total_population += 1 + count($members);
-        //         } else {
-        //             $total_population += 1; 
-        //         }
-        //     }
-        // }
+        $count_male = Resident::where('purok', $purok)->where('sex', 'Male')->count();
+        $count_female = Resident::where('purok', $purok)->where('sex', 'Female')->count();
+        $total_population = $count_male + $count_female;
 
         $data_array[] = [
-            'purok_name' => $purok->purok_name,
-            'total_male' => count($count_male),
-            'total_female' => count($count_female),
-            // 'total_population' => $total_population,
-            'total_household' => count($household),
+            'purok_name' => $purok,
+            'total_male' => $count_male,
+            'total_female' => $count_female,
+            'total_population' => $total_population,
         ];
     }
 
-    $report = $data_array;
-
-    return view('Report.Population.index', [
-        'reports' => $report,
-    ]);
+ return view('Report.Population.index', compact('data_array'));
 }
 
 

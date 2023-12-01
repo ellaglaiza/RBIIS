@@ -94,7 +94,6 @@
                         <a class="collapse-item" href="{{ route('soloparent.save') }}">Solo Parent</a>
                         <a class="collapse-item" href="{{ route('Unemployed.save') }}">Unemployed</a>
                         <a class="collapse-item" href="{{ route('ChildrensOutofSchool.save') }}">Children's Out of School</a>
-                        <a class="collapse-item" href="{{ route('HouseholdSurvey.save') }}">Household Survey</a>
                         <a class="collapse-item" href="{{ route('MonitoringReport.save') }}">Monitoring Report</a>
                     </div>
                 </div>

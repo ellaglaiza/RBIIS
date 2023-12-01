@@ -64,7 +64,7 @@
                                                     <div class=" font-weight-bold text-uppercase mb-1" style="font-size: 13px; ">
                                                         Total Population
                                                     </div>
-                                                    <div class="h2 mb-0 font-weight-bold">{{ $totalPopulation }}</div>
+                                                    <div class="h2 mb-0 font-weight-bold">{{ $total_population }}</div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <i class="fas fa-users fa-2x"></i>
@@ -107,42 +107,39 @@
     </div>
 </div>
 
-                         <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;" >
-        <div class="card-body">
-            <div class="row no-gutters align-items-center">
-                <div class="col mr-3 " style="color: #3e72f6">
-                    <div class="text-sm font-weight-bold  mb-1" style="color: #3e72f6" >Solo Parent</div>
-                    <div class="h4 font-weight-bold ">{{ $total_population_soloparent }}</div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;" >
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-3 " style="color: #3e72f6">
+                                <div class="text-sm font-weight-bold  mb-1" style="color: #3e72f6" >Solo Parent</div>
+                                <div class="h4 font-weight-bold ">{{ $total_population_soloparent }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-friends fa-3x " style="color: #3e72f6" ></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <i class="fas fa-user-friends fa-3x " style="color: #3e72f6" ></i>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card  shadow  py-1" style="background-color: #22a4be80;  height: 141px;
+            width: 237px; " >
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-3">
+                            <div class="text-sm font-weight-bold  text-uppercase mb-1" style="color: #bd00ff">Persons with Disabilities (PWD)</div>
+                            <div class="h4 font-weight-bold text-gray-800">{{ $total_population_pwd }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-wheelchair fa-3x " style="color: #bb1eb4"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-                         <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card  shadow  py-1" style="background-color: #22a4be80;  height: 141px;
-    width: 237px; " >
-        <div class="card-body">
-            <div class="row no-gutters align-items-center">
-                <div class="col mr-3">
-                    <div class="text-sm font-weight-bold  text-uppercase mb-1" style="color: #bd00ff">Persons with Disabilities (PWD)</div>
-                    <div class="h4 font-weight-bold text-gray-800">{{ $total_population_pwd }}</div>
-                </div>
-                <div class="col-auto">
-                    <i class="fas fa-wheelchair fa-3x " style="color: #bb1eb4"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-                       <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card  shadow  py-3" style="background-color: #beb522;   height: 141px;
-    width: 237px;">
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card  shadow  py-3" style="background-color: #beb522;   height: 141px; width: 237px;">
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-3">
@@ -179,37 +176,15 @@
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-3">
-                    <div class="text-sm font-weight-bold  mb-1" style=" color: #e53935;">Unemployed</div>
-                    <div class="h4 font-weight-bold " style="  color: #e53935;">{{ $total_population_unemployed}}</div>
+                    <div class="text-sm font-weight-bold  mb-1" style=" color: #e53935;">Deceased</div>
+                    <div class="h4 font-weight-bold " style="  color: #e53935;">{{ $total_population_deceased}}</div>
                 </div>
                 <div class="col-auto">
-   <i class="fas fa-user fa-3x" style="color: #e53935;"></i>
-                   </div>
+                <i class="fas fa-user fa-3x" style="color: #e53935;"></i>
+                </div>
             </div>
         </div>
     </div>
 </div>
-                       <!--  <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                              Deceased </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $total_population_ofw}}</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                  -->
-                    </div>
-                  
-                    
-                    
-                    <!-- Content Row -->
-
+</div>
 @endsection
