@@ -39,7 +39,7 @@ class DashboardController extends Controller
 
     $total_population_soloparent = Resident::where('remarks', 'Solo Parent')->count();
    
- 	$total_population_ofw = Resident::where('remarks', 'Overseas Filipino Workers')->count();
+ 	$total_population_ofw = Resident::where('remarks', 'OFW')->count();
 
 	$total_population_unemployed = Resident::where('status_of_employment', 'Unemployed')->count();
 	
@@ -47,5 +47,67 @@ class DashboardController extends Controller
    
 	    return view('Dashboard.index', compact('totalPopulation','sum','total_HouseholdNo','total_population_pwd','total_population_senior','total_population_soloparent', 'total_population_ofw','total_population_unemployed','total_population_deceased','total_population'));
 }
+
+  public function listDeceased() 
+{
+    $deceasedRecords = $this->getDeceasedRecords();
+
+    return view('dashboard.list_deceased', compact('deceasedRecords'));
+}
+
+private function getDeceasedRecords()
+{
+    return Resident::where('outofschool', 'Deceased')->get();
+}
+
+public function listsoloparent() 
+{
+    $soloparentRecords = $this->getsoloparentRecords();
+
+    return view('Dashboard.list_soloparent', compact('soloparentRecords'));
+}
+
+private function getsoloparentRecords()
+{
+    return Resident::where('remarks', 'Solo Parent')->get();
+}
+public function listpwd() 
+{
+    $listRecords = $this->getpwdRecords();
+
+    return view('Dashboard.list_pwd', compact('listRecords'));
+}
+
+private function getpwdRecords()
+{
+    return Resident::where('remarks', 'PWD')->get();
+}
+public function listOFW() 
+{
+    $OFWRecords = $this->getOFWRecords();
+
+    return view('Dashboard.listof_OFW', compact('OFWRecords'));
+}
+
+private function getOFWRecords()
+{
+      return Resident::where('remarks', 'OFW')->get();
+
+}
+public function listseniorcitizen() 
+{
+    $seniorCitizenRecords = $this->getSeniorCitizenRecords();
+
+    return view('Dashboard.list_seniorcitizens', compact('seniorCitizenRecords'));
+}
+
+private function getSeniorCitizenRecords()
+{
+    $seniorAge = 60; // Define the age threshold for senior citizens
+
+    return Resident::where('age', '>=', $seniorAge)
+                   ->get();
+}
+
 
 }

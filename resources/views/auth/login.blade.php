@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-    <form method="post" id="submitForm" action="{{ route('login.perform') }}">
+    <form method="post" id="submitForm" action="{{ route('login.perform') }}" >
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <!-- /.login-logo -->
          <div class="card card-outline card-info" style="width: auto; max-width: 322px; margin-inline: auto; margin-top: 100px;">

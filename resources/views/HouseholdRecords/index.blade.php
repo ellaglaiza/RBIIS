@@ -15,7 +15,7 @@
 
  <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h3 class="m-0 font-weight-bold text-primary">Lists of Household Records</h3>
+                            <h3 class="m-0 font-weight-bold text-primary">Lists</h3>
                         </div>
                         
                         <div class="card-body">
@@ -27,7 +27,6 @@
                         <th>Middlename</th>
                         <th>Lastname</th>
                         <th>Suffix</th>
-                        <th>Age</th>
                         <th>Sex</th>
                         <th>Purok</th>
 
@@ -44,12 +43,12 @@
                         <td>{{$ResidentProfile->middlename}}</td>
                         <td>{{$ResidentProfile->lastname}}</td>
                         <td>{{$ResidentProfile->suffix}}</td>
-                        <td>{{$ResidentProfile->age}}</td>
                         <td>{{$ResidentProfile->sex}}</td>
                         <td>{{$ResidentProfile->purok}}</td>
                         <td class="text-center">
-                             <a href="{{ url('/Lists/view/records/').'/'.$ResidentProfile->id}}" class="btn btn-primary btn-sm">Household Records</a>
-                          
+                             <a href="{{ url('/Lists/view/records/').'/'.$ResidentProfile->id}}" class="btn btn-primary btn-sm">View</a>
+                             
+                         
 
                         </td>
                        

@@ -195,6 +195,28 @@ body { font-family: Arial; font-size: 15.8px; border: 5px solid; margin-top: 176
   margin-top: 36px;
   margin-left: 529px;
 }
+    .box9 {
+   width: 70px;
+  height: 70px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 300px;
+margin-left: 584px;
+}
+    .boxs9 {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -11px;
+  margin-left: -125px; 
+}
     .boxs11{
     width: 186px;
   height: 2px;
@@ -227,6 +249,17 @@ body { font-family: Arial; font-size: 15.8px; border: 5px solid; margin-top: 176
   font-family: Arial, sans-serif;
   margin-top: 40px;
   margin-left: 461px;
+}
+  .samplebox {
+ width: 104px;
+  height: 2px;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -18px;
+  margin-left: 122px;
 }
    .btn {
       position: absolute;
@@ -277,7 +310,7 @@ INDIVIDUAL RECORDS OF BARANGAY INHABITANT</span>
 REGION</span>
 <div class="pos" id="_50:114" style="top:-3;left:55">
 <span style="margin-inline: 30px;"></span>
-    {{$resident->firstname}}
+    {{$resident->region}}
 </div>
 </div>
 <div class="pos" id="_150:114" style="top:114;left:150">
@@ -297,7 +330,7 @@ REGION</span>
  CITY/MUN</span>
  <div class="pos" id="_450:114" style="top:-2;left:54">
  <span style="margin-inline: 30px;"></span>
-    {{$resident->firstname}}
+    {{$resident->city_munipality}}
 </div>
 </div>
 <div class="pos" id="_550:114" style="top:114;left:550">
@@ -307,10 +340,11 @@ REGION</span>
 <div class="pos" id="_50:136" style="top:136;left:50">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
 PROVINCE</span>
-<div class="pos" id="_50:136" style="top:-4;left:68">
-<span style="margin-inline: 23px;"></span>
-    {{$resident->firstname}}
+<div class="pos" id="_50:136" style="top:-4;left:68; white-space: nowrap;">
+    <span style="margin-inline: 23px; display: inline-block;"></span>
+    {{$resident->province}}
 </div>
+
 </div>
 <div class="pos" id="_150:136" style="top:136;left:150">
 <span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
@@ -320,13 +354,14 @@ PROVINCE</span>
 <span id="_11.6" style=" font-family:Arial; font-size:11.6px; color:#000000">
                </span>
 </div>
-<div class="pos" id="_450:136" style="top:136;left:450">
+<div class="pos" id="_450:136" style="top:136px;left:450px">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
 BARANGAY</span>
-<div class="pos" id="_450:136" style="top:-4;left:60">
-<span style="margin-inline: 27px;"></span>
-    {{$resident->firstname}}
+<div class="pos" id="_450:136" style="top:-4;left:60; white-space: nowrap;">
+    <span style="margin-inline: 27px;"></span>
+    {{$resident->barangay}}
 </div>
+
 </div>
 <div class="pos" id="_549:136" style="top:136;left:549">
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
@@ -345,7 +380,7 @@ PERSONAL INFORMATION</span>
 <div class="pos" id="_49:246" style="top:245; left:49; margin-inline: 20px; margin-top: -4px;">
 <span id="_15.3" style="font-weight:bold; font-family:Arial; font-size:15.3px; color:#000000">
                  </span>
-        {{$resident->firstname}}
+        {{$resident->landlineNo}}
   </div>
   </div>
 
@@ -354,13 +389,13 @@ PERSONAL INFORMATION</span>
                                 (PhilSys Card No.)</span>
 </div>
  <div class="sample-box1">
-  <div class="pos" id="_49:264" style="top:305;left:49;">
+  <div class="pos" id="_49:264" style="top:305;left:72px;">
     <span style="margin-inline: 10px;"></span>
-    {{$resident->firstname}}
+    {{$resident->lastname}}
 
   </div>
 </div>
-<div class="pos" id="_49:328" style="top:328;left:49;  margin-inline: 10px; margin-top: -1px;">
+<div class="pos" id="_49:328" style="top:328;left:80;  margin-inline: 10px; margin-top: -1px;">
 <span id="_12.1" style=" font-family:Arial; font-size:12.1px; color:#000000">
 <span id="_13.5" style=" font-size:13.5px">  </span><span id="_10.8" style=" font-size:10.8px"> (Last Name)</span></span>
 
@@ -368,7 +403,7 @@ PERSONAL INFORMATION</span>
 <div class="sample-box2">
   <div class="pos" id="_250:330" style="top:307;left:268">
     <span style="margin-inline: 10px;"></span>
-    {{$resident->firstname}}
+    {{$resident->qualifier}}
   </div>        
  </div>
 
@@ -396,7 +431,7 @@ PERSONAL INFORMATION</span>
 
 <div class="pos" id="_600:330" style="top:309;left:627">
   <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->middlename}}
 </div>
 <div class="pos" id="_600:330" style="top:330;left:600">
 <span id="_11.0" style=" font-family:Arial; font-size:11.0px; color:#000000">
@@ -409,9 +444,9 @@ PERSONAL INFORMATION</span>
                </span>
 </div>
 <div class="sample-box11">
-  <div class="pos" id="_49:397" style="top:374;left:90">
+  <div class="pos" id="_49:397" style="top:374;left:74px">
      <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->date_of_birth}}
     </div>
   </div>
 <div class="pos" id="_49:397" style="top:397;left:49">
@@ -421,7 +456,7 @@ PERSONAL INFORMATION</span>
 <div class="sample-box7">
   <div class="pos" id="_249:397" style="top:373;left:284">
     <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->place_of_birth}}
   </div>
   </div>
 
@@ -432,7 +467,7 @@ PERSONAL INFORMATION</span>
 
 <div class="pos" id="_399:397" style="top:374;left:409">
   <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->sex}}
 </div>
 
 <div class="pos" id="_399:397" style="top:397;left:399">
@@ -442,7 +477,7 @@ PERSONAL INFORMATION</span>
 
 <div class="pos" id="_249:397" style="top:375;left:515">
   <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->civil_status}}
 </div>
 
  <div class="pos" id="_249:397" style="top:396;left:492">
@@ -452,10 +487,11 @@ PERSONAL INFORMATION</span>
 
 <div class="pos" id="_649:397" style="top:397;left:649">
   <div class="sample-box11" style="margin-inline: -56px; margin-top: -28px; width: 111px">
-    <div class="pos" id="_649:397" style="top:-23;left:-8">
-    <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
-  </div>
+   <div class="pos" id="_649:397" style="top:-23;left:-36px; white-space: nowrap;">
+    <span style="margin-inline: -5px; display: inline-block;"></span>
+    {{$resident->religion}}
+</div>
+
   </div>
 </div>
 
@@ -464,9 +500,9 @@ PERSONAL INFORMATION</span>
 (Religion)</span>
 </div>
 
-<div class="pos" id="_191:455" style="top:444;left:253">
+<div class="pos" id="_191:455" style="top:444;left:180">
  <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->address}}
 </div>
 
 <div class="pos" id="_191:455" style="top:464;left:191">
@@ -476,7 +512,7 @@ PERSONAL INFORMATION</span>
 <div class="sample-box10">
   <div class="pos" id="_593:455" style="top:443;left:610">
      <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->citizenship}}
   </div>  
   </div>
 
@@ -485,9 +521,10 @@ PERSONAL INFORMATION</span>
              (Citizenship)</span>
 </div>
 <div class="box4">
-  <div class="pos" id="_57:517" style="top:503;left:138">
+  <div class="pos" id="_57:517" style="top: 503;
+  left: 77px;">
      <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->occupation}}
     </div>
   </div>
 
@@ -496,9 +533,10 @@ PERSONAL INFORMATION</span>
                           (Profession / Occupation)</span>
 </div>
 
-<div class="pos" id="_57:517" style="top:505;left:402px">
+<div class="pos" id="_57:517" style="top: 505;
+  left: 373px;">
    <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->contact_number}}
 </div>
 
 <div class="pos" id="_57:517" style="top:522;left:360px">
@@ -506,9 +544,10 @@ PERSONAL INFORMATION</span>
               (Contact Number) </span>
 </div>
 <div class="sample-boxs">
-    <div class="pos" id="_632:517" style="top:503;left:612">
+    <div class="pos" id="_632:517" style="top: 500px;
+  left: 542px;">
        <span style="margin-inline: -5px;"></span>
-    {{$resident->firstname}}
+    {{$resident->email}}
 
   </div>
 </div>
@@ -524,32 +563,21 @@ PERSONAL INFORMATION</span>
 <span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
 HIGHEST EDUCATIONAL ATTAINMENT:
 <label>
-                                   <input type="hidden" name="id" value="{{$resident->id}}">
-
-    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
-">  ELEMENTARY
-  </label>
-  
-  <label>
-    
-    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
-"> HIGH SCHOOL
-  </label>
-  
-  <label>
-    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
-"> COLLEGE
-  </label>
-  
-  <label>
-    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
-"> POST GRAD
-  </label>
-  
-  <label>
-    <input type="checkbox" name="members_school" value="    {{$resident->firstname}}
-"> VOCATIONAL
-  </label>
+                                    <?php
+                            // Assuming $resident->members_school is a string containing comma-separated values
+                            $educationalBackgrounds = explode(', ', $resident->members_school);
+                            
+                            $educationalOptions = ['ELEMENTARY', 'HIGH SCHOOL', 'COLLEGE', 'POST GRAD', 'VOCATIONAL'];
+                            
+                            foreach ($educationalOptions as $option) {
+                                // Check if the current option exists in the array obtained from the database
+                                $checked = in_array($option, $educationalBackgrounds) ? 'checked' : '';
+                            ?>
+                                <label>
+                                    <input type="checkbox" name="members_school[]" value="<?php echo $option; ?>" <?php echo $checked; ?>>
+                                    <?php echo $option; ?>
+                                </label>
+                            <?php } ?>
 </span>
 </div>
 <div class="box" style="margin-top: -24px;
@@ -559,13 +587,23 @@ HIGHEST EDUCATIONAL ATTAINMENT:
 <div class="pos" id="_300:584" style="top:584;left:300">
 <span id="_10.9" style="font-style:italic; font-family:Arial; font-size:10.9px; color:#000000">
 Please specify:
-  <label>
-    <input type="checkbox" name="specify" value="graduate"> Graduate
-  </label>
-  
-  <label>
-    <input type="checkbox" name="specify" value="undergraduate"> Under Graduate
-  </label>
+   @php
+                                // Assuming $resident->specify is a string containing comma-separated values
+                                $specifyValues = explode(', ', $resident->specify);
+                                
+                                $specifyOptions = ['Graduate', 'Under Graduate'];
+                            @endphp
+                            
+                            @foreach ($specifyOptions as $option)
+                                @php
+                                    // Check if the current option exists in the array obtained from the database
+                                    $checked = in_array($option, $specifyValues) ? 'checked' : '';
+                                @endphp
+                                <label>
+                                    <input type="checkbox" name="specify[]" value="{{ $option }}" {{ $checked }}>
+                                    {{ $option }}
+                                </label>
+                            @endforeach
 </span>
 </div><div class="boxs13">
     
@@ -577,28 +615,34 @@ Please specify:
 <div class="box5">
     
   </div>
+<div class="box9">
+<div class="boxs9">
+  
+</div>
+  
+</div>
  
   </div>
-<div class="pos" id="_50:623" style="top:623;left:50">
+<div class="pos" id="_50:623" style="top:623;left:17">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 I hereby certify that the above information is true and correct to the best of my knowledge. I understand that for the Barangay to </span>
 </div>
 
     
   </div>
-<div class="pos" id="_50:637" style="top:637;left:50">
+<div class="pos" id="_50:637" style="top:637;left:17">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 carry out its mandate pursuant to Section 394 (d)(6) of the Local Government Code of 1991, they must necessarily process my </span>
 </div>
-<div class="pos" id="_50:652" style="top:652;left:50">
+<div class="pos" id="_50:652" style="top:652;left:17">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 personal information for easy identification of inhabitants, as a tool in planning, and as an updated reference in the number of </span>
 </div>
-<div class="pos" id="_50:666" style="top:666;left:50">
+<div class="pos" id="_50:666" style="top:666;left:17">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 inhabitants of the Barangay. Therefore, I grant my consent and recognize the authority of the Barangay to process my personal </span>
 </div>
-<div class="pos" id="_50:681" style="top:681;left:50">
+<div class="pos" id="_50:681" style="top:681;left:17">
 <span id="_12.2" style=" font-family:Arial; font-size:12.2px; color:#000000">
 information, subject to the provision of the Philippine Data Privacy Act of 2012.</span>
 </div>
@@ -638,26 +682,22 @@ ______________________________</span>
 <span id="_12.2" style="font-weight:bold; font-family:Arial; font-size:12.2px; color:#000000">
               Barangay Secretary</span>
 </div>
-<div class="sample-box10" style="margin-top: -256px; margin-inline: 437px; width: 70px; height: 74px;">
-  <div class="pos" id="_481:907" style="top:907;left:481">
-     <span style="margin-inline: -5px;"></span>
-
-  </div>  
-  </div>
-  <div class="sample-box10" style="margin-top: -96px; margin-inline: 563px; width: 70px; height: 74px;">
-  <div class="pos" id="_481:907" style="top:907;left:481">
-     <span style="margin-inline: -5px;"></span>
 
   </div>  
   </div>
 <div class="pos" id="_481:907" style="top:907;left:481">
 <span id="_10.9" style="font-weight:bold; font-family:Arial; font-size:10.9px; color:#000000">
-   <span id="_12.2" style="font-weight:normal; font-size:12.2px; margin-inline: -32px;"> Left Thumbmark </span><span id="_12.2" style="font-weight:normal; font-size:12.2px; margin-inline: 68px;"> Right Thumbmark</span></span>
+   <span id="_12.2" style="font-weight:normal; font-size:12.2px; margin-inline: -8px;"> Left Thumbmark </span><span id="_12.2" style="font-weight:normal; font-size:12.2px; margin-left: 24px;"> Right Thumbmark</span></span>
 </div>
-<div class="pos" id="_87:973" style="top:973;left:87">
-<span id="_11.9" style="font-weight:bold; font-family:Arial; font-size:11.9px; color:#000000">
-Household Number:</span>
+<div class="pos" id="_87:973" style="top:973;left:87; white-space: nowrap;">
+    <span id="_11.9" style="font-weight:bold; font-family:Arial; font-size:11.9px; ">
+        Household Number:
+    </span>
+    <div class="samplebox" style="display: inline-block; width: 85px;height: 5px;margin-left: 5px; vertical-align: top; margin-top: -9px;">
+        {{$resident->householdNO}}
+    </div>
 </div>
+
 <div class="pos" id="_87:1000" style="top:1000;left:87">
 <span id="_10.6" style="font-style:italic; font-family:Arial; font-size:10.6px; color:#000000">
 Note: The household No. shall be filled up by the Barangay Secretary.</span>

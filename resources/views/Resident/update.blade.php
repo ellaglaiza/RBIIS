@@ -91,61 +91,59 @@
                                 <input class= "form-control" name="age" id="age" placeholder="" value="{{$resident->age}}"></input>
                               </div>
                            </div>
-                             <div class="col-md-6">
-                              <div class="form-group">
+                            <div class="col-md-6">
+                            <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Sex </label>
                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                <select class="form-control" name="sex" value="{{$resident->sex}}">
-                                  <option disabled>Select Sex</option>
-                                  <option>Male</option>
-                                  <option>Female</option>
+                                <select class="form-control" name="sex">
+                                    <option value="" disabled>Select Sex</option>
+                                    <option value="Male" <?php echo ($resident->sex === 'Male') ? 'selected' : ''; ?>>Male</option>
+                                    <option value="Female" <?php echo ($resident->sex === 'Female') ? 'selected' : ''; ?>>Female</option>
                                 </select>
-                              </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
+                        </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Civil Status </label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <select class="form-control" name="civil_status" value="{{$resident->civil_status}}">
-                                  <option disabled>Select Civil Status</option>
-                                  <option>Single</option>
-                                  <option>Married</option>
-                                  <option>Widow</option>
-                                  <option>Separated</option>
+                                <input type="hidden" name="id" value="{{$resident->id}}">
+                                <select class="form-control" name="civil_status">
+                                    <option value="" disabled>Select Civil Status</option>
+                                    <option value="Single" <?php echo ($resident->civil_status === 'Single') ? 'selected' : ''; ?>>Single</option>
+                                    <option value="Married" <?php echo ($resident->civil_status === 'Married') ? 'selected' : ''; ?>>Married</option>
+                                    <option value="Widow" <?php echo ($resident->civil_status === 'Widow') ? 'selected' : ''; ?>>Widow</option>
+                                    <option value="Separated" <?php echo ($resident->civil_status === 'Separated') ? 'selected' : ''; ?>>Separated</option>
                                 </select>
-                              </div>
-                           </div>
-                             <div class="col-md-4">
-                              <div class="form-group">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <select class="form-control" name="remarks" value="{{$resident->remarks}}" >
-                                  <option>PWD</option>
-                                  <option>OFW</option>
-                                  <option>Solo Parent</option>
-                                  <option>Childrens Out of School 15-24 yrs. old</option>
-                                  <option>Belongs to Indigenous People</option>                                  
+                                <input type="hidden" name="id" value="{{$resident->id}}">
+                                <select class="form-control" name="remarks">
+                                    <option value=""></option>
+                                    <option value="PWD" <?php echo ($resident->remarks === 'PWD') ? 'selected' : ''; ?>>PWD</option>
+                                    <option value="OFW" <?php echo ($resident->remarks === 'OFW') ? 'selected' : ''; ?>>OFW</option>
+                                    <option value="Solo Parent" <?php echo ($resident->remarks === 'Solo Parent') ? 'selected' : ''; ?>>Solo Parent</option>
+                                    <option value="Belongs to Indigenous People" <?php echo ($resident->remarks === 'Belongs to Indigenous People') ? 'selected' : ''; ?>>Belongs to Indigenous People</option>
                                 </select>
-                              </div>
-                           </div>
-                            <div class="col-md-4">
-                              <div class="form-group">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Other Info</label>
-                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <select class="form-control" name="outofschool"  value="{{$resident->outofschool}}"  >
-                                   <option></option>
-                                    <option>Out of School Children(OSC) (6-14 years old)</option> 
-                                   <option>Out of School Youth(OSy) (14-24 years old)</option>
-                                   <option>Labor Force</option>
-                                   <option>Deceased</option>
-                                   <option>Transferred</option>
-                                   <option>New</option>
-
-
+                                <input type="hidden" name="id" value="{{$resident->id}}">
+                                <select class="form-control" name="outofschool">
+                                    <option value=""></option>
+                                    <option value="Out of School Children(OSC) (6-14 years old)" <?php echo ($resident->outofschool === 'Out of School Children(OSC) (6-14 years old)') ? 'selected' : ''; ?>>Out of School Children(OSC) (6-14 years old)</option>
+                                    <option value="Out of School Youth(OSy) (15-24 years old)" <?php echo ($resident->outofschool === 'Out of School Youth(OSy) (15-24 years old)') ? 'selected' : ''; ?>>Out of School Youth(OSy) (15-24 years old)</option>
+                                    <option value="Labor Force" <?php echo ($resident->outofschool === 'Labor Force') ? 'selected' : ''; ?>>Labor Force</option>
+                                    <option value="Deceased" <?php echo ($resident->outofschool === 'Deceased') ? 'selected' : ''; ?>>Deceased</option>
+                                    <option value="Transferred" <?php echo ($resident->outofschool === 'Transferred') ? 'selected' : ''; ?>>Transferred</option>
+                                    <option value="New" <?php echo ($resident->outofschool === 'New') ? 'selected' : ''; ?>>New</option>
                                 </select>
-                              </div>
-                           </div>
-                            <div class="col-md-4">
+                            </div>
+                        </div>
+                          <div class="col-md-4">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;"> (PhilSys Card No.)</label>
                                   <input type="hidden" name="id" value="{{$resident->id}}">
@@ -160,23 +158,23 @@
                                 <input class= "form-control" name="address" placeholder="" value="{{$resident->address}}"></input>
                               </div>
                            </div>
-                            
-                             <div class="col-md-6">
-                              <div class="form-group">
+                            <div class="col-md-6">
+                            <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500; margin-top: 33px;">Purok</label>
                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                <select name="purok" class="form-control" required=""  value="{{$resident->purok}}">
-                                  <option disabled>Select Purok</option>
-                                  <option>Santan</option>
-                                  <option>Camia</option>
-                                  <option>Bougainvilla</option>
-                                  <option>Orchids</option>
-                                  <option>Rosal</option>
-                                  <option>Daisy</option>
-                                  <option>Adelfa</option>
+                                <select name="purok" class="form-control" required="">
+                                    <option value="" disabled>Select Purok</option>
+                                    <option value="Santan" <?php echo ($resident->purok === 'Santan') ? 'selected' : ''; ?>>Santan</option>
+                                    <option value="Camia" <?php echo ($resident->purok === 'Camia') ? 'selected' : ''; ?>>Camia</option>
+                                    <option value="Bougainvilla" <?php echo ($resident->purok === 'Bougainvilla') ? 'selected' : ''; ?>>Bougainvilla</option>
+                                    <option value="Orchids" <?php echo ($resident->purok === 'Orchids') ? 'selected' : ''; ?>>Orchids</option>
+                                    <option value="Rosal" <?php echo ($resident->purok === 'Rosal') ? 'selected' : ''; ?>>Rosal</option>
+                                    <option value="Daisy" <?php echo ($resident->purok === 'Daisy') ? 'selected' : ''; ?>>Daisy</option>
+                                    <option value="Adelfa" <?php echo ($resident->purok === 'Adelfa') ? 'selected' : ''; ?>>Adelfa</option>
                                 </select>
-                              </div>
-                           </div>
+                            </div>
+                        </div>
+
                            <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;"> Barangay </label>
@@ -243,53 +241,75 @@
                               </div>
                            </div>
                            <hr>
-                               <div class="col-md-7">
-                              <div class="form-group">
-                                <hr>
-                                <h3 style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
-                                  <label style="font-family: emoji; font-weight: 500;">HIGHEST EDUCATIONAL ATTAINMENT:         </label>
-                              <select name="members_school" class="form-control" required="">
-                                 <option enabled=""></option>
-                                  <option>Elementary</option>
-                                  <option>High School</option>
-                                  <option>College</option>
-                                  <option>Post Grad</option>
-                                  <option>Vocational</option>
-                                </select>                                
-                              </div>
-                           </div>
-                           <div class="col-md-5">
-                              <div class="form-group" style="margin-top: 66px">
-                               <label style="font-family: emoji; font-weight: 500;">Please Specify:</label>
-                                <select name="specify" class="form-control" required="">
-                                  <option>Graduate</option>
-                                  <option>Under Graduate</option>
-                                </select>   
-                              </div>
-                           </div>
-                         <div class="col-md-6">
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <hr>
+                            <h3 style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
+                            <label style="font-family: emoji; font-weight: 500;">HIGHEST EDUCATIONAL ATTAINMENT:</label>
+                            
+                            <?php
+                            // Assuming $resident->members_school is a string containing comma-separated values
+                            $educationalBackgrounds = explode(', ', $resident->members_school);
+                            
+                            $educationalOptions = ['ELEMENTARY', 'HIGH SCHOOL', 'COLLEGE', 'POST GRAD', 'VOCATIONAL'];
+                            
+                            foreach ($educationalOptions as $option) {
+                                // Check if the current option exists in the array obtained from the database
+                                $checked = in_array($option, $educationalBackgrounds) ? 'checked' : '';
+                            ?>
+                                <label>
+                                    <input type="checkbox" name="members_school[]" value="<?php echo $option; ?>" <?php echo $checked; ?>>
+                                    <?php echo $option; ?>
+                                </label>
+                            <?php } ?>
+                        </div>
+                    </div>
+
+
+                                            <div class="col-md-5">
+                        <div class="form-group" style="margin-top: -12px">
+                            <label style="font-family: emoji; font-weight: 500;">Please Specify:</label>
+                            @php
+                                // Assuming $resident->specify is a string containing comma-separated values
+                                $specifyValues = explode(', ', $resident->specify);
+                                
+                                $specifyOptions = ['Graduate', 'Under Graduate'];
+                            @endphp
+                            
+                            @foreach ($specifyOptions as $option)
+                                @php
+                                    // Check if the current option exists in the array obtained from the database
+                                    $checked = in_array($option, $specifyValues) ? 'checked' : '';
+                                @endphp
+                                <label>
+                                    <input type="checkbox" name="specify[]" value="{{ $option }}" {{ $checked }}>
+                                    {{ $option }}
+                                </label>
+                            @endforeach
+                        </div>
+                    </div>
+
+                         <div class="col-md-12">
                               <div class="form-group">
                                   <hr>
-                                  <h3 style="font-weight: bolder; font-size: 20px;">Occupation</h3>
+                                  <h3 style="font-weight: bolder; font-size: 15px;">Occupation</h3>
                                   <label></label>
                                   <input type="hidden" name="id" value="{{$resident->id}}">                                 
                                   <input class= "form-control"  name="occupation" placeholder="occupation" value="{{$resident->occupation}}"></input>
                               </div>
                            </div>
-                           <div class="col-md-6" style="margin-top: 56px;">
-                              <div class="form-group">
-                                  <label style="font-family: emoji; font-weight: 500;">Status Of Employment</label>
-                                  <input type="hidden" name="id" value="{{$resident->id}}">                                 
-                                  <select class="form-control" name="status_of_employment" value="{{$resident->status_of_employment}}">
-                                    <option>Employed</option>
-                                    <option>Unemployed</option>
-                                    <option>Self-employed</option>
-                                   
-                                  </select>
-                              </div>
-                           </div>
-                           
-                           <div class="col-md-12" id="household_form" hidden>
+                          <div class="col-md-12" style="margin-top: 15px;">
+                          <div class="form-group">
+                              <label style="font-family: emoji; font-weight: 500;">Status Of Employment</label>
+                              <input type="hidden" name="id" value="{{$resident->id}}">
+                              <select class="form-control" name="status_of_employment">
+                                  <option value="Employed" <?php echo ($resident->status_of_employment === 'Employed') ? 'selected' : ''; ?>>Employed</option>
+                                  <option value="Unemployed" <?php echo ($resident->status_of_employment === 'Unemployed') ? 'selected' : ''; ?>>Unemployed</option>
+                                  <option value="Self-employed" <?php echo ($resident->status_of_employment === 'Self-employed') ? 'selected' : ''; ?>>Self-employed</option>
+                              </select>
+                          </div>
+                      </div>
+                        <div class="col-md-12" id="household_form" hidden>
                               <div class="form-group">
                                 <hr>
                                 <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Household Members</h3>

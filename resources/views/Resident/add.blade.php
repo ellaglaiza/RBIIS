@@ -108,10 +108,10 @@
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
                                  <select class="form-control" name="remarks"  >
+                                  <option></option>
                                   <option>PWD</option>
                                   <option>OFW</option>
                                   <option>Solo Parent</option>
-                                  <option>Childrens Out of School 15-24 yrs. old</option>
                                   <option>Belongs to Indigenous People</option>                                  
                                 </select>
                               </div>
@@ -122,7 +122,7 @@
                                  <select class="form-control" name="outofschool"    >
                                    <option></option>
                                     <option>Out of School Children(OSC) (6-14 years old)</option> 
-                                   <option>Out of School Youth(OSy) (14-24 years old)</option>
+                                   <option>Out of School Youth (OSY) (15-24 years old)</option>
                                    <option>Labor Force</option>
                                 </select>
                               </div>
@@ -213,31 +213,55 @@
                               </div>
                            </div>
                            <hr>
-                               <div class="col-md-7">
+                             <div class="col-md-12">
                               <div class="form-group">
                                 <hr>
                                 <h3 style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
                                   <label style="font-family: emoji; font-weight: 500;">HIGHEST EDUCATIONAL ATTAINMENT:         </label>
-                              <select name="members_school" class="form-control" required="">
-                                 <option enabled=""></option>
-                                  <option>Elementary</option>
-                                  <option>High School</option>
-                                  <option>College</option>
-                                  <option>Post Grad</option>
-                                  <option>Vocational</option>
-                                </select>                                
+                             <label>
+                              <input type="checkbox" name="members_school" value="  ELEMENTARY  
+                          ">  ELEMENTARY
+                            </label>
+                            
+                            <label>
+                              
+                              <input type="checkbox" name="members_school" value=" HIGH SCHOOL
+                          "> HIGH SCHOOL
+                            </label>
+                            
+                            <label>
+                              <input type="checkbox" name="members_school" value=" COLLEGE
+                          "> COLLEGE
+                            </label>
+                            
+                            <label>
+                              <input type="checkbox" name="members_school" value="  POST GRAD
+                          "> POST GRAD
+                            </label>
+                            
+                            <label>
+                              <input type="checkbox" name="members_school" value="VOCATIONAL
+                          "> VOCATIONAL
+                            </label>
+                          </span>
+                          </div>                        
                               </div>
                            </div>
                            <div class="col-md-5">
-                              <div class="form-group" style="margin-top: 66px">
+                              <div class="form-group" style="margin-top: -12px">
                                <label style="font-family: emoji; font-weight: 500;">Please Specify:</label>
-                                <select name="specify" class="form-control" required="">
-                                  <option>Graduate</option>
-                                  <option>Under Graduate</option>
-                                </select>   
+                                 <label>
+                            <input type="checkbox" name="specify" value=" 
+                        "> Graduate
+                          </label>
+                          
+                          <label>
+                            <input type="checkbox" name="specify" value="VOCATIONAL
+                        "> Under Graduate
+                          </label>
                               </div>
                            </div>
-                         <div class="col-md-6">
+                         <div class="col-md-12" style="margin-top: 15px;">
                               <div class="form-group">
                                   <hr>
                                   <h3 style="font-weight: bolder; font-size: 20px;">Occupation</h3>
@@ -245,10 +269,11 @@
                                   <input class= "form-control"  name="occupation" placeholder="occupation" ></input>
                               </div>
                            </div>
-                           <div class="col-md-6" style="margin-top: 56px;">
+                           <div class="col-md-12" style="margin-top: 20px;">
                               <div class="form-group">
                                   <label style="font-family: emoji; font-weight: 500;">Status Of Employment</label>
                                   <select class="form-control" name="status_of_employment" >
+                                    <option></option>
                                     <option>Employed</option>
                                     <option>Unemployed</option>
                                     <option>Self-employed</option>
@@ -295,7 +320,18 @@
 </script>
 
 <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+<script>
+  $(document).on('change', 'input[name="members_dob[]"]', function() {
+    const dateOfBirthInput = this;
+    const ageInput = $(this).closest('.col-md-4').next().find('input[name="members_age[]"]');
 
+    const dob = new Date(dateOfBirthInput.value);
+    const currentDate = new Date();
+    const age = currentDate.getFullYear() - dob.getFullYear();
+
+    ageInput.val(age);
+  });
+</script>
 <script>
   $('#nooffamilymember').on('keyup', function(){
    

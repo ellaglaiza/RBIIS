@@ -99,7 +99,7 @@ tr:nth-child(even) {
            </section>
           <link rel="stylesheet" href="{{ asset('auth/css/print.css') }}" media="print">
                   <div style="">
-                      <h6 style="text-decoration: underline; margin-left: 68%; margin-top: 5%;"> ERNESTO  E. TACARDON  JR.</h6>
+                      <h6 style="text-decoration: underline; margin-left: 71%; margin-top: 5%;">RENE T. FUSTANES</h6>
                       <h6 style="margin-left: 72%;  ">Punong Barangay</h6>
                      
                   </div>

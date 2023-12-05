@@ -279,7 +279,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
            
           </tr>
           <tr class="row4">
-            <td class="column0 style21 s">REGION :    VIII  </td>
+            <td class="column0 style21 s">REGION :    <u>VIII</u>  </td>
             <td class="column1 style28 null style28" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -289,7 +289,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           
           </tr>
           <tr class="row5">
-            <td class="column0 style1 s">PROVINCE:   SOUTHERN LEYTE</td>
+            <td class="column0 style1 s">PROVINCE:   <u>SOUTHERN LEYTE </u></td>
             <td class="column1 style28 null style28" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -299,7 +299,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           
           </tr>
           <tr class="row6">
-            <td class="column0 style1 s">CITY/MUNICIPALITY:  BONTOC</td>
+            <td class="column0 style1 s">CITY/MUNICIPALITY:  <u>BONTOC</u></td>
             <td class="column1 style28 null style28" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -309,7 +309,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             
           </tr>
           <tr class="row7">
-            <td class="column0 style1 s">BARANGAY:  </td>
+            <td class="column0 style1 s">BARANGAY:<u>San Ramon</u>  </td>
             <td class="column1 style28 null style28" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -333,7 +333,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             <td class="column11 style1 null"></td>
           </tr>
           <tr class="row9">
-            <td class="column0 style17 s">Total No. of Barangay Inhabitants:</td>
+            <td class="column0 style17 s">Total No. of Barangay Inhabitants:<u>{{ $total_population1}}</u> </td>
             <td class="column1 style31 s style31" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -345,7 +345,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             <td class="column11 style1 null"></td>
           </tr>
           <tr class="row10">
-            <td class="column0 style17 s">Total No. of Households:</td>
+            <td class="column0 style17 s">Total No. of Households: <u>{{ $total_HouseholdNo }}</u> </td>
             <td class="column1 style31 s style31" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -357,7 +357,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             <td class="column11 style1 null"></td>
           </tr>
           <tr class="row11">
-            <td class="column0 style17 s">Total No. of Families: {{$sum}}</td>
+            <td class="column0 style17 s">Total No. of Families:<u> {{$sum}} </u></td>
             <td class="column1 style31 s style31" colspan="3"></td>
             <td class="column4 style1 null"></td>
             <td class="column5 style1 null"></td>
@@ -438,7 +438,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             <td class="column0 style22 s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Children 13-17 years old</td>
             <td class="column1 style22 null">{{ $total_male_13yrs}}</td>
             <td class="column2 style9 null">{{ $total_female_13yrs}}</td>
-            <td class="column3 style9 null">{{ $total_population_18yrs}}</td>
+            <td class="column3 style9 null">{{ $total_population_13yrs}}</td>
             <td class="column4 style10 null"></td>
             <td class="column5 style2 null"></td>
             <td class="column6 style1 null"></td>
@@ -452,7 +452,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             <td class="column0 style22 s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adult 18-35 years old</td>
             <td class="column1 style22 null">{{ $total_male_18yrs}}</td>
             <td class="column2 style9 null">{{ $total_female_18yrs}}</td>
-            <td class="column3 style9 null">{{ $total_male_13yrs}}</td>
+            <td class="column3 style9 null">{{ $total_population_18yrs}}</td>
             <td class="column4 style10 null"></td>
             <td class="column5 style2 null"></td>
             <td class="column6 style1 null"></td>
@@ -516,9 +516,9 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           </tr>
           <tr class="row23">
             <td class="column0 style23 s">Labor Force</td>
-            <td class="column1 style22 null"></td>
-            <td class="column2 style9 null"></td>
-            <td class="column3 style9 null"></td>
+            <td class="column1 style22 null">{{$total_male_labor_force}}</td>
+            <td class="column2 style9 null">{{$total_female_labor_force}}</td>
+            <td class="column3 style9 null">{{$laborForce}}</td>
             <td class="column4 style10 null"></td>
             <td class="column5 style2 null"></td>
             <td class="column6 style1 null"></td>
@@ -544,9 +544,9 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           </tr>
           <tr class="row25">
             <td class="column0 style23 s">Out of School Children  (OSC)                (6-14 years old)</td>
-            <td class="column1 style11 null">{{$total_population_unemployed}}</td>
-            <td class="column2 style7 null">{{$total_population_unemployed}}</td>
-            <td class="column3 style7 null">{{$total_population_unemployed}}</td>
+            <td class="column1 style11 null">{{$total_male_osc}}</td>
+            <td class="column2 style7 null">{{$total_female_osc}}</td>
+            <td class="column3 style7 null">{{$total_population_osc}}</td>
             <td class="column4 style7 null"></td>
             <td class="column5 style5 null"></td>
             <td class="column6 style1 null"></td>
@@ -558,9 +558,9 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           </tr>
           <tr class="row26">
             <td class="column0 style23 s">Out of School Youth  (OSY)                             (15-24 years old)</td>
-            <td class="column1 style11 null">{{$total_male_osc}}</td>
-            <td class="column2 style7 null">{{$total_female_osc}}</td>
-            <td class="column3 style7 null">{{$total_population_osc}}</td>
+            <td class="column1 style11 null">{{$total_male_osy}}</td>
+            <td class="column2 style7 null">{{$total_female_osy}}</td>
+            <td class="column3 style7 null">{{$total_population_osy}}</td>
             <td class="column4 style7 null"></td>
             <td class="column5 style5 null"></td>
             <td class="column6 style1 null"></td>
@@ -670,9 +670,9 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           </tr>
           <tr class="row34">
             <td class="column0 style23 s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Foreigner</td>
-            <td class="column1 style11 null"></td>
-            <td class="column2 style7 null"></td>
-            <td class="column3 style7 null"></td>
+            <td class="column1 style11 null">{{$total_male_foreigner}}</td>
+            <td class="column2 style7 null">{{$total_female_foreigner}}</td>
+            <td class="column3 style7 null">{{$total_population_foreigner}}</td>
             <td class="column4 style7 null"></td>
             <td class="column5 style18 null"></td>
             <td class="column6 style1 null"></td>

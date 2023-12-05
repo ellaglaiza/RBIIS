@@ -44,6 +44,16 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
         Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard');
+        Route::get('/dashboard/list/deceased', 'Dashboard\DashboardController@listDeceased')->name('dashboard.deceased');
+
+        Route::get('/dashboard/list/soloparent', 'Dashboard\DashboardController@listsoloparent')->name('dashboard.soloparent');
+
+        Route::get('/dashboard/list/pwd', 'Dashboard\DashboardController@listpwd')->name('dashboard.pwd');
+        Route::get('/dashboard/list/seniorcitizen', 'Dashboard\DashboardController@listseniorcitizen')->name('dashboard.seniorcitizen');
+
+       Route::get('/dashboard/list/OFW', 'Dashboard\DashboardController@listOFW')->name('dashboard.OFW');
+
+       
 
         //Addresident
         Route::get('/residentprofile/add', 'ResidentProfileController@addresidentprofile')->name('residentprofile.add');

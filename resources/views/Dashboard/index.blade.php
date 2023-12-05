@@ -106,9 +106,9 @@
         </div>
     </div>
 </div>
-
+        <a href="{{route('dashboard.soloparent')}}">
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;" >
+                <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;  width: 214px;" >
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-3 " style="color: #3e72f6">
@@ -122,6 +122,8 @@
                     </div>
                 </div>
             </div>
+        </a>
+        <a href="{{route('dashboard.pwd')}}">
             <div class="col-xl-3 col-md-6 mb-4">
             <div class="card  shadow  py-1" style="background-color: #22a4be80;  height: 141px;
             width: 237px; " >
@@ -138,8 +140,10 @@
                 </div>
             </div>
         </div>
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card  shadow  py-3" style="background-color: #beb522;   height: 141px; width: 237px;">
+    </a>
+    <a href="{{route('dashboard.seniorcitizen')}}">
+      <div class="col-xl-3 col-md-6 mb-4" style="margin-left: -15px;">
+        <div class="card  shadow  py-3" style="background-color: #beb522;   height: 141px; width: 237px; margin-left: -4px;">
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-3">
@@ -153,10 +157,11 @@
         </div>
     </div>
 </div>
-
-                          <div class="col-xl-3 col-md-6 mb-4">
+</a>
+    <a href="{{route ('dashboard.OFW') }}">
+    <div class="col-xl-3 col-md-6 mb-4">
     <div class="card  shadow  py-1" style="background-color: #fff;  height: 141px;
-    width: 237px; background-color: #ff8a65">
+    width: 237px; background-color: #ff8a65; margin-left: -19px;">
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-3">
@@ -170,21 +175,24 @@
         </div>
     </div>
 </div>
- <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card  shadow  py-1" style="background-color: #fff;  height: 141px;
-    width: 219px; background-color: #64b5f6">
-        <div class="card-body">
-            <div class="row no-gutters align-items-center">
-                <div class="col mr-3">
-                    <div class="text-sm font-weight-bold  mb-1" style=" color: #e53935;">Deceased</div>
-                    <div class="h4 font-weight-bold " style="  color: #e53935;">{{ $total_population_deceased}}</div>
-                </div>
-                <div class="col-auto">
-                <i class="fas fa-user fa-3x" style="color: #e53935;"></i>
+</a>
+<a href="{{route('dashboard.deceased')}}">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card shadow py-1" style="background-color: #fff; height: 141px; width: 219px; background-color: #64b5f6; margin-left: -20px;">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-3">
+                        <div class="text-sm font-weight-bold mb-1" style="color: #e53935;">Deceased</div>
+                        <div class="h4 font-weight-bold" style="color: #e53935;">{{ $total_population_deceased }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-user fa-3x" style="color: #e53935;"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</a>
+
 </div>
 @endsection
