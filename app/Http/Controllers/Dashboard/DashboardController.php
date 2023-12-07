@@ -52,7 +52,7 @@ class DashboardController extends Controller
 {
     $deceasedRecords = $this->getDeceasedRecords();
 
-    return view('dashboard.list_deceased', compact('deceasedRecords'));
+    return view('Dashboard.list_deceased', compact('deceasedRecords'));
 }
 
 private function getDeceasedRecords()
