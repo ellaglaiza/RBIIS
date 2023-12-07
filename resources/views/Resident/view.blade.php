@@ -311,7 +311,7 @@ INDIVIDUAL RECORDS OF BARANGAY INHABITANT</span>
 REGION</span>
 <div class="pos" id="_50:114" style="top:-3;left:55">
 <span style="margin-inline: 30px;"></span>
-    <u>______{{$resident->region}}________</u>
+    <u>______{{$resident->region}}__________</u>
 </div>
 </div>
 <div class="pos" id="_150:114" style="top:114;left:150">

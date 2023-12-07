@@ -239,7 +239,7 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
         <col class="col11">
         <tbody>
           <tr class="row0">
-            <td class="column0 style4 s">RBI FORM C (<span style="font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt">Revised 2023</span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt">)</span></td>
+            <td class="column0 style4 s"> <span style="font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt"></span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt"></span></td>
             <td class="column1 style1 null"></td>
             <td class="column2 style1 null"></td>
             <td class="column3 style1 null"></td>
