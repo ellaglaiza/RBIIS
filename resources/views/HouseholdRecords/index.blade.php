@@ -46,7 +46,7 @@
                         <td>{{$ResidentProfile->sex}}</td>
                         <td>{{$ResidentProfile->purok}}</td>
                         <td class="text-center">
-                             <a href="{{ url('/Lists/view/records/').'/'.$ResidentProfile->id}}" class="btn btn-primary btn-sm">View</a>
+                             <a href="{{ url('/Lists/view/records/').'/'.$ResidentProfile->id}}" class="btn btn-primary btn-sm">View Records</a>
                              
                          
 

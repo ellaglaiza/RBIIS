@@ -106,14 +106,8 @@
                            </div>
                              <div class="col-md-4">
                               <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
-                                 <select class="form-control" name="remarks"  >
-                                  <option></option>
-                                  <option>PWD</option>
-                                  <option>OFW</option>
-                                  <option>Solo Parent</option>
-                                  <option>Belongs to Indigenous People</option>                                  
-                                </select>
+                                <label style="font-family: emoji; font-weight: 500;">Remarks</label>
+                                <input class= "form-control" name="remarks"  ></input>
                               </div>
                            </div>
                             <div class="col-md-4">
@@ -177,7 +171,7 @@
                           <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Region: </label>
-                                 <input type="text" name="region"  class="form-control" >
+                                 <select type="text" id="regions" name="region"  class="form-control" ></select>
                               </div>
                            </div>
                               <div class="col-md-6">
@@ -251,12 +245,11 @@
                               <div class="form-group" style="margin-top: -12px">
                                <label style="font-family: emoji; font-weight: 500;">Please Specify:</label>
                                  <label>
-                            <input type="checkbox" name="specify" value=" 
+                            <input type="checkbox" name="specify" value="Graduate
                         "> Graduate
                           </label>
-                          
                           <label>
-                            <input type="checkbox" name="specify" value="VOCATIONAL
+                            <input type="checkbox" name="specify" value="Under Graduate
                         "> Under Graduate
                           </label>
                               </div>
@@ -273,11 +266,8 @@
                               <div class="form-group">
                                   <label style="font-family: emoji; font-weight: 500;">Status Of Employment</label>
                                   <select class="form-control" name="status_of_employment" >
-                                    <option></option>
                                     <option>Employed</option>
-                                    <option>Unemployed</option>
-                                    <option>Self-employed</option>
-                                   
+                                    <option>Unemployed</option>                                   
                                   </select>
                               </div>
                            </div>
@@ -341,7 +331,7 @@
         $('#household_form').removeAttr('hidden');
         $('#household_form_member').empty();
         for(let x = 0; x < (nooffamilymember-1); x++){
-          $('#household_form_member').append('<div class="col-md-3"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_name[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Suffix:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Age:</label><input class= "form-control" name="members_age[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div> <div class="col-md-3"><div class="form-group"> <label style="font-family: emoji; font-weight: 500;">Sex </label><select class="form-control" name="members_sex[]"><option disabled>Select Sex</option><option>Male</option><option>Female</option></select></div></div><div class="col-md-3"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Citizenship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Occupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label><select class="form-control" name="members_remark[]"><option ></option> <option>PWD</option><option>Solo Parent</option><option>Overseas Filipino Workers</option> <option>Belongs to Indigenous People</option></select></div></div>');
+          $('#household_form_member').append('<div class="col-md-3"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_name[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Suffix:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Age:</label><input class= "form-control" name="members_age[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div> <div class="col-md-3"><div class="form-group"> <label style="font-family: emoji; font-weight: 500;">Sex </label><select class="form-control" name="members_sex[]"><option disabled>Select Sex</option><option>Male</option><option>Female</option></select></div></div><div class="col-md-3"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Citizenship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Occupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Remarks:</label><input class= "form-control" name="members_remarks[]" placeholder=""></input></div></div>');
         }
     } else {
       $('#household_form').attr('hidden','hidden');
@@ -361,5 +351,35 @@
             householdNumberDiv.style.display = 'none';
         }
     }
+       let xhr = new XMLHttpRequest();
+    let url = 'https://ph-locations-api.buonzz.com/v1/regions?page=philippines';
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let responseData = JSON.parse(xhr.responseText);
+                let regions = responseData.data; // Assuming the regions are in the 'data' property
+
+                if (Array.isArray(regions)) {
+                    let select = document.getElementById('regions');
+
+                    regions.forEach(function(region) {
+                        let option = document.createElement('option');
+                        option.text = region.name;
+                        option.value = region.id; // You might want to set a value
+                        select.appendChild(option);
+                    });
+                } else {
+                    console.log('Regions data is not an array');
+                }
+            } else {
+                console.log('Error: ' + xhr.status);
+            }
+        }
+    };
+
+    xhr.open('GET', url, true);
+    xhr.send();
 </script>
+
 @endsection

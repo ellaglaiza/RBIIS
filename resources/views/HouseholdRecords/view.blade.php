@@ -74,6 +74,11 @@
             display: none;
         }
     }
+    @media print {
+  @page {
+    size: landscape;
+  }
+}
 
       </style>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -153,7 +158,7 @@
       th.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
       td.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
       th.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
-      td.style28 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style28 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white; margin-left: 232px }
       th.style28 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       table.sheet0 col.col0 { width:136.23333177pt }
       table.sheet0 col.col1 { width:113.18888759pt }
@@ -254,7 +259,7 @@
             <td class="column0 style23 null style23" colspan="15"></td>
           </tr>
           <tr class="row4">
-            <td class="column0 style28 s style28" colspan="3">REGION : <u>{{$resident->region}}</u></td>
+            <td class="column0 style28 s style28" colspan="3" >REGION : <u>{{$resident->region}}</u></td>
             <td class="column3 style2 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
@@ -269,7 +274,7 @@
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row5">
-            <td class="column0 style28 s style28" colspan="3">PROVINCE:  <u>{{$resident->province}}</u></td>
+            <td class="column0 style28 s style28" colspan="3" >PROVINCE:  <u>{{$resident->province}}</u></td>
             <td class="column3 style2 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
@@ -314,7 +319,7 @@
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row8">
-            <td class="column0 style28 s style28" colspan="3">HOUSEHOLD ADDRESS :  <u>{{$resident->address}}</u></td>
+            <td class="column0 style28 s style28" colspan="3">PUROK :  <u>{{$resident->purok}} </u> </td>
             <td class="column3 style6 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
@@ -323,6 +328,21 @@
             <td class="column8 style2 null"></td>
             <td class="column9 style2 null"></td>
             <td class="column10 style2 null"></td>
+            <td class="column11 style2 null"></td>
+            <td class="column12 style2 null"></td>
+            <td class="column13 style2 null"></td>
+            <td class="column14 style2 null"></td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style28 s style28" colspan="3">HOUSEHOLD ADDRESS :  <u>{{$resident->address}}</u></td>
+            <td class="column3 style2 null"></td>
+            <td class="column4 style2 null"></td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style2 null"></td>
+            <td class="column7 style3 null"></td>
+            <td class="column8 style3 null"></td>
+            <td class="column9 style3 null"></td>
+            <td class="column10 style3 null"></td>
             <td class="column11 style2 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
@@ -342,23 +362,6 @@
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
-          </tr>
-          <tr class="row10">
-            <td class="column0 style15 null"></td>
-            <td class="column1 style20 null"></td>
-            <td class="column2 style20 null"></td>
-            <td class="column3 style15 null"></td>
-            <td class="column4 style15 null"></td>
-            <td class="column5 style15 null"></td>
-            <td class="column6 style15 null"></td>
-            <td class="column7 style15 null"></td>
-            <td class="column8 style5 null"></td>
-            <td class="column9 style5 null"></td>
-            <td class="column10 style5 null"></td>
-            <td class="column11 style5 null"></td>
-            <td class="column12 style5 null"></td>
-            <td class="column13 style5 null"></td>
-            <td class="column14 style5 null"></td>
           </tr>
           <tr class="row11">
             <td class="column0 style26 s style26" colspan="4">NAME</td>

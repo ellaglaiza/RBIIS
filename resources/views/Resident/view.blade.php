@@ -272,18 +272,19 @@ margin-left: 584px;
     }
     #print-button {
       display: block;
-    width: 100px;
-    margin-left: 88%;
-    background-color: 99FF;
-    text-align: center;
-    position: relative;
-    margin-top: 847px;
+  width: 100px;
+  margin-left: 103%;
+  background-color: 99FF;
+  text-align: center;
+  position: relative;
+  margin-top: -136px;
     }
     @media print {
       #print-button {
         display: none;
       }
     } 
+    
     
 </style>
 
@@ -292,14 +293,14 @@ function printDocument() {
   window.print();
 }
 </script>
-<button id="print-button" onclick="printDocument()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i style="font-size:24px" class="fa">&#xf02f;</i></i> Print</button></head>
+<button id="print-button" onclick="printDocument()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i style="font-size:24px;"></i>Print</button></head>
 <body>
 
 
 <div class="pos" id="_0:0" style="top:-10px; ">
 <div class="pos" id="_60:41" style="top:41;left:60">
 <span id="_13.5" style="font-weight:bold; font-family:Arial; font-size:13.5px; color:#000000">
-RBI Form B<span style="font-weight:normal"> (Revised 2023)</span></span>
+<span style="font-weight:normal"></span></span>
 </div>
 <div class="pos" id="_232:68" style="top:68;left:232">
 <span id="_13.5" style="font-weight:bold; font-family:Arial; font-size:13.5px; color:#000000">
@@ -310,11 +311,11 @@ INDIVIDUAL RECORDS OF BARANGAY INHABITANT</span>
 REGION</span>
 <div class="pos" id="_50:114" style="top:-3;left:55">
 <span style="margin-inline: 30px;"></span>
-    {{$resident->region}}
+    <u>______{{$resident->region}}________</u>
 </div>
 </div>
 <div class="pos" id="_150:114" style="top:114;left:150">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
+<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#0>00000">
 :</span>
 </div>
 <div class="pos" id="_200:114" style="top:114;left:200">
@@ -330,7 +331,7 @@ REGION</span>
  CITY/MUN</span>
  <div class="pos" id="_450:114" style="top:-2;left:54">
  <span style="margin-inline: 30px;"></span>
-    {{$resident->city_munipality}}
+    <u>__{{$resident->city_munipality}}_________</u>
 </div>
 </div>
 <div class="pos" id="_550:114" style="top:114;left:550">
@@ -342,7 +343,7 @@ REGION</span>
 PROVINCE</span>
 <div class="pos" id="_50:136" style="top:-4;left:68; white-space: nowrap;">
     <span style="margin-inline: 23px; display: inline-block;"></span>
-    {{$resident->province}}
+    <u>_{{$resident->province}}___</u>
 </div>
 
 </div>
@@ -359,7 +360,7 @@ PROVINCE</span>
 BARANGAY</span>
 <div class="pos" id="_450:136" style="top:-4;left:60; white-space: nowrap;">
     <span style="margin-inline: 27px;"></span>
-    {{$resident->barangay}}
+    <u>___{{$resident->barangay}}____</u>
 </div>
 
 </div>

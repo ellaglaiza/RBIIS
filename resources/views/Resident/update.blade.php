@@ -116,18 +116,12 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="form-group">
-                                <label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label>
+                              <div class="form-group">
+                                <label style="font-family: emoji; font-weight: 500;">Remarks</label>
                                 <input type="hidden" name="id" value="{{$resident->id}}">
-                                <select class="form-control" name="remarks">
-                                    <option value=""></option>
-                                    <option value="PWD" <?php echo ($resident->remarks === 'PWD') ? 'selected' : ''; ?>>PWD</option>
-                                    <option value="OFW" <?php echo ($resident->remarks === 'OFW') ? 'selected' : ''; ?>>OFW</option>
-                                    <option value="Solo Parent" <?php echo ($resident->remarks === 'Solo Parent') ? 'selected' : ''; ?>>Solo Parent</option>
-                                    <option value="Belongs to Indigenous People" <?php echo ($resident->remarks === 'Belongs to Indigenous People') ? 'selected' : ''; ?>>Belongs to Indigenous People</option>
-                                </select>
-                            </div>
-                        </div>
+                                <input class= "form-control" name="remarks" placeholder="" value="{{$resident->remarks}}"></input>
+                              </div>
+                           </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Other Info</label>
@@ -196,13 +190,15 @@
                                  <input type="text" name="province"  id="province" class="form-control" value="{{$resident->province}}">
                               </div>
                            </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
+                            <div class="col-md-6">
+                            <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">Region: </label>
-                                <input type="hidden" name="id" value="{{$resident->id}}">
-                                 <input type="text" name="region"  class="form-control" value="{{$resident->region}}">
-                              </div>
-                           </div>
+                                <select name="region" class="form-control">
+                                    <option value="{{ $resident->region }}" selected>{{ $resident->region }}</option>
+                                    <!-- Ang option nga gitagana kini maoy ipakita nga selected sa dropdown -->
+                                </select>
+                            </div>
+                        </div>                         
                               <div class="col-md-6">
                               <div class="form-group">
                                 <label style="font-family: emoji; font-weight: 500;">No. Of Family Members:</label>
@@ -347,7 +343,18 @@
 </script>
 
 <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+<script>
+  $(document).on('change', 'input[name="members_dob[]"]', function() {
+    const dateOfBirthInput = this;
+    const ageInput = $(this).closest('.col-md-4').next().find('input[name="members_age[]"]');
 
+    const dob = new Date(dateOfBirthInput.value);
+    const currentDate = new Date();
+    const age = currentDate.getFullYear() - dob.getFullYear();
+
+    ageInput.val(age);
+  });
+</script>
 <script>
   $('#nooffamilymember').on('keyup', function(){
    
@@ -357,7 +364,7 @@
         $('#household_form').removeAttr('hidden');
         $('#household_form_member').empty();
         for(let x = 0; x < (nooffamilymember-1); x++){
-          $('#household_form_member').append('<div class="col-md-3"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_name[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Suffix:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Age:</label><input class= "form-control" name="members_age[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div> <div class="col-md-3"><div class="form-group"> <label style="font-family: emoji; font-weight: 500;">Sex </label><select class="form-control" name="members_sex[]"><option disabled>Select Sex</option><option>Male</option><option>Female</option></select></div></div><div class="col-md-3"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Citizenship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Occupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label style="font-family: emoji; font-weight: 500;">Remarks(Other Info)</label><select class="form-control" name="members_remark[]"><option ></option> <option>PWD</option><option>Solo Parent</option><option>Overseas Filipino Workers</option> <option>Belongs to Indigenous People</option></select></div></div>');
+          $('#household_form_member').append('<div class="col-md-3"><div class="form-group"><label>Firstname:</label><input class= "form-control" name="members_name[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Middlename:</label><input class= "form-control" name="members_middlename[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Lastname:</label><input class= "form-control" name="members_lastname[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Suffix:</label><input class= "form-control" name="members_qualifier[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Address:</label><input class= "form-control" name="members_address[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Date of Birth:</label><input type="date" class= "form-control" name="members_dob[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Age:</label><input class= "form-control" name="members_age[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Place of Birth:</label><input class= "form-control" name="members_placeofbirth[]" placeholder=""></input></div></div> <div class="col-md-3"><div class="form-group"> <label style="font-family: emoji; font-weight: 500;">Sex </label><select class="form-control" name="members_sex[]"><option disabled>Select Sex</option><option>Male</option><option>Female</option></select></div></div><div class="col-md-3"><div class="form-group"><label>Civil Status:</label><input class= "form-control" name="members_civilstatus[]" placeholder=""></input></div></div><div class="col-md-3"><div class="form-group"><label>Religion:</label><input class= "form-control" name="members_religion[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Citizenship:</label><input class= "form-control" name="members_relationship[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Occupation:</label><input class= "form-control" name="members_occupation[]" placeholder=""></input></div></div><div class="col-md-4"><div class="form-group"><label>Remarks:</label><input class= "form-control" name="members_remarks[]" placeholder=""></input></div></div>');
         }
     } else {
       $('#household_form').attr('hidden','hidden');
@@ -377,5 +384,34 @@
             householdNumberDiv.style.display = 'none';
         }
     }
+     let xhr = new XMLHttpRequest();
+    let url = 'https://ph-locations-api.buonzz.com/v1/regions?page=philippines';
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let responseData = JSON.parse(xhr.responseText);
+                let regions = responseData.data; // Assuming the regions are in the 'data' property
+
+                if (Array.isArray(regions)) {
+                    let select = document.getElementById('regions');
+
+                    regions.forEach(function(region) {
+                        let option = document.createElement('option');
+                        option.text = region.name;
+                        option.value = region.id; // You might want to set a value
+                        select.appendChild(option);
+                    });
+                } else {
+                    console.log('Regions data is not an array');
+                }
+            } else {
+                console.log('Error: ' + xhr.status);
+            }
+        }
+    };
+
+    xhr.open('GET', url, true);
+    xhr.send();
 </script>
 @endsection

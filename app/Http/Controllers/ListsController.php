@@ -7,13 +7,15 @@ use App\Models\Resident;
 
 class ListsController extends Controller
 {
-	 public function editresidentprofile(Request $request){
-        $resident=Resident::where('id',$request->id)->first();
-        
-        return view('Resident.update',[
-                'resident'=>$resident
-        ]);
-    }
+	public function editresidentprofile(Request $request){
+    $resident = Resident::where('id', $request->id)->first();
+    $regions = Resident::distinct()->pluck('region')->toArray();
+
+    return view('Resident.update', [
+        'resident' => $resident,
+        'regions' => $regions
+    ]);
+}
 
      public function listresidentprofile(){
         $resident=Resident::orderby('created_at','desc')->paginate(1000);
