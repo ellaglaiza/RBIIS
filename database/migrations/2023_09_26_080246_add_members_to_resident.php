@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('province')->after('city_munipality');
             $table->string('region')->after('province');
             $table->string('landlineNo')->after('region')->nullable();
-            $table->string('contact_number')->after('landlineNo')->nullable();
+            $table->string('contact_number')->after('landlineNo')->nullable()->change();
             $table->string('email')->after('contact_number')->nullable();           
             $table->string('occupation')->after('email')->nullable();
             $table->string('status_of_employment')->after('occupation')->nullable();
