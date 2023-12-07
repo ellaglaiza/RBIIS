@@ -266,6 +266,7 @@
                               <div class="form-group">
                                   <label style="font-family: emoji; font-weight: 500;">Status Of Employment</label>
                                   <select class="form-control" name="status_of_employment" >
+                                    <option></option>
                                     <option>Employed</option>
                                     <option>Unemployed</option>                                   
                                   </select>
