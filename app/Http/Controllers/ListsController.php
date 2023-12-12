@@ -26,11 +26,21 @@ class ListsController extends Controller
     }
 
      public function recordslistresidentprofile(){
-        $resident=Resident::orderby('created_at','desc')->paginate(1000);
-        
-        return view('HouseholdRecords.index', [
-                'residents'=>$resident
-        ]);
+        $distinctHouseholds = Resident::select('HouseholdNO')
+        ->distinct()
+        ->orderBy('HouseholdNO')
+        ->pluck('HouseholdNO');
+
+    $households = collect();
+
+    foreach ($distinctHouseholds as $household) {
+        $households->push(
+            Resident::where('HouseholdNO', $household)
+                ->first()
+        );
+    }
+
+    return view('HouseholdRecords.index', compact('households'));
     }
     
   

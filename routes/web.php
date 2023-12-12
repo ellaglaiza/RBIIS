@@ -53,6 +53,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
        Route::get('/dashboard/list/OFW', 'Dashboard\DashboardController@listOFW')->name('dashboard.OFW');
 
+        Route::get('/dashboard/list/house', 'Dashboard\DashboardController@house')->name('dashboard.house');
+
        
 
         //Addresident

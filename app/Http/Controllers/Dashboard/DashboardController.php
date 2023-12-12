@@ -16,6 +16,12 @@ class DashboardController extends Controller
     }
     public function index() 
 {
+    // $totalPopulation = 0; 
+
+    // $residents = Resident::all();
+    // foreach($residents as $household){
+    //     $totalPopulation += count(json_decode($household->members_name)) + 1;
+    // }
     $totalPopulation = Resident::count(); 
     $total_population_deceased = Resident::where('outofschool', 'Deceased')->count();
     $total_population_transferred = Resident::where('outofschool', 'Transferred')->count();
@@ -31,7 +37,7 @@ class DashboardController extends Controller
 	    $sum += (int)$resident->total_family;
 	}
 
-	$total_HouseholdNo = Resident::distinct('HouseholdNO')->count(); // Assuming 'household_id' is the column representing households
+	$total_HouseholdNo = Resident::distinct('householdNO')->count(); // Assuming 'household_id' is the column representing households
 
     $total_population_pwd = Resident::where('remarks', 'PWD')->count();
    
@@ -59,6 +65,7 @@ private function getDeceasedRecords()
 {
     return Resident::where('outofschool', 'Deceased')->get();
 }
+
 
 public function listsoloparent() 
 {
@@ -107,6 +114,25 @@ private function getSeniorCitizenRecords()
 
     return Resident::where('age', '>=', $seniorAge)
                    ->get();
+}
+
+ public function house()
+{
+    $distinctHouseholds = Resident::select('HouseholdNO')
+        ->distinct()
+        ->orderBy('HouseholdNO')
+        ->pluck('HouseholdNO');
+
+    $households = collect();
+
+    foreach ($distinctHouseholds as $household) {
+        $households->push(
+            Resident::where('HouseholdNO', $household)
+                ->first()
+        );
+    }
+
+    return view('Dashboard.HOUSE', compact('households'));
 }
 
 

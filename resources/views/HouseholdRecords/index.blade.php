@@ -36,7 +36,7 @@
                      </tr>
                   </thead>
                   <tbody>
-                    @foreach($residents as $ResidentProfile)
+                    @foreach($households as $ResidentProfile)
                      <tr>
                    
                         <td>{{$ResidentProfile->firstname}}</td>

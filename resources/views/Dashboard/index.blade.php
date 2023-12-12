@@ -55,9 +55,9 @@
 
                     <!-- Content Row -->
                     <div class="row">
-                         <div class="col-xl-3 col-md-6 mb-4">
+                         <div class="col-xl-3 col-md-6 mb-4" style="    margin-right: -11px;">
                                     <div class="card bg-primary text-white shadow " style="height: 141px;
-    width: 237px;">
+    width: 227px;">
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col">
@@ -89,10 +89,10 @@
         </div>
     </div>
 </div>
-
+<a href="{{route('dashboard.house')}}">
                      <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card  shadow h-100 py-1" style=" width: 237px; background-color: #1cc8c7">
-        <div class="card-body" style="  color: black;">
+    <div class="card  shadow h-100 py-1" style=" width: 237px; background-color: #1cc8c7; height: 141px;">
+        <div class="card-body" style="  color: black;   height: 133px;">
             <div class="row no-gutters align-items-center">
                 <div class="col">
                     <div class="text-xs font-weight-bold mb-1" style="font-size: 15px;  ">Total Number of Household</div>
@@ -106,9 +106,10 @@
         </div>
     </div>
 </div>
+</a>
         <a href="{{route('dashboard.soloparent')}}">
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;  width: 214px;" >
+                <div class="card   py-1" style="background-color: #f6c23ecc; border-radius: 10px; color: #c43ef6f7; height: 141px;      width: 229px; margin-left: -19px;" >
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-3 " style="color: #3e72f6">

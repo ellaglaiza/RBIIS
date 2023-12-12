@@ -273,17 +273,23 @@ public function listsaveChildrensOutofSchool()
     return view('Report.ChildrensOutofSchool.list', compact('OutofSchool'));
 }
 
-
-// public function recordslistresidentprofile() 
+// public function recordviewresidentprofile()
 // {
-//     $residents = $this->getHouseholdRecords();
+//     $distinctHouseholds = Resident::select('HouseholdNO')
+//         ->distinct()
+//         ->orderBy('HouseholdNO')
+//         ->pluck('HouseholdNO');
 
-//     return view('HouseholdRecords.index', compact('residents'));
-// }
+//     $households = collect();
 
-// private function getHouseholdRecords()
-// {
-//     return Resident::select('HouseholdNO')->distinct()->get();
+//     foreach ($distinctHouseholds as $household) {
+//         $households->push(
+//             Resident::where('HouseholdNO', $household)
+//                 ->first()
+//         );
+//     }
+
+//     return view('HouseholdRecords.index', compact('households'));
 // }
 
 
