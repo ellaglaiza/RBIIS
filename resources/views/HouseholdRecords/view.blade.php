@@ -102,40 +102,40 @@
       .inlineStr { text-align:left }
       .n { text-align:right }
       .s { text-align:left }
-      td.style0 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style0 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style1 { vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style1 { vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style2 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style2 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style3 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style3 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style4 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style4 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style5 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style5 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style1 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style2 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style2 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style3 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style3 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style5 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style5 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       td.style6 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       th.style6 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       td.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       th.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style10 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style10 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style12 { vertical-align:middle;   text-align: center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style12 { vertical-align:middle;   text-align: center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style9 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style9 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style10 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style10 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style11 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style11 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style12 { vertical-align:bottom; text-align: center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style12 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       td.style13 { vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       th.style13 { vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       td.style14 { vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       th.style14 { vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style15 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style15 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style16 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style16 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style15 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style15 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style16 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style16 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       td.style17 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:8pt; background-color:white }
       th.style17 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:8pt; background-color:white }
       td.style18 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
@@ -144,49 +144,55 @@
       th.style19 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
       td.style20 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       th.style20 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style21 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:8pt; background-color:white }
-      th.style21 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:8pt; background-color:white }
-      td.style22 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
-      th.style22 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
-      td.style23 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style23 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style24 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style24 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style25 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      th.style25 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
-      td.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
-      th.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
-      td.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
-      th.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
-      td.style28 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white; margin-left: 232px }
-      th.style28 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style21 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style21 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style22 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style22 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style23 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:8pt; background-color:white }
+      th.style23 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:8pt; background-color:white }
+      td.style24 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style24 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      td.style25 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style25 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style26 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style26 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style27 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style27 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style28 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style28 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
+      th.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
+      td.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
+      th.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:#C5DEB5 }
+      td.style31 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style31 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
       table.sheet0 col.col0 { width:136.23333177pt }
       table.sheet0 col.col1 { width:113.18888759pt }
-      table.sheet0 col.col2 { width:90.14444341pt }
+      table.sheet0 col.col2 { width:88.1111101pt }
       table.sheet0 col.col3 { width:39.31111066pt }
       table.sheet0 col.col4 { width:79.97777686pt }
       table.sheet0 col.col5 { width:82.68888794pt }
       table.sheet0 col.col6 { width:33.8888885pt }
       table.sheet0 col.col7 { width:39.31111066pt }
-      table.sheet0 col.col8 { width:51.51111052pt }
+      table.sheet0 col.col8 { width:54.89999937pt }
       table.sheet0 col.col9 { width:60.32222153pt }
       table.sheet0 col.col10 { width:88.1111101pt }
-      table.sheet0 col.col11 { width:71.84444362pt }
+      table.sheet0 col.col11 { width:69.13333254pt }
       table.sheet0 col.col12 { width:42.02222174pt }
       table.sheet0 col.col13 { width:65.06666592pt }
       table.sheet0 col.col14 { width:43.37777728pt }
       table.sheet0 .column14 { visibility:collapse; display:none }
       table.sheet0 tr { height:15pt }
       table.sheet0 tr.row1 { height:15pt }
-      table.sheet0 tr.row2 { height:15.75pt }
+      table.sheet0 tr.row2 { height:15.5pt }
       table.sheet0 tr.row3 { height:15pt }
       table.sheet0 tr.row4 { height:18pt }
-      table.sheet0 tr.row5 { height:18pt }
+      table.sheet0 tr.row5 { height:19pt }
       table.sheet0 tr.row6 { height:18pt }
       table.sheet0 tr.row7 { height:18pt }
-      table.sheet0 tr.row8 { height:18pt }
-      table.sheet0 tr.row9 { height:18pt }
-      table.sheet0 tr.row10 { height:15pt }
+      table.sheet0 tr.row8 { height:10pt }
+      table.sheet0 tr.row9 { height:1pt; display:none; visibility:hidden }
+      table.sheet0 tr.row10 { height:15pt; display:none; visibility:hidden }
       table.sheet0 tr.row11 { height:15pt }
       table.sheet0 tr.row12 { height:33pt }
       table.sheet0 tr.row13 { height:18pt }
@@ -217,7 +223,7 @@
                 </button> 
 
             </div>
-    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines" style="margin-left: 107px;">
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines" style="margin-left: 44px;">
         <col class="col0">
         <col class="col1">
         <col class="col2">
@@ -234,77 +240,61 @@
         <col class="col13">
         <col class="col14">
         <tbody>
-         
+        
           <tr class="row1">
-            <td class="column0 style5 s"><span style="font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:11pt"></span></td>
-            <td class="column1 style5 null"></td>
-            <td class="column2 style5 null"></td>
-            <td class="column3 style5 null"></td>
-            <td class="column4 style5 null"></td>
-            <td class="column5 style5 null"></td>
-            <td class="column6 style5 null"></td>
-            <td class="column7 style5 null"></td>
-            <td class="column8 style5 null"></td>
-            <td class="column9 style5 null"></td>
-            <td class="column10 style5 null"></td>
-            <td class="column11 style5 null"></td>
+            <td class="column0 style28 null style28" colspan="12"></td>
             <td class="column12 style5 null"></td>
             <td class="column13 style5 null"></td>
             <td class="column14 style5 null"></td>
           </tr>
           <tr class="row2">
-            <td class="column0 style22 s style22" colspan="15">RECORDS OF BARANGAY INHABITANTS BY HOUSEHOLD</td>
+            <td class="column0 style24 s style24" colspan="15">RECORDS OF BARANGAY INHABITANTS BY HOUSEHOLD</td>
           </tr>
           <tr class="row3">
-            <td class="column0 style23 null style23" colspan="15"></td>
+            <td class="column0 style25 null style25" colspan="15"></td>
           </tr>
           <tr class="row4">
-            <td class="column0 style28 s style28" colspan="3" >REGION : <u>{{$resident->region}}</u></td>
+            <td class="column0 style2 s">REGION : <u>{{$resident->region}}</u></td>
+            <td class="column1 style26 null style26" colspan="2"></td>
             <td class="column3 style2 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
-            <td class="column6 style2 null"></td>
-            <td class="column7 style2 null"></td>
-            <td class="column8 style2 null"></td>
-            <td class="column9 style2 null"></td>
-            <td class="column10 style2 null"></td>
-            <td class="column11 style2 null"></td>
+            <td class="column6 style22 s style22" colspan="4">PUROK: <u>{{$resident->purok}}</u></td>
+            <td class="column10 style21 null"></td>
+            <td class="column11 style21 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row5">
-            <td class="column0 style28 s style28" colspan="3" >PROVINCE:  <u>{{$resident->province}}</u></td>
+            <td class="column0 style2 s"  style=" white-space: nowrap;">PROVINCE: <u>{{$resident->province}}</u></td>
+            <td class="column1 style26 null style26" colspan="2"></td>
             <td class="column3 style2 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
-            <td class="column6 style2 null"></td>
-            <td class="column7 style2 null"></td>
-            <td class="column8 style2 null"></td>
-            <td class="column9 style2 null"></td>
-            <td class="column10 style2 null"></td>
-            <td class="column11 style2 null"></td>
+            <td class="column6 style22 s style22" colspan="4">HOUSEHOLD ADDRESS : <u>{{$resident->address}}</u></td>
+            <td class="column10 style21 null"></td>
+            <td class="column11 style21 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row6">
-            <td class="column0 style28 s style28" colspan="3">CITY/MUNICIPALITY:  <u>{{$resident->city_munipality}}</u> </td>
+            <td class="column0 style2 s" style=" white-space: nowrap;" >CITY/MUNICIPALITY:  <u>{{$resident->city_munipality}}</u></td>
+            <td class="column1 style26 null style26" colspan="2"></td>
             <td class="column3 style2 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
-            <td class="column6 style2 null"></td>
-            <td class="column7 style2 null"></td>
-            <td class="column8 style2 null"></td>
-            <td class="column9 style2 null"></td>
-            <td class="column10 style2 null"></td>
-            <td class="column11 style2 null"></td>
+            <td class="column6 style22 s style22" colspan="4">NO. OF HOUSEHOLD MEMBERS:  <u>{{$resident->nooffamilymember}}</u></td>
+            <td class="column10 style21 null"></td>
+            <td class="column11 style21 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row7">
-            <td class="column0 style28 s style28" colspan="3">BARANGAY :  <u>{{$resident->barangay}}</u> </td>
+            <td class="column0 style2 s"  style=" white-space: nowrap;">BARANGAY :  <u>{{$resident->barangay}}</td>
+            <td class="column1 style26 null style26" colspan="2"></td>
             <td class="column3 style6 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
@@ -319,7 +309,8 @@
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row8">
-            <td class="column0 style28 s style28" colspan="3">PUROK :  <u>{{$resident->purok}} </u> </td>
+            <td class="column0 style2 null"></td>
+            <td class="column1 style26 null style26" colspan="2"></td>
             <td class="column3 style6 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
@@ -334,7 +325,8 @@
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row9">
-            <td class="column0 style28 s style28" colspan="3">HOUSEHOLD ADDRESS :  <u>{{$resident->address}}</u></td>
+            <td class="column0 style2 s">&nbsp;</td>
+            <td class="column1 style26 null style26" colspan="2"></td>
             <td class="column3 style2 null"></td>
             <td class="column4 style2 null"></td>
             <td class="column5 style2 null"></td>
@@ -348,31 +340,33 @@
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
-          <tr class="row9">
-            <td class="column0 style28 s style28" colspan="3">NO. OF HOUSEHOLD MEMBERS:  <u>{{$resident->nooffamilymember}}</u></td>
-            <td class="column3 style2 null"></td>
-            <td class="column4 style2 null"></td>
-            <td class="column5 style2 null"></td>
-            <td class="column6 style2 null"></td>
-            <td class="column7 style3 null"></td>
-            <td class="column8 style3 null"></td>
-            <td class="column9 style3 null"></td>
-            <td class="column10 style3 null"></td>
-            <td class="column11 style2 null"></td>
-            <td class="column12 style2 null"></td>
-            <td class="column13 style2 null"></td>
-            <td class="column14 style2 null"></td>
+          <tr class="row10">
+            <td class="column0 style15 null"></td>
+            <td class="column1 style20 null"></td>
+            <td class="column2 style20 null"></td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 null"></td>
+            <td class="column5 style15 null"></td>
+            <td class="column6 style15 null"></td>
+            <td class="column7 style15 null"></td>
+            <td class="column8 style5 null"></td>
+            <td class="column9 style5 null"></td>
+            <td class="column10 style5 null"></td>
+            <td class="column11 style5 null"></td>
+            <td class="column12 style5 null"></td>
+            <td class="column13 style5 null"></td>
+            <td class="column14 style5 null"></td>
           </tr>
           <tr class="row11">
-            <td class="column0 style26 s style26" colspan="4">NAME</td>
-            <td class="column4 style27 s style27" rowspan="2">PLACE OF BIRTH</td>
-            <td class="column5 style27 s style27" rowspan="2">DATE OF BIRTH</td>
-            <td class="column6 style26 s style26" rowspan="2">AGE</td>
-            <td class="column7 style26 s style26" rowspan="2">SEX</td>
-            <td class="column8 style27 s style27" rowspan="2">CIVIL STATUS</td>
-            <td class="column9 style27 s style27" rowspan="2">CITIZENSHIP</td>
-            <td class="column10 style27 s style27" rowspan="2">OCCUPATION</td>
-            <td class="column11 style27 s style27" rowspan="2">Indicate if PWD, OFW, Solo Parent or IP</td>
+            <td class="column0 style29 s style29" colspan="4">NAME</td>
+            <td class="column4 style30 s style30" rowspan="2">PLACE OF BIRTH</td>
+            <td class="column5 style30 s style30" rowspan="2">DATE OF BIRTH</td>
+            <td class="column6 style29 s style29" rowspan="2">AGE</td>
+            <td class="column7 style29 s style29" rowspan="2">SEX</td>
+            <td class="column8 style30 s style30" rowspan="2">CIVIL STATUS</td>
+            <td class="column9 style30 s style30" rowspan="2">CITIZENSHIP</td>
+            <td class="column10 style30 s style30" rowspan="2">OCCUPATION</td>
+            <td class="column11 style30 s style30" rowspan="2">Indicate if PWD, OFW, Solo Parent or IP</td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
@@ -403,8 +397,7 @@
             <td class="column13 style5 null"></td>
             <td class="column14 style5 null"></td>
           </tr>
-
-           <?php 
+            <?php 
                         $members_name = json_decode($resident->members_name);
                         $members_middlename = json_decode($resident->members_middlename);
                         $members_lastname = json_decode($resident->members_lastname);
@@ -477,8 +470,6 @@
 
     ?> -->
 </div>
-
-  
 
           <tr class="row15">
             <td class="column0 style13 null"></td>
@@ -650,15 +641,35 @@
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
-       
+          <tr class="row25">
+            <td class="column0 style2 null"></td>
+            <td class="column1 style2 null"></td>
+            <td class="column2 style2 null"></td>
+            <td class="column3 style2 null"></td>
+            <td class="column4 style2 null"></td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style2 null"></td>
+            <td class="column7 style2 null"></td>
+            <td class="column8 style2 null"></td>
+            <td class="column9 style2 null"></td>
+            <td class="column10 style2 null"></td>
+            <td class="column11 style2 null"></td>
+            <td class="column12 style2 null"></td>
+            <td class="column13 style2 null"></td>
+            <td class="column14 style2 null"></td>
+          </tr>
           <tr class="row26">
             <td class="column0 style2 s">Prepared by:</td>
             <td class="column1 style2 null"></td>
             <td class="column2 style2 null"></td>
             <td class="column3 style2 null"></td>
-            <td class="column4 style28 s style28" colspan="2">Certified Correct:</td>
+            <td class="column4 style2 s" style=" white-space: nowrap; text-align: center;">Certified Correct:</td>
+            <td class="column5 style2 null"></td>
             <td class="column6 style2 null"></td>
-            <td class="column7 style28 s style28" colspan="4">Validated by:</td>
+            <td class="column7 style2 s" style=" white-space: nowrap; text-align: center;">Validated by:</td>
+            <td class="column8 style2 null"></td>
+            <td class="column9 style2 null"></td>
+            <td class="column10 style2 null"></td>
             <td class="column11 style2 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
@@ -681,25 +692,37 @@
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
-        
-          <tr class="row29">
-            <td class="column0 style25 s style25" colspan="2">Name of Household/Head Member</td>
+          <tr class="row28">
+            <td class="column0 style26 null style26" colspan="2">{{$resident->firstname}} {{$resident->middlename}} {{$resident->lastname}}</td>
             <td class="column2 style2 null"></td>
             <td class="column3 style2 null"></td>
-            <td class="column4 style25 s style25" colspan="2">Barangay Secretary</td>
+            <td class="column4 style31 s style31" colspan="2">Flordilane F. Esparcia</td>
+            <td class="column6 style2 null"></td>
+            <td class="column7 style31 s style31" colspan="4">Rene T. Fustanes</td>
+            <td class="column11 style2 null"></td>
+            <td class="column12 style2 null"></td>
+            <td class="column13 style2 null"></td>
+            <td class="column14 style2 null"></td>
+          </tr>
+          <tr class="row29">
+            <td class="column0 style27 s style27" colspan="2">Name of Household/Head Member </td>
+            <td class="column2 style2 null"></td>
+            <td class="column3 style2 null"></td>
+            <td class="column4 style27 s style27" colspan="2">Barangay Secretary</td>
             <td class="column6 style3 null"></td>
-            <td class="column7 style25 s style25" colspan="4">Punong Barangay</td>
+            <td class="column7 style27 s style27" colspan="4">Punong Barangay</td>
             <td class="column11 style2 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row30">
-            <td class="column0 style24 s style24" colspan="2">(Signature over Printed Name)</td>
+            <td class="column0 style26 s style26" colspan="2">(Signature over Printed Name)</td>
             <td class="column2 style2 null"></td>
             <td class="column3 style2 null"></td>
-  <td class="column4 style24 s style24" colspan="2">(Signature over Printed Name)</td>            <td class="column6 style3 null"></td>
-            <td class="column7 style24 s style24" colspan="4">(Signature over Printed Name)</td>
+            <td class="column4 style26 s style26" colspan="2" style=" white-space: nowrap; text-align: center;">(Signature over Printed Name)</td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style26 s style26" colspan="4">(Signature over Printed Name)</td>
             <td class="column11 style2 null"></td>
             <td class="column12 style2 null"></td>
             <td class="column13 style2 null"></td>
@@ -723,7 +746,7 @@
             <td class="column14 style2 null"></td>
           </tr>
           <tr class="row32">
-            <td class="column0 style21 s style21" colspan="12">I hereby certify that the above information are true and correct to the best of my knowledge. I understand that for the Barangay to carry out its mandate pursuant to Section 394 (d)(6) of the Local Government Code of 1991, they must necessarily process my personal information for easy identification of inhabitants, as a tool in planning, and as an updated reference in the number of inhabitants of the Barangay. Therefore, I grant my consent and recognize the authority of the Barangay to process my personal information, subject to the provision of the Philippine Data Privacy Act of 2012.</td>
+            <td class="column0 style23 s style23" colspan="12">I hereby certify that the above information are true and correct to the best of my knowledge. I understand that for the Barangay to carry out its mandate pursuant to Section 394 (d)(6) of the Local Government Code of 1991, they must necessarily process my personal information for easy identification of inhabitants, as a tool in planning, and as an updated reference in the number of inhabitants of the Barangay. Therefore, I grant my consent and recognize the authority of the Barangay to process my personal information, subject to the provision of the Philippine Data Privacy Act of 2012.</td>
             <td class="column12 style17 null"></td>
             <td class="column13 style17 null"></td>
             <td class="column14 style17 null"></td>
@@ -749,5 +772,4 @@
     </table>
   </body>
 </html>
-
 @endsection

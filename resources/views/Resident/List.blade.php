@@ -29,6 +29,7 @@
                         <th>Suffix</th>
                         <th>Sex</th>
                         <th>Purok</th>
+                        <th>Other Info</th>
 
                         <th class="text-center">Action</th>
                      </tr>
@@ -45,6 +46,8 @@
                         <td>{{$ResidentProfile->suffix}}</td>
                         <td>{{$ResidentProfile->sex}}</td>
                         <td>{{$ResidentProfile->purok}}</td>
+                         <td>{{$ResidentProfile->outofschool}}</td>
+
                         <td class="text-center">
                              <a href="{{ url('/Lists/view/').'/'.$ResidentProfile->id}}" class="btn btn-primary btn-sm">View</a>
                              

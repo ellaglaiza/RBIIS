@@ -106,8 +106,8 @@ body { font-family: Arial; font-size: 15.8px; border: 5px solid; margin-top: 176
      margin-top: 210px;
   margin-left: 248px;
     }
-    .sample-box10 {
-  width: 139px;
+   .sample-box10 {
+  width: 183px;
   height: 2px;
   background-color: white;
   border: 1px solid #333;
@@ -182,7 +182,7 @@ body { font-family: Arial; font-size: 15.8px; border: 5px solid; margin-top: 176
   text-align: center;
   font-family: Arial, sans-serif;
   margin-top: -24px;
-  margin-left: 383px;
+  margin-left: 422px;
 }
    .box5 {
   width: 180px;
@@ -239,8 +239,8 @@ margin-left: 584px;
   margin-top: -158px;
   margin-left: 591px;
 }
-    .boxs13 {
-  width: 104px;
+   .boxs13 {
+  width: 70px;
   height: 2px;
   background-color: white;
   border: 1px solid #333;
@@ -248,7 +248,7 @@ margin-left: 584px;
   text-align: center;
   font-family: Arial, sans-serif;
   margin-top: 40px;
-  margin-left: 461px;
+  margin-left: 498px;
 }
   .samplebox {
  width: 104px;
@@ -461,17 +461,18 @@ PERSONAL INFORMATION</span>
   </div>
   </div>
 
-<div class="pos" id="_249:397" style="top:397;left:249">
+<div class="pos" id="_249:397" style="top: 397;
+  left: 282px;">
 <span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
                 (Birth Place)</span>
 </div>
 
-<div class="pos" id="_399:397" style="top:374;left:409">
+<div class="pos" id="_399:397" style="top:374;left:442px">
   <span style="margin-inline: -5px;"></span>
     {{$resident->sex}}
 </div>
 
-<div class="pos" id="_399:397" style="top:397;left:399">
+<div class="pos" id="_399:397" style="top:397;left:443px">
 <span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
                     (Sex)  </span>
 </div>
@@ -481,7 +482,7 @@ PERSONAL INFORMATION</span>
     {{$resident->civil_status}}
 </div>
 
- <div class="pos" id="_249:397" style="top:396;left:492">
+ <div class="pos" id="_249:397" style="top:396;left:512px">
  <span id="_11.2" style=" font-family:Arial; font-size:11.2px; color:#000000">
      (Civil Status)</span>   
 </div>

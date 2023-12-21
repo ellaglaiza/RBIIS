@@ -258,8 +258,87 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
             <td class="column8 style1 null"></td>
            
           </tr>
+          <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the current year using JavaScript's Date object
+  var currentYear = new Date().getFullYear();
+
+  // Get the total months passed from January of the current year
+  var totalMonthsPassed = new Date().getMonth() + 1; // Add 1 to get current month
+
+  // Determine the semester based on total months passed
+  var semester = totalMonthsPassed <= 6 ? "1st" : "2nd";
+
+  // Get all elements with the class name "row2"
+  var rows = document.querySelectorAll(".row2");
+
+  // Iterate through each row with class "row2"
+  rows.forEach(function(row) {
+    // Find the <td> element within the row
+    var cell = row.querySelector(".column0.style30.s.style30");
+
+    // Check if the cell exists
+    if (cell) {
+      // Create a new HTML element <u> for underlining currentYear
+      var underlineElement = document.createElement('u');
+
+      // Set the text content of the underline element
+      underlineElement.textContent = currentYear;
+
+      // Create a span element for "for ___ Semester of CY" text
+      var textElement = document.createElement('span');
+      
+      // Determine the semester to display based on the current month
+      if (totalMonthsPassed <= 6) {
+        textElement.textContent = 'for 1st Semester of CY ';
+      } else {
+        textElement.textContent = 'for ';
+        
+        // Check if the semester is '2nd' to apply underline
+        if (semester === '2nd') {
+          // Create a span for underlining semester value
+          var semesterElement = document.createElement('u');
+          semesterElement.textContent = semester;
+          
+          // Append the underlined semester value
+        } else {
+          textElement.textContent += semester;
+        }
+        
+        textElement.textContent += '    ';
+      }
+
+      // Append the content to the cell in the correct order
+      cell.appendChild(textElement);
+      cell.appendChild(underlineElement);
+    }
+    var semesterTextElement = document.createElement('span');
+semesterTextElement.textContent = ' Semester of CY ' ;
+
+// Create an underline element for the entire semester phrase
+var underlineSemesterText = document.createElement('u');
+underlineSemesterText.textContent = ' Semester of CY ' ;
+
+// Replace the text content with the underlined version
+semesterTextElement.innerHTML = semesterTextElement.innerHTML.replace( underlineSemesterText.outerHTML);
+
+// Append the underlined semester value and phrase
+textElement.appendChild(semesterElement);
+textElement.appendChild(semesterTextElement);
+
+  });
+});
+
+// Inserting code above the event listener
+var codeToInsert = '<tr class="row2">' +
+  '<td class="column0 style30 s style30" colspan="5"> </td>' +
+  '</tr>';
+
+document.body.insertAdjacentHTML('afterbegin', codeToInsert);
+
+          </script>
           <tr class="row2">
-            <td class="column0 style30 s style30" colspan="5">for ___ Semester of CY ________</td>
+            <td class="column0 style30 s style30" colspan="5">  </td>
             <td class="column5 style2 null"></td>
             <td class="column6 style2 null"></td>
             <td class="column7 style5 null"></td>
@@ -731,11 +810,11 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           
           </tr>
           <tr class="row39">
-            <td class="column0 style1 s">________________________________</td>
+            <td class="column0 style1 s" style=" white-space: nowrap; "><u>_____Flordilane F. Esparcia _____ </u></td>
             <td class="column1 style1 null"></td>
             <td class="column2 style1 null"></td>
             <td class="column3 style1 null"></td>
-            <td class="column4 style1 s">_____________________________</td>
+            <td class="column4 style1 s" style=" white-space: nowrap; "><u>_______Rene T. Fustanes________</u></td>
             <td class="column5 style1 null"></td>
             <td class="column6 style1 null"></td>
             <td class="column7 style1 null"></td>
@@ -743,11 +822,11 @@ body {  margin-right: 0.51181102362205in; margin-bottom: 0.11811023622047in; }
           
           </tr>
           <tr class="row40">
-            <td class="column0 style8 s">Barangay Secretary</td>
+            <td class="column0 style8 s" style="text-align: center; font-weight: bold;">Barangay Secretary</td>
             <td class="column1 style15 null"></td>
             <td class="column2 style2 null"></td>
             <td class="column3 style2 null"></td>
-            <td class="column4 style3 s">Punong Barangay</td>
+            <td class="column4 style3 s" style=" text-align: center;">Punong Barangay</td>
             <td class="column5 style2 null"></td>
             <td class="column6 style2 null"></td>
             <td class="column7 style2 null"></td>

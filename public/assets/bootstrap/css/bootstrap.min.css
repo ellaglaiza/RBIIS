@@ -1487,16 +1487,13 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #e3e6f0;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #e3e6f0;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #e3e6f0;
 }
 
 .table-sm th,
@@ -1505,12 +1502,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #e3e6f0;
+  border: 1px solid;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #e3e6f0;
+  border: 1px solid;
 }
 
 .table-bordered thead th,

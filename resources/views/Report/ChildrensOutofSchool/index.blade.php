@@ -2,11 +2,13 @@
 
 @section('content')
   
- <style type="text/css">
+  <style type="text/css">
    .btn{
    }
    tr{
       text-align: center;
+  border: 1px solid black ;
+
    }
    .card{
     margin-bottom: 60px;
@@ -40,22 +42,23 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd;
+  border: 1px solid ;
   margin-top: 20px;
 }
 
-th, td {
-  border: 1px solid #ddd;
+th, td, tr {
+  border: 1px solid black;
   padding: 8px;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
+
 </style>
 
 <div class="header">
@@ -67,7 +70,7 @@ tr:nth-child(even) {
   <hr>
 
 <td>
-    <a style="margin-left: 811px;" href="{{route('list.ChildrensOutofSchool.save')}}" class="btn btn-primary btn-sm" id="print-button">Children's Out of School</a>                         
+    <a style="margin-left: 820px;" href="{{route('list.ChildrensOutofSchool.save')}}" class="btn btn-primary btn-sm" id="print-button">Children's Out of School</a>                         
 </td>
   <!-- Add image tag here -->
   <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
@@ -75,7 +78,7 @@ tr:nth-child(even) {
          <section class="content">
                 <div class="col-md-12">
                   <p style="margin-top: -40px;">Childrens Out of School</p>
-                    <table id="example1" class="table table-hover">
+                    <table id="example1" class="" style="width: -webkit-fill-available;">
                       <thead>
                                         <tr>
                                             <th>Children's Out of School</th>

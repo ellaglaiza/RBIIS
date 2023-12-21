@@ -1,10 +1,12 @@
 @extends('layouts.auth')
 
 @section('content')
+          <h2 style="color: white; margin-top: 53px; text-align: center;font-size: 42px;">Registry of Barangay Inhabitants Information System</h2>
+
     <form method="post" id="submitForm" action="{{ route('login.perform') }}" >
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <!-- /.login-logo -->
-         <div class="card card-outline card-info" style="width: auto; max-width: 322px; margin-inline: auto; margin-top: 100px;">
+         <div class="card card-outline card-info" style="width: auto; max-width: 322px; margin-inline: auto; margin-top: 42px;">
             <div class="card-header text-center">
                <a href="index.html" class="brand-link">
                <img src="{{ asset('auth/img/admin1.png')}}" style="object-fit: fill; width: -14px; height: 103px;">

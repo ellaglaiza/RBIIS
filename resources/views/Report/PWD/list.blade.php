@@ -1,18 +1,21 @@
 @extends('layouts.default')
 @section('content')
   
- <style type="text/css">
+
+   <style type="text/css">
    .btn{
    }
    tr{
       text-align: center;
+  border: 1px solid black ;
+
    }
    .card{
     margin-bottom: 60px;
    }
    #print-button {
     display: block;
-    width: 100px;
+    width: 158px;
     margin-left: 40%;
     
 }
@@ -39,23 +42,25 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd;
+  border: 1px solid ;
   margin-top: 20px;
 }
 
-th, td {
-  border: 1px solid #ddd;
+th, td, tr {
+  border: 1px solid black;
   padding: 8px;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
+
 </style>
+
 
 <div class="header">
   <h5>Republic of the Philippines</h5>
@@ -72,7 +77,7 @@ tr:nth-child(even) {
          <section class="content">
                 <div class="col-md-12">
                   <p style="margin-top: -40px;">List of Persons with Dis-abilities</p>
-                    <table id="example1" class="table table-hover">
+                    <table id="example1" class="" style="width: -webkit-fill-available;">
                      <thead>
                                     <tr>
                                         <th>Lastname</th>

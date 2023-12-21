@@ -7,6 +7,8 @@
    }
    tr{
       text-align: center;
+  border: 1px solid black ;
+
    }
    .card{
     margin-bottom: 60px;
@@ -40,22 +42,23 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd;
+  border: 1px solid ;
   margin-top: 20px;
 }
 
-th, td {
-  border: 1px solid #ddd;
+th, td, tr {
+  border: 1px solid black;
   padding: 8px;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
+
 </style>
 
 <div class="header" style="font-size: 12px;">
@@ -71,12 +74,12 @@ tr:nth-child(even) {
     <a style="margin-left: 878px; padding: 5px;" id="print-button" href="{{ route('list.residentprofile.list') }}" class="btn btn-primary btn-sm">Resident Lists</a>                         
 </td>
   <!-- Add image tag here -->
-  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style="width: 84px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
+  <img class="img-profile rounded-circle" src="{{ asset('auth/img/admin1.png') }}" style=" width: 84px; margin-right: 550px; margin-top: -302px; margin-left: 157px;">
 </div>
          <section class="content">
                 <div class="col-md-12">
                   <p style="margin-top: -40px;">POPULATION</p>
-                    <table id="example1" class="table table-hover">
+                    <table id="example1" class="" style="width: -webkit-fill-available;">
                      <thead>
                         <tr>
                                             <th>Total Population By Purok</th>
