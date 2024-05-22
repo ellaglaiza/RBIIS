@@ -306,68 +306,6 @@ function printDocument() {
 <span id="_13.5" style="font-weight:bold; font-family:Arial; font-size:13.5px; color:#000000">
 INDIVIDUAL RECORDS OF BARANGAY INHABITANT</span>
 </div>
-<div class="pos" id="_50:114" style="top:114;left:50">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-REGION</span>
-<div class="pos" id="_50:114" style="top:-3;left:55">
-<span style="margin-inline: 30px;"></span>
-    <u>______{{$resident->region}}__________</u>
-</div>
-</div>
-<div class="pos" id="_150:114" style="top:114;left:150">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#0>00000">
-:</span>
-</div>
-<div class="pos" id="_200:114" style="top:114;left:200">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-</span>
-</div>
-<div class="pos" id="_250:114" style="top:114;left:250">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-             </span>
-</div>
-<div class="pos" id="_450:114" style="top:114;left:450">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
- CITY/MUN</span>
- <div class="pos" id="_450:114" style="top:-2;left:54">
- <span style="margin-inline: 30px;"></span>
-    <u>__{{$resident->city_munipality}}_________</u>
-</div>
-</div>
-<div class="pos" id="_550:114" style="top:114;left:550">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-:</span>
-</div>
-<div class="pos" id="_50:136" style="top:136;left:50">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-PROVINCE</span>
-<div class="pos" id="_50:136" style="top:-4;left:68; white-space: nowrap;">
-    <span style="margin-inline: 23px; display: inline-block;"></span>
-    <u>_{{$resident->province}}___</u>
-</div>
-
-</div>
-<div class="pos" id="_150:136" style="top:136;left:150">
-<span id="_10.8" style=" font-family:Arial; font-size:10.8px; color:#000000">
-:</span>
-</div>
-<div class="pos" id="_350:136" style="top:136;left:350">
-<span id="_11.6" style=" font-family:Arial; font-size:11.6px; color:#000000">
-               </span>
-</div>
-<div class="pos" id="_450:136" style="top:136px;left:450px">
-<span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-BARANGAY</span>
-<div class="pos" id="_450:136" style="top:-4;left:60; white-space: nowrap;">
-    <span style="margin-inline: 27px;"></span>
-    <u>___{{$resident->barangay}}____</u>
-</div>
-
-</div>
-<div class="pos" id="_549:136" style="top:136;left:549">
-<span id="_10.9" style=" font-family:Arial; font-size:10.9px; color:#000000">
-:</span>
-</div>
 
 <div class="pos" id="_342:200" style="top:200;left:264">
 <span id="_13.6" style="font-weight:bold; font-family:Arial; font-size:13.6px; color:#000000">

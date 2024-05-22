@@ -12,8 +12,7 @@
       <div class="container-fluid" >
          <div class="row mb-2">
       <div class="col-sm-6">
-<!--          <h1 class="m-0" style="border-radius: 100px;">Add New Resident</h1>
- -->         </div>
+      </div>
             <div class="col-sm-6">
             </div>
          </div>
@@ -282,10 +281,7 @@
 
                               </div>
                            </div>
-
-                                            </form>
-
-                      
+                         </form>
                         <center>
                <div class="col-md-5">
                   <button type="submit" class="btn btn-primary" style="background-color: black; margin-top: 10px;">Save</button>
@@ -353,21 +349,21 @@
         }
     }
        let xhr = new XMLHttpRequest();
-    let url = 'https://ph-locations-api.buonzz.com/v1/regions?page=philippines';
+    let url = 'https://psgc.gitlab.io/api/regions/';
+
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let responseData = JSON.parse(xhr.responseText);
-                let regions = responseData.data; // Assuming the regions are in the 'data' property
-
+                let regions = responseData; 
                 if (Array.isArray(regions)) {
                     let select = document.getElementById('regions');
 
                     regions.forEach(function(region) {
                         let option = document.createElement('option');
-                        option.text = region.name;
-                        option.value = region.id; // You might want to set a value
+                        option.text = region.regionName;
+                        option.value = region.regionName; 
                         select.appendChild(option);
                     });
                 } else {
